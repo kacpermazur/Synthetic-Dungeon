@@ -8,7 +8,7 @@ namespace Core
 {
     public class GameManager : MonoBehaviour
     {
-        private static readonly string name = typeof(GameManager).Name;
+        private static readonly string Name = typeof(GameManager).Name;
 
         private static GameManager _instance;
         private EntityManager _entityManager;
@@ -39,7 +39,7 @@ namespace Core
 
         private static void LogMessage(string message)
         {
-            Debug.Log("<color=Green>" + name + "</color> : " + message);
+            Debug.Log("<color=Green>" + Name + "</color> : " + message);
         }
     }
 }
