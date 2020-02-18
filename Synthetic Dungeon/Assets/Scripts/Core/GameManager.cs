@@ -14,7 +14,7 @@ namespace Core
         private static GameManager _instance;
         private PlayerInputActions _playerInputActions;
         
-        [Tooltip("Managers")]
+        [Header("Managers")]
         private EntityManager _entityManager;
         [SerializeField] private UIManager _uiManager;
         [SerializeField] private Inventory _inventory;

@@ -5,14 +5,37 @@ using UnityEngine;
 
 namespace Player.Inventory
 {
-    public abstract class Item : ScriptableObject
+    [CreateAssetMenu]
+    public class Item : ScriptableObject
     {
-        [SerializeField] private string _name;
-        [SerializeField] private StatsData _statsData;
+        [Header("Item Setup")]
+        public string Name;
+        public Sprite Icon;
+        public ItemType Type;
+        public string TempRarity;
+       
 
-        public string Name => _name;
-        public StatsData StatsData => _statsData;
+        [Header("Item Properties")]
+        public int Health;
+        public int Mana;
+        public int Toughness;
+        public int AttackPower;
+        public int MagicPower;
 
-        public abstract string InfoText();
+        [Header("Item Requirements")]
+        public int RequiredAttackPower;
+        public int RequiredMagicPower;
+
+        public enum ItemType
+        {
+            WEAPON,
+            HAND,
+            ARMOR,
+            LEGGINGS,
+            HELM,
+            SHOES,
+            GEM
+        }
+        
     }
 }
