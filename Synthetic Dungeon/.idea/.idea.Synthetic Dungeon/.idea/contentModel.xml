@@ -16,12 +16,19 @@
             <e p="StatsData.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
+            <e p="Inventory" t="Include">
+              <e p="Inventory.cs" t="Include" />
+              <e p="Item.cs" t="Include" />
+            </e>
             <e p="MovementSpeedData.cs" t="Include" />
             <e p="MovementSystem.cs" t="Include" />
             <e p="PlayerTag.cs" t="Include" />
             <e p="RotationSpeedData.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
+            <e p="Inventory" t="Include">
+              <e p="InventoryUI.cs" t="Include" />
+            </e>
             <e p="UIManager.cs" t="Include" />
             <e p="UIPanel.cs" t="Include" />
           </e>

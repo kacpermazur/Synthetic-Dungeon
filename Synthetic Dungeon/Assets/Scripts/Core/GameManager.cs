@@ -14,13 +14,17 @@ namespace Core
         private static GameManager _instance;
         private PlayerInputActions _playerInputActions;
         
+        [Tooltip("Managers")]
         private EntityManager _entityManager;
         [SerializeField] private UIManager _uiManager;
+        [SerializeField] private Inventory _inventory;
         
         private Vector2 _inputVector2; //todo: Move this out To InputClass
 
         public static GameManager Instance => _instance;
         public EntityManager EntityManager => _entityManager;
+        public UIManager UiManager => _uiManager;
+        public Inventory Inventory => _inventory;
 
         public enum MessageType
         {
@@ -52,10 +56,23 @@ namespace Core
             _entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
 
             if(!_uiManager)
+            {
                 LogMessage("Error: Please Reference UIManager!", MessageType.ALERT);
+            }
             else
+            {
                 _uiManager.Initialize();
-            
+            }
+
+            if (!_inventory)
+            {
+                LogMessage("Error: Please Reference Inventory!", MessageType.ALERT);
+            }
+            else
+            {
+                _uiManager.Initialize();
+            }
+
         }
 
         public static void LogMessage(string message, MessageType? type = null)
