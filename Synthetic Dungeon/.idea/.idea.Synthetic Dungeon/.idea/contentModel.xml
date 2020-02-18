@@ -9,6 +9,7 @@
         <e p="Scripts" t="Include">
           <e p="Core" t="Include">
             <e p="GameManager.cs" t="Include" />
+            <e p="IInitializable.cs" t="Include" />
             <e p="PlayerInputActions.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
@@ -16,6 +17,10 @@
             <e p="MovementSystem.cs" t="Include" />
             <e p="PlayerTag.cs" t="Include" />
             <e p="RotationSpeedData.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="UIManager.cs" t="Include" />
+            <e p="UIPanel.cs" t="Include" />
           </e>
         </e>
       </e>
