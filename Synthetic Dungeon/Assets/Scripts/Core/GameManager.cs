@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UI;
 using Unity.Entities;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -11,19 +12,28 @@ namespace Core
         private static readonly string Name = typeof(GameManager).Name;
 
         private static GameManager _instance;
-        private EntityManager _entityManager;
         private PlayerInputActions _playerInputActions;
-
-        private Vector2 _inputVector2;
+        
+        private EntityManager _entityManager;
+        [SerializeField] private UIManager _uiManager;
+        
+        private Vector2 _inputVector2; //todo: Move this out To InputClass
 
         public static GameManager Instance => _instance;
         public EntityManager EntityManager => _entityManager;
 
-        public Vector2 OnMoveVector => _inputVector2;
+        public enum MessageType
+        {
+            MESSAGE,
+            ALERT,
+            ERROR
+        }
+
+        public Vector2 OnMoveVector => _inputVector2; //todo: Move this out To InputClass
 
         public void OnMove(InputValue value)
         {
-            _inputVector2 = value.Get<Vector2>();
+            _inputVector2 = value.Get<Vector2>(); //todo: Move this out To InputClass
         }
         
         private void Awake()
@@ -31,15 +41,41 @@ namespace Core
             if (!_instance)
             {
                 _instance = this;
-                _entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
-                _playerInputActions = new PlayerInputActions();
-                LogMessage("GameManager Initialized!");
+                Initialize();
             }
         }
 
-        private static void LogMessage(string message)
+        private void Initialize()
         {
-            Debug.Log("<color=Green>" + Name + "</color> : " + message);
+            _playerInputActions = new PlayerInputActions();
+            
+            _entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
+
+            if(!_uiManager)
+                LogMessage("Error: Please Reference UIManager!", MessageType.ALERT);
+            else
+                _uiManager.Initialize();
+            
+        }
+
+        public static void LogMessage(string message, MessageType? type = null)
+        {
+            switch (type)
+            {
+                case null:
+                case MessageType.MESSAGE:
+                    Debug.Log("<color=BlueViolet> MESSAGE </color>" + " <color=Green>" + Name + "</color> : " + message);
+                    break;
+                case MessageType.ALERT:
+                    Debug.Log("<color=Gold> ALERT </color>" + " <color=Green>" + Name + "</color> : " + message);
+                    break;
+                case MessageType.ERROR:
+                    Debug.Log("<color=FireBrick> ERROR </color>" + " <color=Green>" + Name + "</color> : " + message);
+                    break;
+                default:
+                    Debug.Log("<color=Red> LOG MESSAGE ERROR! </color>");
+                    break;
+            }
         }
     }
 }

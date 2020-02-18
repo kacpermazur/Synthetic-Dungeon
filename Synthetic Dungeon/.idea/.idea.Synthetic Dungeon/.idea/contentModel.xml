@@ -12,6 +12,10 @@
             <e p="IInitializable.cs" t="Include" />
             <e p="PlayerInputActions.cs" t="Include" />
           </e>
+          <e p="Entity Data" t="Include">
+            <e p="HealthData.cs" t="Include" />
+            <e p="StatsData.cs" t="Include" />
+          </e>
           <e p="Player" t="Include">
             <e p="MovementSpeedData.cs" t="Include" />
             <e p="MovementSystem.cs" t="Include" />

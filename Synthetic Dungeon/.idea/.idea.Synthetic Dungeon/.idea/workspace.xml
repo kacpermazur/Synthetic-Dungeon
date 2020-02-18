@@ -11,8 +11,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entity Data/HealthData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/94C5F4C3-8CDC-42D2-B006-F8BADEF04394/79/31642113/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.entities@0.5.1-preview.11/Unity.Transforms/Rotation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entity Data/StatsData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FD80350A-03FB-4F81-873A-ACB5119F4935/15/b8244934/Vector.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerTag.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -32,10 +34,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/RotationSpeedData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerTag.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/MovementSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/IInitializable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Entity Data/StatsData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -91,7 +94,7 @@
       <workItem from="1581583384230" duration="8392000" />
       <workItem from="1581592500450" duration="120000" />
       <workItem from="1581592679660" duration="61000" />
-      <workItem from="1582014620310" duration="606000" />
+      <workItem from="1582014620310" duration="2369000" />
     </task>
     <servers />
   </component>
