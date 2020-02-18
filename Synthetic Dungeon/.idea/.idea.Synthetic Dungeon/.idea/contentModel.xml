@@ -12,8 +12,7 @@
             <e p="IInitializable.cs" t="Include" />
             <e p="PlayerInputActions.cs" t="Include" />
           </e>
-          <e p="Entity Data" t="Include">
-            <e p="HealthData.cs" t="Include" />
+          <e p="Entity Core" t="Include">
             <e p="StatsData.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
