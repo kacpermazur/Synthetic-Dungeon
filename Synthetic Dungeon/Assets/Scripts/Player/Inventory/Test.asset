@@ -12,5 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa55f7dfe46c0db4f9b05850f2ced53e, type: 3}
   m_Name: Test
   m_EditorClassIdentifier: 
-  _name: 
-  _icon: {fileID: 0}
+  Name: Test
+  Icon: {fileID: 0}
+  Type: 2
+  TempRarity: Rare
+  Health: 40
+  Mana: 5
+  Toughness: 75
+  AttackPower: 35
+  MagicPower: 5
+  RequiredAttackPower: 75
+  RequiredMagicPower: 10
