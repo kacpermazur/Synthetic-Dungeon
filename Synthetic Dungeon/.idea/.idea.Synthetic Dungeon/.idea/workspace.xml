@@ -36,7 +36,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/MovementSpeedData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/RotationSpeedData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerTag.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/MovementSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/IInitializable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
@@ -47,6 +46,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Inventory/ItemStatsProxy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Inventory/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/MovementSystem.cs" />
       </list>
     </option>
   </component>
@@ -102,7 +102,8 @@
       <workItem from="1581583384230" duration="8392000" />
       <workItem from="1581592500450" duration="120000" />
       <workItem from="1581592679660" duration="61000" />
-      <workItem from="1582014620310" duration="6783000" />
+      <workItem from="1582014620310" duration="6797000" />
+      <workItem from="1582622761260" duration="58000" />
     </task>
     <servers />
   </component>

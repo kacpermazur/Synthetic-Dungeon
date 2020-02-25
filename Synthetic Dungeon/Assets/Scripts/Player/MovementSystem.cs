@@ -17,9 +17,9 @@ public class MovementSystem : ComponentSystem
         {
 
             rotation.Value = math.mul(math.normalize(rotation.Value), quaternion.AxisAngle(math.up(), movementVector.x * Time.DeltaTime * rotationSpeedData.Value));
-            float3 foward = math.mul(rotation.Value, new float3(1,0,0));
+            float3 forwardDirection = math.mul(rotation.Value, new float3(1,0,0));
 
-            translation.Value += foward * movementSpeedData.Value * Time.DeltaTime * movementVector.y;
+            translation.Value += forwardDirection * movementSpeedData.Value * Time.DeltaTime * movementVector.y;
         });
         
     }
