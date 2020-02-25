@@ -19,6 +19,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Inventory/ItemStatsProxy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerTag.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Inventory/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawnSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyTag.cs" root0="FORCE_HIGHLIGHTING" />
@@ -44,12 +45,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Entity Data/StatsData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Entity Core/StatsData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Inventory/Inventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Inventory/ItemStatsProxy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Inventory/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/MovementSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyTag.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovementSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawnSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -106,7 +108,7 @@
       <workItem from="1581592500450" duration="120000" />
       <workItem from="1581592679660" duration="61000" />
       <workItem from="1582014620310" duration="6797000" />
-      <workItem from="1582622761260" duration="1045000" />
+      <workItem from="1582622761260" duration="2992000" />
     </task>
     <servers />
   </component>
@@ -129,10 +131,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="794" y="236" key="RiderGenerateDialog" timestamp="1582623301867">
+    <state x="794" y="236" key="RiderGenerateDialog" timestamp="1582624654895">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="236" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582623301867" />
+    <state x="794" y="236" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582624654895" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1582019798406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

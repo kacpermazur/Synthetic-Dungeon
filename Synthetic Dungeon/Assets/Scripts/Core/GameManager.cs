@@ -13,7 +13,11 @@ namespace Core
 
         private static GameManager _instance;
         private PlayerInputActions _playerInputActions;
-        
+
+        [Header("Camera")] 
+        [SerializeField] private Camera _camera;
+        public Camera GameCamera => _camera;
+
         [Header("Managers")]
         private EntityManager _entityManager;
         [SerializeField] private UIManager _uiManager;
@@ -25,7 +29,6 @@ namespace Core
         public EntityManager EntityManager => _entityManager;
         public UIManager UiManager => _uiManager;
         public Inventory Inventory => _inventory;
-
         public enum MessageType
         {
             MESSAGE,
@@ -53,7 +56,13 @@ namespace Core
         {
             _playerInputActions = new PlayerInputActions();
             
+            
             _entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
+
+            if (!_camera)
+            {
+                _camera = Camera.main;
+            }
 
             if(!_uiManager)
             {
@@ -72,8 +81,8 @@ namespace Core
             {
                 _uiManager.Initialize();
             }
-
         }
+        
 
         public static void LogMessage(string message, MessageType? type = null)
         {
