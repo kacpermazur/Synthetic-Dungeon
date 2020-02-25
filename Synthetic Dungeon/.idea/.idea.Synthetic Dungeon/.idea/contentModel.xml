@@ -12,7 +12,12 @@
             <e p="IInitializable.cs" t="Include" />
             <e p="PlayerInputActions.cs" t="Include" />
           </e>
+          <e p="Enemy" t="Include">
+            <e p="EnemyMovementSystem.cs" t="Include" />
+            <e p="EnemyTag.cs" t="Include" />
+          </e>
           <e p="Entity Core" t="Include">
+            <e p="MovementSystem.cs" t="Include" />
             <e p="StatsData.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
@@ -22,7 +27,6 @@
               <e p="ItemStatsProxy.cs" t="Include" />
             </e>
             <e p="MovementSpeedData.cs" t="Include" />
-            <e p="MovementSystem.cs" t="Include" />
             <e p="PlayerTag.cs" t="Include" />
             <e p="RotationSpeedData.cs" t="Include" />
           </e>

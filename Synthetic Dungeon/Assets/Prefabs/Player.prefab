@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5201123613267107940}
   - component: {fileID: 5201123613267107943}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: PlayerHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
