@@ -4,30 +4,31 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour,IInitializable,IOnUpdate
 {
-    private bool _isInitialized;
-    public bool IsInitialized => _isInitialized;
+    public bool isActive;
 
-    private Vector2 _OnMoveDir;
+    private Vector2 _onMoveDir;
 
-    public void Initialize()
+    public bool Initialize()
     {
-        if (!_isInitialized)
-            _isInitialized = true;
+        isActive = true;
+        return true;
     }
 
     public void OnUpdate()
     {
-        if (_isInitialized)
+        if (isActive)
+        {
             Move();
+        }
     }
 
     private void Move()
     {
-        GameManager.LogMessage(_OnMoveDir.ToString(), GameManager.MessageType.MESSAGE);
+        GameManager.LogMessage("Bitch just work please", GameManager.MessageType.MESSAGE);
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        _OnMoveDir = context.ReadValue<Vector2>();
+        _onMoveDir = context.ReadValue<Vector2>();
     }
 }

@@ -9,9 +9,10 @@ namespace UI
     {
         private List<UIPanel> _uiPanels = new List<UIPanel>();
 
-        public void Initialize()
+        public bool Initialize()
         {
             AddListeners();
+            return true;
         }
 
         public void OpenPanel(UIPanel panel)

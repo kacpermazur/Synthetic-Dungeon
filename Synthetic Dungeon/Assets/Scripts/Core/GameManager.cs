@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Player;
 using UI;
@@ -21,6 +22,9 @@ namespace Core
         public UIManager UiManager => _uiManager;
         public PlayerManager PlayerManager => _playerManager;
 
+        //todo: Move this out later
+        private bool _isPlayerActive;
+        
         public enum MessageType
         {
             MESSAGE,
@@ -37,26 +41,25 @@ namespace Core
             }
         }
 
+        private void Update()
+        {
+            if (_isPlayerActive)
+            {
+                _playerManager.OnUpdate();
+            }
+        }
+
         private void Initialize()
         {
             _playerInputActions = new PlayerInputActions();
-            
-            if(!_uiManager)
-            {
+
+            if(!_uiManager.Initialize())
                 LogMessage("Error: Please Reference UIManager!", MessageType.ALERT);
-            }
-            else
+
+            _isPlayerActive = _playerManager.Initialize();
+            if (!_isPlayerActive)
             {
-                _uiManager.Initialize();
-            }
-            
-            if(!_uiManager)
-            {
-                LogMessage("Error: Please Reference PlayerManager!", MessageType.ALERT);
-            }
-            else
-            {
-                _playerManager.Initialize();
+                LogMessage("PlayerManager not initialized!", MessageType.ALERT);
             }
         }
         

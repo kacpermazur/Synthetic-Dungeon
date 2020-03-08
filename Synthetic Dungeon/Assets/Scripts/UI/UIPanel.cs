@@ -14,9 +14,10 @@ namespace UI
         }
         private UiState _state;
         
-        public void Initialize()
+        public bool Initialize()
         {
             _state = UiState.NONE;
+            return true;
         }
 
         public virtual void Open()
