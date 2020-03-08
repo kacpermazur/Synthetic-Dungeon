@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Player;
 using UI;
 using UnityEngine;
 
@@ -14,10 +15,12 @@ namespace Core
         
         [Header("Managers")]
         [SerializeField] private UIManager _uiManager;
+        [SerializeField] private PlayerManager _playerManager;
 
         public static GameManager Instance => _instance;
-        
         public UIManager UiManager => _uiManager;
+        public PlayerManager PlayerManager => _playerManager;
+
         public enum MessageType
         {
             MESSAGE,
@@ -45,6 +48,15 @@ namespace Core
             else
             {
                 _uiManager.Initialize();
+            }
+            
+            if(!_uiManager)
+            {
+                LogMessage("Error: Please Reference PlayerManager!", MessageType.ALERT);
+            }
+            else
+            {
+                _playerManager.Initialize();
             }
         }
         
