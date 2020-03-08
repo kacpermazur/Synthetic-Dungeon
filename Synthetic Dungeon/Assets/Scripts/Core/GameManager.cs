@@ -1,9 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UI;
-using Unity.Entities;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Core
 {
@@ -13,22 +11,13 @@ namespace Core
 
         private static GameManager _instance;
         private PlayerInputActions _playerInputActions;
-
-        [Header("Camera")] 
-        [SerializeField] private Camera _camera;
-        public Camera GameCamera => _camera;
-
-        [Header("Managers")]
-        private EntityManager _entityManager;
-        [SerializeField] private UIManager _uiManager;
-        [SerializeField] private Inventory _inventory;
         
-        private Vector2 _inputVector2; //todo: Move this out To InputClass
+        [Header("Managers")]
+        [SerializeField] private UIManager _uiManager;
 
         public static GameManager Instance => _instance;
-        public EntityManager EntityManager => _entityManager;
+        
         public UIManager UiManager => _uiManager;
-        public Inventory Inventory => _inventory;
         public enum MessageType
         {
             MESSAGE,
@@ -36,13 +25,6 @@ namespace Core
             ERROR
         }
 
-        public Vector2 OnMoveVector => _inputVector2; //todo: Move this out To InputClass
-
-        public void OnMove(InputValue value)
-        {
-            _inputVector2 = value.Get<Vector2>(); //todo: Move this out To InputClass
-        }
-        
         private void Awake()
         {
             if (!_instance)
@@ -56,26 +38,9 @@ namespace Core
         {
             _playerInputActions = new PlayerInputActions();
             
-            
-            _entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
-
-            if (!_camera)
-            {
-                _camera = Camera.main;
-            }
-
             if(!_uiManager)
             {
                 LogMessage("Error: Please Reference UIManager!", MessageType.ALERT);
-            }
-            else
-            {
-                _uiManager.Initialize();
-            }
-
-            if (!_inventory)
-            {
-                LogMessage("Error: Please Reference Inventory!", MessageType.ALERT);
             }
             else
             {
