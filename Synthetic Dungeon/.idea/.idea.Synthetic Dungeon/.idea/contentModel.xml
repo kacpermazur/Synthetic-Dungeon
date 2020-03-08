@@ -10,10 +10,13 @@
           <e p="Core" t="Include">
             <e p="GameManager.cs" t="Include" />
             <e p="IInitializable.cs" t="Include" />
-            <e p="IOnUpdate.cs" t="Include" />
+            <e p="IOnExecute.cs" t="Include" />
             <e p="PlayerInputActions.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
+            <e p="Data" t="Include">
+              <e p="PlayerData.cs" t="Include" />
+            </e>
             <e p="PlayerManager.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
           </e>

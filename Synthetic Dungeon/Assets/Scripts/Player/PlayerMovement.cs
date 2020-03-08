@@ -1,34 +1,42 @@
 ﻿using Core;
+using Player.Data;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour,IInitializable,IOnUpdate
+namespace Player
 {
-    public bool isActive;
-
-    private Vector2 _onMoveDir;
-
-    public bool Initialize()
+    public class PlayerMovement : MonoBehaviour, IInitializable, IOnExecute
     {
-        isActive = true;
-        return true;
-    }
+        private PlayerData _playerData;
+        private Vector2 _onMoveDir;
 
-    public void OnUpdate()
-    {
-        if (isActive)
+        public bool Initialize()
         {
-            Move();
+            _playerData = GameManager.Instance.PlayerManager.PlayerData;
+            return true;
         }
-    }
 
-    private void Move()
-    {
-        GameManager.LogMessage("Bitch just work please", GameManager.MessageType.MESSAGE);
-    }
+        public void OnExecute()
+        {
+            Movement();
+        }
 
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        _onMoveDir = context.ReadValue<Vector2>();
+        private void Movement()
+        {
+            Vector3 direction = new Vector3(_onMoveDir.x, 0, _onMoveDir.y);
+
+            if (direction != Vector3.zero)
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction),
+                    Time.deltaTime * _playerData.rotationSpeed);
+
+                transform.position += _playerData.movementSpeed * Time.deltaTime * transform.right;
+            }
+        }
+
+        public void OnMove(InputValue value)
+        {
+            _onMoveDir = value.Get<Vector2>();
+        }
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Player;
 using UI;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Core
 {
@@ -17,7 +18,7 @@ namespace Core
         [Header("Managers")]
         [SerializeField] private UIManager _uiManager;
         [SerializeField] private PlayerManager _playerManager;
-
+        
         public static GameManager Instance => _instance;
         public UIManager UiManager => _uiManager;
         public PlayerManager PlayerManager => _playerManager;
@@ -45,7 +46,7 @@ namespace Core
         {
             if (_isPlayerActive)
             {
-                _playerManager.OnUpdate();
+                _playerManager.OnExecute();
             }
         }
 

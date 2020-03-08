@@ -106,8 +106,9 @@ GameObject:
   - component: {fileID: 2745255897541657708}
   - component: {fileID: 1263282013452390140}
   - component: {fileID: 4200901582443845415}
-  - component: {fileID: 6689944570720383250}
+  - component: {fileID: 1376349395}
   - component: {fileID: 1652013494884333182}
+  - component: {fileID: 6689944570720383250}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -205,9 +206,9 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &6689944570720383250
+--- !u!114 &1376349395
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,9 +217,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 6759311466908082868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1556e4b472edff142ac852ead9810c87, type: 3}
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 2adfbc81693f196439f58e61a8a655ec,
+    type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9dba8f12-7dbe-40c0-97b3-053191df259b
+    m_ActionName: InGame/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Keyboard
+  m_DefaultActionMap: InGame
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!114 &1652013494884333182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,3 +266,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8442f2a0b37e69840a55b22281bc026f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6689944570720383250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6759311466908082868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1556e4b472edff142ac852ead9810c87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
