@@ -44,9 +44,9 @@ namespace Enemy
             SetupProperties();
         }
 
-        public void Spawn(Transform spawnPosition)
+        public void Spawn(Vector3 spawnPosition)
         {
-            transform.position = spawnPosition.position;
+            transform.position = spawnPosition;
         }
 
         public virtual void MoveTowardsTarget(Transform target)

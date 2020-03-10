@@ -32,11 +32,12 @@ namespace Player.Spells.Components
             }
             
             Vector3 dir = transform.position - _playerPos;
+            dir = dir.normalized;
             dir.y = 0.0f;
 
-            transform.rotation = Quaternion.LookRotation(dir);
+            //transform.rotation = Quaternion.LookRotation(dir);
             
-            transform.position += delta * 15.0f * transform.right;
+            transform.position += delta * 15.0f * dir;
         }
         
         protected virtual void OnHit(Enemy enemy)

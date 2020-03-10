@@ -19,7 +19,11 @@ namespace Enemy
         {
             _activeEnemies = new List<Enemy>();
 
-            SpawnTestEnemy();
+            for (int i = 0; i < 30; i++)
+            {
+                SpawnTestEnemy();
+            }
+            
             
             return true;
         }
@@ -47,7 +51,8 @@ namespace Enemy
             var e = instance.GetComponent<Enemy>();
             
             e.Init(this, enemyPool[0].enemyStats , enemyPool[0].enemyProperties);
-            e.Spawn(spawnPoint);
+            
+            e.Spawn(new Vector3(Random.Range(-20.0f,20.0f), 1, Random.Range(-20.0f,20.0f)));
             
             _activeEnemies.Add(e);
         }

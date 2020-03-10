@@ -62,16 +62,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Types/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Types/EnemyMeele.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Data/EnemyData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/EmissionComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentRing.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Test.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponentDamage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/SpellSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/ImpactComponent.cs" />
       </list>
     </option>
@@ -134,7 +134,7 @@
       <workItem from="1583665995085" duration="74000" />
       <workItem from="1583667265513" duration="10074000" />
       <workItem from="1583780190787" duration="41000" />
-      <workItem from="1583807392899" duration="25213000" />
+      <workItem from="1583807392899" duration="26047000" />
     </task>
     <servers />
   </component>
