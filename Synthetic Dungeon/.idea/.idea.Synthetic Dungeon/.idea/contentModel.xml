@@ -32,6 +32,9 @@
             </e>
             <e p="PlayerManager.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
+            <e p="Spells" t="Include">
+              <e p="SpellSystem.cs" t="Include" />
+            </e>
           </e>
           <e p="UI" t="Include">
             <e p="Inventory" t="Include">

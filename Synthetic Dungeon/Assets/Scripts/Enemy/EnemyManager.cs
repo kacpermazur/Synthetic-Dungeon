@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Core;
+using Core.Data;
+using Enemy.Data;
 using UnityEngine;
 
 namespace Enemy
@@ -12,15 +14,11 @@ namespace Enemy
         [SerializeField] private Transform spawnPoint;
         
         private List<Enemy> _activeEnemies;
-        private List<Enemy> _inactiveEnemies;
-        
+
         public bool Initialize()
         {
-            GameManager.LogMessage("Enemy Manager Active");
-            
             _activeEnemies = new List<Enemy>();
-            _inactiveEnemies = new List<Enemy>();
-            
+
             SpawnTestEnemy();
             
             return true;
@@ -35,13 +33,22 @@ namespace Enemy
                     actor.MoveTowardsTarget(GameManager.Instance.PlayerManager.Transform);
                 }
             }
+        }
 
+        public void RemoveFromActive(Enemy enemy)
+        {
+            _activeEnemies.Remove(enemy);
+            GameManager.LogMessage("Enemy Removed From Active List");
         }
 
         private void SpawnTestEnemy()
         {
-            var instance = Instantiate(enemyPool[0].gameObject, spawnPoint.position, spawnPoint.rotation);
+            var instance = Instantiate(enemyPool[0].gameObject);
             var e = instance.GetComponent<Enemy>();
+            
+            e.Init(this, enemyPool[0].enemyStats , enemyPool[0].enemyProperties);
+            e.Spawn(spawnPoint);
+            
             _activeEnemies.Add(e);
         }
     }
@@ -49,7 +56,8 @@ namespace Enemy
     [System.Serializable]
     public struct EnemyVar
     {
-        public Enemy enemy;
         public GameObject gameObject;
+        public CoreData enemyStats;
+        public EnemyData enemyProperties;
     }
 }

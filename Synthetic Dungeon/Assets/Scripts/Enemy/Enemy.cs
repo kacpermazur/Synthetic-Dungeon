@@ -31,12 +31,10 @@ namespace Enemy
         }
         private State _state;
 
-        public void Spawn(EnemyManager enemyManager, Transform spawnPosition, CoreData coreData, EnemyData enemyData)
+        public void Init(EnemyManager enemyManager, CoreData coreData, EnemyData enemyData)
         {
             _enemyManager = enemyManager;
             _enemyData = enemyData;
-            
-            transform.position = spawnPosition.position;
 
             _maxHealth = coreData.health;
             _maxMana = coreData.mana;
@@ -46,15 +44,19 @@ namespace Enemy
             SetupProperties();
         }
 
+        public void Spawn(Transform spawnPosition)
+        {
+            transform.position = spawnPosition.position;
+        }
+
         public virtual void MoveTowardsTarget(Transform target)
         {
             Vector3 targetVector = target.position - transform.position;
             float distance = Mathf.Abs(targetVector.magnitude);
 
-            transform.rotation = Quaternion.LookRotation(targetVector,Vector3.up);
-            
-            
-            if (distance >= 0.5f)
+            transform.rotation = Quaternion.LookRotation(targetVector, Vector3.up) * Quaternion.Euler(0, -90, 0);
+
+            if (distance >= 1.1f)
             {
                 transform.position += _enemyData.movementSpeed * Time.deltaTime * targetVector.normalized;
             }
@@ -68,7 +70,9 @@ namespace Enemy
             if (_currentHealth <= 0)
             {
                 _state = State.DEAD;
-                GameManager.LogMessage("Enemy Has Died");
+
+                _enemyManager.RemoveFromActive(this);
+                gameObject.SetActive(false);
             }
         }
 
