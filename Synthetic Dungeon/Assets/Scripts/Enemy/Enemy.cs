@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Core;
 using Core.Data;
 using Enemy.Data;
 using UnityEngine;
@@ -9,6 +10,7 @@ namespace Enemy
     public abstract class Enemy : MonoBehaviour
     {
         private EnemyManager _enemyManager;
+        
         private EnemyData _enemyData;
 
         private int _maxHealth;
@@ -19,6 +21,12 @@ namespace Enemy
 
         private int _toughness;
         private int _magicPower;
+
+        //todo: Make A State machine later
+        enum State
+        {
+            
+        }
 
         public void Spawn(EnemyManager enemyManager, Transform spawnPosition, CoreData coreData, EnemyData enemyData)
         {
@@ -33,6 +41,30 @@ namespace Enemy
             _magicPower = coreData.magicPower;
 
             SetupProperties();
+        }
+
+        public virtual void MoveTowards(Transform target)
+        {
+            Vector3 targetVector = target.position - transform.position;
+            float distance = Mathf.Abs(targetVector.magnitude);
+
+            transform.rotation = Quaternion.LookRotation(targetVector,Vector3.forward);
+
+            if (distance >= 0.5f)
+            {
+                transform.position += _enemyData.movementSpeed * Time.deltaTime * targetVector.normalized;
+            }
+        }
+
+        public virtual void TakeDamage(int damage)
+        {
+            int dmg = (damage - _toughness < 1) ? 0 : damage;
+            _currentHealth -= dmg;
+
+            if (_currentHealth <= 0)
+            {
+                GameManager.LogMessage("Enemy Has Died");
+            }
         }
 
         private void SetupProperties()
