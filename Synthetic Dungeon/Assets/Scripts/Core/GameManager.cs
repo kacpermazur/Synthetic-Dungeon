@@ -10,8 +10,7 @@ namespace Core
         private static readonly string Name = typeof(GameManager).Name;
 
         private static GameManager _instance;
-        private PlayerInputActions _playerInputActions;
-        
+
         [Header("Managers")]
         [SerializeField] private UIManager _uiManager;
         [SerializeField] private PlayerManager _playerManager;
@@ -57,7 +56,6 @@ namespace Core
 
         private void Initialize()
         {
-            _playerInputActions = new PlayerInputActions();
 
             if (!_uiManager.Initialize())
             {

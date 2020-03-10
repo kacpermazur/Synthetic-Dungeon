@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Core;
 using Player.Spells.Components;
 using UnityEngine;
 
@@ -13,7 +14,7 @@ public class EmissionComponentRing : EmissionComponent
     {
         Vector3[] spellEmitters = new Vector3[NumPoints];
 
-        Vector3 pos = transform.position;
+        Vector3 pos = GameManager.Instance.PlayerManager.transform.position;
         Vector3 centerPos = new Vector3(pos.x, 0.5f, pos.z);
             
         for(int i = 0; i < NumPoints; i++)

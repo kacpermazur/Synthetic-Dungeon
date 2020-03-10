@@ -39,5 +39,10 @@ namespace Player
         {
             _onMoveDir = value.Get<Vector2>();
         }
+        
+        public void OnAttack(InputValue value)
+        {
+            GameManager.Instance.PlayerManager.SpellSystem.CastSpell();
+        }
     }
 }

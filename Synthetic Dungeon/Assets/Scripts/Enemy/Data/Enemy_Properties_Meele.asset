@@ -16,3 +16,4 @@ MonoBehaviour:
   attackRate: 1
   movementSpeed: 2
   rotationSpeed: 10
+  distanceToPlayer: 1.7

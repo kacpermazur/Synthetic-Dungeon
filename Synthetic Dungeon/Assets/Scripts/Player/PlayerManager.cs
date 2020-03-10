@@ -2,6 +2,7 @@
 using Player.Data;
 using Player.Spells;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Player
 {
@@ -21,6 +22,7 @@ namespace Player
         public Transform Transform => _transform;
         public Rigidbody Rigidbody => _rigidBody;
         public PlayerData PlayerData => playerData;
+        public SpellSystem SpellSystem => _spellSystem;
 
         public bool Initialize()
         {
@@ -56,5 +58,6 @@ namespace Player
         {
             _enabledControls = false;
         }
+        
     }
 }

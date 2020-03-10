@@ -39,6 +39,9 @@
                   <e p="EmissionComponentRing.cs" t="Include" />
                 </e>
                 <e p="EmissionComponent.cs" t="Include" />
+                <e p="Impact" t="Include">
+                  <e p="ImpactComponentDamage.cs" t="Include" />
+                </e>
                 <e p="ImpactComponent.cs" t="Include" />
               </e>
               <e p="SpellSystem.cs" t="Include" />
@@ -52,6 +55,7 @@
             <e p="UIPanel.cs" t="Include" />
           </e>
         </e>
+        <e p="Test.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
