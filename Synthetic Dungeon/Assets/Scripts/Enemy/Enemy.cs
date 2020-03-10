@@ -23,10 +23,13 @@ namespace Enemy
         private int _magicPower;
 
         //todo: Make A State machine later
-        enum State
+        private enum State
         {
-            
+            PATROL,
+            ATTACK,
+            DEAD
         }
+        private State _state;
 
         public void Spawn(EnemyManager enemyManager, Transform spawnPosition, CoreData coreData, EnemyData enemyData)
         {
@@ -43,7 +46,7 @@ namespace Enemy
             SetupProperties();
         }
 
-        public virtual void MoveTowards(Transform target)
+        public virtual void MoveTowardsTarget(Transform target)
         {
             Vector3 targetVector = target.position - transform.position;
             float distance = Mathf.Abs(targetVector.magnitude);
@@ -63,6 +66,7 @@ namespace Enemy
 
             if (_currentHealth <= 0)
             {
+                _state = State.DEAD;
                 GameManager.LogMessage("Enemy Has Died");
             }
         }
@@ -71,6 +75,8 @@ namespace Enemy
         {
             _currentHealth = _maxHealth;
             _currentMana = _maxMana;
+
+            _state = State.ATTACK;
         }
     }
 }

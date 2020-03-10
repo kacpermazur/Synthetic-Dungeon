@@ -7,6 +7,11 @@ namespace Enemy
 {
     public class EnemyManager : MonoBehaviour, IInitializable, IOnExecute
     {
+        [SerializeField] private EnemyVar[] enemyPool;
+
+        private List<Enemy> _activeEnemies;
+        private List<Enemy> _inactiveEnemies;
+        
         public bool Initialize()
         {
             GameManager.LogMessage("Enemy Manager Active");
@@ -17,5 +22,17 @@ namespace Enemy
         {
 
         }
+
+        private void SpawnTestEnemy()
+        {
+            
+        }
+    }
+
+    [System.Serializable]
+    public struct EnemyVar
+    {
+        public Enemy enemy;
+        public GameObject gameObject;
     }
 }
