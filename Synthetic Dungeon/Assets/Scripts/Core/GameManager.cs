@@ -18,14 +18,17 @@ namespace Core
         [Header("Managers")]
         [SerializeField] private UIManager _uiManager;
         [SerializeField] private PlayerManager _playerManager;
+        [SerializeField] private EnemyManager _enemyManager;
         
         public static GameManager Instance => _instance;
-        public UIManager UiManager => _uiManager;
+        public UIManager UiManager => _uiManager; 
         public PlayerManager PlayerManager => _playerManager;
+        public EnemyManager EnemyManager => _enemyManager;
 
         //todo: Move this out later
         private bool _isPlayerActive;
-        
+        private bool _isEnemyManagerActive;
+
         public enum MessageType
         {
             MESSAGE,
@@ -48,19 +51,32 @@ namespace Core
             {
                 _playerManager.OnExecute();
             }
+
+            if (_isEnemyManagerActive)
+            {
+                _enemyManager.OnExecute();
+            }
         }
 
         private void Initialize()
         {
             _playerInputActions = new PlayerInputActions();
 
-            if(!_uiManager.Initialize())
+            if (!_uiManager.Initialize())
+            {
                 LogMessage("Error: Please Reference UIManager!", MessageType.ALERT);
+            }
 
             _isPlayerActive = _playerManager.Initialize();
             if (!_isPlayerActive)
             {
                 LogMessage("PlayerManager not initialized!", MessageType.ALERT);
+            }
+            
+            _isEnemyManagerActive = _enemyManager.Initialize();
+            if (!_enemyManager)
+            {
+                LogMessage("EnemyManager not initialized!", MessageType.ALERT);
             }
         }
         
