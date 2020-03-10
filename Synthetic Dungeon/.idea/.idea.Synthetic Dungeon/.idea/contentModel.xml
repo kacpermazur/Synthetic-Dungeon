@@ -8,6 +8,9 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Core" t="Include">
+            <e p="Data" t="Include">
+              <e p="CoreData.cs" t="Include" />
+            </e>
             <e p="GameManager.cs" t="Include" />
             <e p="IInitializable.cs" t="Include" />
             <e p="IOnExecute.cs" t="Include" />

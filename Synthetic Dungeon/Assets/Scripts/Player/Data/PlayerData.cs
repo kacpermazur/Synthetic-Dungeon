@@ -4,17 +4,11 @@ using UnityEngine;
 
 namespace Player.Data
 {
-    [CreateAssetMenuAttribute(fileName = "PlayerStats_")]
+    [CreateAssetMenuAttribute(fileName = "Player_Properties_")]
     public class PlayerData : ScriptableObject
     {
         [Header("Properties")] 
         public float movementSpeed;
         public float rotationSpeed;
-
-        [Header("Statistics")] 
-        public int health;
-        public int mana;
-        public int toughness;
-        public int magicPower;
     }
 }
