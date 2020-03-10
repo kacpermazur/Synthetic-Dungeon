@@ -14,5 +14,6 @@ namespace Enemy.Data
         [Header("Movement")]
         public float movementSpeed;
         public float rotationSpeed;
+        public float distanceToPlayer;
     }
 }

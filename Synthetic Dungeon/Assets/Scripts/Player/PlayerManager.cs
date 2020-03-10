@@ -1,20 +1,22 @@
 ﻿using Core;
 using Player.Data;
+using Player.Spells;
 using UnityEngine;
 
 namespace Player
 {
-    [RequireComponent(typeof(Rigidbody), typeof(PlayerMovement))]
+    [RequireComponent(typeof(Rigidbody), typeof(PlayerMovement), typeof(SpellSystem))]
     public class PlayerManager : MonoBehaviour, IInitializable, IOnExecute
     {
         private PlayerMovement _playerMovement;
+        private SpellSystem _spellSystem;
 
         [SerializeField] private PlayerData playerData;
         
         private Transform _transform;
         private Rigidbody _rigidBody;
 
-        private bool canPlayerMove;
+        private bool _enabledControls;
 
         public Transform Transform => _transform;
         public Rigidbody Rigidbody => _rigidBody;
@@ -30,29 +32,29 @@ namespace Player
             _transform = GetComponent<Transform>();
             _rigidBody = GetComponent<Rigidbody>();
             _playerMovement = GetComponent<PlayerMovement>();
+            _spellSystem = GetComponent<SpellSystem>();
 
-            _playerMovement.Initialize();
-            canPlayerMove = true;
-
-            return true;
+            _enabledControls = _playerMovement.Initialize() && _spellSystem.Initialize();
+            return _enabledControls;
         }
 
         public void OnExecute()
         {
-            if (canPlayerMove)
+            if (_enabledControls)
             {
                 _playerMovement.OnExecute();
+                _spellSystem.OnExecute();
             }
         }
 
         public void EnableControls()
         {
-            canPlayerMove = true;
+            _enabledControls = true;
         }
         
         public void DisableControls()
         {
-            canPlayerMove = false;
+            _enabledControls = false;
         }
     }
 }

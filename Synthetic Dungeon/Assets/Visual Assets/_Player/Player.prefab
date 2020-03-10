@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5562749223766712838}
   - component: {fileID: 8166046716595815007}
   - component: {fileID: 8813238642058270020}
-  - component: {fileID: 6349857230046521959}
   m_Layer: 0
   m_Name: hand
   m_TagString: Untagged
@@ -80,19 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6349857230046521959
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2364970351286912851}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6759311466908082868
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,6 +95,7 @@ GameObject:
   - component: {fileID: 1376349395}
   - component: {fileID: 1652013494884333182}
   - component: {fileID: 6689944570720383250}
+  - component: {fileID: 64637445429769319}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -201,7 +188,7 @@ Rigidbody:
   m_GameObject: {fileID: 6759311466908082868}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -277,5 +264,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1556e4b472edff142ac852ead9810c87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &64637445429769319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6759311466908082868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 028b0c17829317049a6841c145ce956c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

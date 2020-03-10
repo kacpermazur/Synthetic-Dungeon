@@ -56,7 +56,7 @@ namespace Enemy
 
             transform.rotation = Quaternion.LookRotation(targetVector, Vector3.up) * Quaternion.Euler(0, -90, 0);
 
-            if (distance >= 1.1f)
+            if (distance >= _enemyData.distanceToPlayer)
             {
                 transform.position += _enemyData.movementSpeed * Time.deltaTime * targetVector.normalized;
             }

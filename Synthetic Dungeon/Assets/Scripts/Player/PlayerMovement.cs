@@ -24,12 +24,13 @@ namespace Player
         private void Movement()
         {
             Vector3 direction = new Vector3(_onMoveDir.x, 0, _onMoveDir.y);
+            
 
             if (direction != Vector3.zero)
             {
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction),
                     Time.deltaTime * _playerData.rotationSpeed);
-
+                
                 transform.position += _playerData.movementSpeed * Time.deltaTime * transform.right;
             }
         }
