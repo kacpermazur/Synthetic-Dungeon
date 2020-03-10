@@ -393,7 +393,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 75.5
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -418,13 +418,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.28776088, y: 0.6459053, z: -0.287761, w: 0.64590526}
-  m_LocalPosition: {x: -4.69, y: 9.93, z: -0}
+  m_LocalRotation: {x: 0.34375566, y: 0.6179256, z: -0.3437558, w: 0.6179255}
+  m_LocalPosition: {x: -3.77, y: 10.5, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 48.027, y: 90.00001, z: 0}
+  m_LocalEulerAnglesHint: {x: 58.175003, y: 90.00001, z: 0}
 --- !u!1 &1265358588
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,13 +756,13 @@ PrefabInstance:
         type: 3}
       propertyPath: emissionComponent
       value: 
-      objectReference: {fileID: 3113307303074362301, guid: f80b1fc725332b046bca6fa37ea42da2,
+      objectReference: {fileID: 2588681289720224035, guid: 1e8b56c9355bd2943a120f2191968f86,
         type: 3}
     - target: {fileID: 64637445429769319, guid: fd6782c7d42c4b441b2465ffa48d19be,
         type: 3}
       propertyPath: impactComponent
       value: 
-      objectReference: {fileID: 3113307303074362300, guid: f80b1fc725332b046bca6fa37ea42da2,
+      objectReference: {fileID: -9009297833861292804, guid: 1e8b56c9355bd2943a120f2191968f86,
         type: 3}
     - target: {fileID: 1358311805882367584, guid: fd6782c7d42c4b441b2465ffa48d19be,
         type: 3}

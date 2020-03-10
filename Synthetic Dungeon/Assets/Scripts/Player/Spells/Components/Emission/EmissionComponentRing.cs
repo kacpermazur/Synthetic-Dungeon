@@ -1,33 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Core;
-using Player.Spells.Components;
 using UnityEngine;
 
-public class EmissionComponentRing : EmissionComponent
+namespace Player.Spells.Components
 {
-    private const int NumPoints = 5;
-    private const float RadiusX = 1f;
-    private const float RadiusY = 1f;
-    
-    public override Vector3[] GetEmissionShape()
+    public class EmissionComponentRing : EmissionComponent
     {
-        Vector3[] spellEmitters = new Vector3[NumPoints];
+        private const int NumPoints = 50;
+        private const float RadiusX = 1f;
+        private const float RadiusZ = 1f;
 
-        Vector3 pos = GameManager.Instance.PlayerManager.transform.position;
-        Vector3 centerPos = new Vector3(pos.x, 0.5f, pos.z);
-            
-        for(int i = 0; i < NumPoints; i++)
+        public override Vector3[] GetEmissionShape(Vector3 origin)
         {
-            float pointNum = (i * 1.0f) / NumPoints;
-            float angle = pointNum * Mathf.PI * 2;
+            Vector3[] spellEmitters = new Vector3[NumPoints];
 
-            float x = Mathf.Sin(angle) * RadiusX;
-            float y = Mathf.Cos(angle) * RadiusY;
+            Vector3 pos = origin;
+            Vector3 centerPos = new Vector3(pos.x, 0.5f, pos.z);
 
-            spellEmitters[i] = new Vector3(x, 0, y) + centerPos;
+            for (int i = 0; i < NumPoints; i++)
+            {
+                float pointNum = (i * 1.0f) / NumPoints;
+                float angle = pointNum * Mathf.PI * 2;
+
+                float x = Mathf.Sin(angle) * RadiusX;
+                float z = Mathf.Cos(angle) * RadiusZ;
+
+                spellEmitters[i] = new Vector3(x, 0, z) + centerPos;
+            }
+
+            return spellEmitters;
         }
-
-        return spellEmitters;
     }
 }

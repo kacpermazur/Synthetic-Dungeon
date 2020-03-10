@@ -12,32 +12,38 @@ namespace Player.Spells.Components
     public abstract class ImpactComponent : MonoBehaviour
     {
         private float _lifeTime = 3f;
-        private Vector3 _playerPos;
+        protected Vector3 PlayerPos;
         
-        
-        public void SpawnProjectile(Vector3 spawnPoint, Vector3 playerPos)
+        //todo: remove these later
+        protected bool IsActive;
+                
+        public void SpawnProjectile(Vector3 spawnPoint, Vector3 origin)
         {
-            _playerPos = playerPos;
             var obj = Instantiate(this, spawnPoint, Quaternion.identity);
+            obj.IsActive = true;
+            obj.PlayerPos = origin;
         }
 
         public void Update()
         {
-            float delta = Time.deltaTime;
-            _lifeTime -= delta;
-            
-            if (_lifeTime < 0)
+            if (IsActive)
             {
-                DestroyProjectile();
-            }
-            
-            Vector3 dir = transform.position - _playerPos;
-            dir = dir.normalized;
-            dir.y = 0.0f;
+                float delta = Time.deltaTime;
+                _lifeTime -= delta;
 
-            //transform.rotation = Quaternion.LookRotation(dir);
-            
-            transform.position += delta * 15.0f * dir;
+                if (_lifeTime < 0)
+                {
+                    DestroyProjectile();
+                }
+
+                Vector3 dir = transform.position - PlayerPos;
+                dir.y = 0;
+                dir = dir.normalized;
+
+                //transform.rotation = Quaternion.LookRotation(dir);
+
+                transform.position += delta * 15.0f * dir;
+            }
         }
         
         protected virtual void OnHit(Enemy enemy)
@@ -47,6 +53,7 @@ namespace Player.Spells.Components
 
         protected virtual void DestroyProjectile()
         {
+            IsActive = false;
             Destroy(gameObject);
         }
         

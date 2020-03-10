@@ -27,14 +27,11 @@ namespace Player.Spells
 
         public void CastSpell()
         {
-            _emissionPoints = emissionComponent.GetEmissionShape();
-            Vector3 playerPos = GameManager.Instance.PlayerManager.transform.position;
-
-            Debug.Log(playerPos);
+            _emissionPoints = emissionComponent.GetEmissionShape(GameManager.Instance.PlayerManager.transform.position);
             
             foreach (var point in _emissionPoints)
             {
-                impactComponent.SpawnProjectile(point, playerPos);
+                impactComponent.SpawnProjectile(point, GameManager.Instance.PlayerManager.Transform.position);
             }
         }
 
