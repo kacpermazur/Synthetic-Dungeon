@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Player.Data
 {
-    [CreateAssetMenuAttribute(fileName = "Player_Properties_")]
+    [CreateAssetMenuAttribute(fileName = "Player_Properties_", menuName = "Data/Player_Properties")]
     public class PlayerData : ScriptableObject
     {
         [Header("Properties")] 

@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Player;
+﻿using Player;
+using Enemy;
 using UI;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Core
 {

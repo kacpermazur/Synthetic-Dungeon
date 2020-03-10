@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Core.Data
 {
-    [CreateAssetMenuAttribute(fileName = "Core_Stats_")]
+    [CreateAssetMenuAttribute(fileName = "Core_Stats_", menuName = "Data/Core_Stats")]
     public class CoreData : ScriptableObject
     {
         [Header("Statistics")] 

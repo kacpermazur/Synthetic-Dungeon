@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using Core;
 using UnityEngine;
 
-public class EnemyManager : MonoBehaviour, IInitializable, IOnExecute
+namespace Enemy
 {
-    public bool Initialize()
+    public class EnemyManager : MonoBehaviour, IInitializable, IOnExecute
     {
-        GameManager.LogMessage("Enemy Manager Active");
-        return true;
-    }
+        public bool Initialize()
+        {
+            GameManager.LogMessage("Enemy Manager Active");
+            return true;
+        }
 
-    public void OnExecute()
-    {
-        
+        public void OnExecute()
+        {
+
+        }
     }
 }
