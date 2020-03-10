@@ -51,8 +51,9 @@ namespace Enemy
             Vector3 targetVector = target.position - transform.position;
             float distance = Mathf.Abs(targetVector.magnitude);
 
-            transform.rotation = Quaternion.LookRotation(targetVector,Vector3.forward);
-
+            transform.rotation = Quaternion.LookRotation(targetVector,Vector3.up);
+            
+            
             if (distance >= 0.5f)
             {
                 transform.position += _enemyData.movementSpeed * Time.deltaTime * targetVector.normalized;

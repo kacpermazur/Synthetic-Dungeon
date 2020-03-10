@@ -59,8 +59,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Data/EnemyData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Types/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Types/EnemyMeele.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
       </list>
     </option>
   </component>
@@ -122,7 +122,7 @@
       <workItem from="1583665995085" duration="74000" />
       <workItem from="1583667265513" duration="10074000" />
       <workItem from="1583780190787" duration="41000" />
-      <workItem from="1583807392899" duration="6467000" />
+      <workItem from="1583807392899" duration="7740000" />
     </task>
     <servers />
   </component>
