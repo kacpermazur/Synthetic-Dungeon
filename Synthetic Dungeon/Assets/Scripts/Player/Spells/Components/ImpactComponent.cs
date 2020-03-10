@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using Core;
 using UnityEngine;
+using Quaternion = UnityEngine.Quaternion;
+using Vector3 = UnityEngine.Vector3;
 
 namespace Player.Spells.Components
 {
@@ -32,7 +34,9 @@ namespace Player.Spells.Components
             Vector3 dir = transform.position - _playerPos;
             dir.y = 0.0f;
 
-            transform.position += delta * 15.0f * dir.normalized;
+            transform.rotation = Quaternion.LookRotation(dir);
+            
+            transform.position += delta * 15.0f * transform.right;
         }
         
         protected virtual void OnHit(Enemy enemy)
