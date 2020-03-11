@@ -1,18 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class EffectComponent : MonoBehaviour
+namespace Player.Spells.Components
 {
-    // Start is called before the first frame update
-    void Start()
+    using Enemy;
+    public abstract class EffectComponent : MonoBehaviour, IInitializable, IOnExecute
     {
+        //private 
         
-    }
+        public bool Initialize()
+        {
+            return true;
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void OnExecute()
+        {
+
+        }
+
+        public EffectComponent ApplyEffect(Enemy enemy)
+        {
+            return null;
+        }
     }
 }

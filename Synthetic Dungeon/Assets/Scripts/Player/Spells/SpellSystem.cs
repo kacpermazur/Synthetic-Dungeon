@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Core;
+﻿using Core;
 using Player.Spells.Components;
 using UnityEngine;
 
@@ -10,6 +6,8 @@ namespace Player.Spells
 {
     public class SpellSystem : MonoBehaviour, IInitializable, IOnExecute
     {
+        private PlayerManager _playerManager;
+        
         [SerializeField] private EmissionComponent emissionComponent;
         [SerializeField] private ImpactComponent impactComponent;
         [SerializeField] private EffectComponent effectComponent;
@@ -18,6 +16,7 @@ namespace Player.Spells
 
         public bool Initialize()
         {
+            _playerManager = GameManager.Instance.PlayerManager;
             return true;
         }
         
@@ -27,11 +26,11 @@ namespace Player.Spells
 
         public void CastSpell()
         {
-            _emissionPoints = emissionComponent.GetEmissionShape(GameManager.Instance.PlayerManager.transform.position);
+            _emissionPoints = emissionComponent.GetEmissionShape(_playerManager.Transform.position);
             
             foreach (var point in _emissionPoints)
             {
-                impactComponent.SpawnProjectile(point, GameManager.Instance.PlayerManager.Transform.position);
+                impactComponent.SpawnProjectile(point, _playerManager.Transform.position);
             }
         }
 

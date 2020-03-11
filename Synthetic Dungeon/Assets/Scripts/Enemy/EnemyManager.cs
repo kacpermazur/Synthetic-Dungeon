@@ -10,21 +10,21 @@ namespace Enemy
     public class EnemyManager : MonoBehaviour, IInitializable, IOnExecute
     {
         [SerializeField] private EnemyVar[] enemyPool;
-
         [SerializeField] private Transform spawnPoint;
-        
+
+        private Transform _playerTransform;
         private List<Enemy> _activeEnemies;
 
         public bool Initialize()
         {
+            _playerTransform = GameManager.Instance.PlayerManager.Transform;
             _activeEnemies = new List<Enemy>();
 
             for (int i = 0; i < 30; i++)
             {
                 SpawnTestEnemy();
             }
-            
-            
+
             return true;
         }
 
@@ -34,7 +34,7 @@ namespace Enemy
             {
                 foreach (var actor in _activeEnemies)
                 { 
-                    actor.MoveTowardsTarget(GameManager.Instance.PlayerManager.Transform);
+                    actor.OnExecute();
                 }
             }
         }
@@ -50,9 +50,8 @@ namespace Enemy
             var instance = Instantiate(enemyPool[0].gameObject);
             var e = instance.GetComponent<Enemy>();
             
-            e.Init(this, enemyPool[0].enemyStats , enemyPool[0].enemyProperties);
-            
-            e.Spawn(new Vector3(Random.Range(-20.0f,20.0f), 1, Random.Range(-20.0f,20.0f)));
+            e.Initialize(this, enemyPool[0].enemyStats , enemyPool[0].enemyProperties);
+            e.Spawn(new Vector3(Random.Range(-20.0f,20.0f), 1, Random.Range(-20.0f,20.0f)), _playerTransform);
             
             _activeEnemies.Add(e);
         }

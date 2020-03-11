@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using Core;
 using Core.Data;
 using Enemy.Data;
+using Player.Spells.Components;
 using UnityEngine;
 
 namespace Enemy
 {
-    public abstract class Enemy : MonoBehaviour
+    public abstract class Enemy : MonoBehaviour, IOnExecute
     {
         private EnemyManager _enemyManager;
-        
         private EnemyData _enemyData;
 
         private int _maxHealth;
@@ -22,6 +22,9 @@ namespace Enemy
         private int _toughness;
         private int _magicPower;
 
+        private List<EffectComponent> _effectComponents;
+        private Transform _target;
+
         //todo: Make A State machine later
         private enum State
         {
@@ -31,7 +34,7 @@ namespace Enemy
         }
         private State _state;
 
-        public void Init(EnemyManager enemyManager, CoreData coreData, EnemyData enemyData)
+        public void Initialize(EnemyManager enemyManager, CoreData coreData, EnemyData enemyData)
         {
             _enemyManager = enemyManager;
             _enemyData = enemyData;
@@ -44,9 +47,20 @@ namespace Enemy
             SetupProperties();
         }
 
-        public void Spawn(Vector3 spawnPosition)
+        public void OnExecute()
         {
+            MoveTowardsTarget(_target);
+        }
+
+        public void Spawn(Vector3 spawnPosition, Transform target)
+        {
+            _target = target;
             transform.position = spawnPosition;
+        }
+        
+        public void ApplyEffect(EffectComponent effectComponent)
+        {
+            
         }
 
         public virtual void MoveTowardsTarget(Transform target)
@@ -69,11 +83,17 @@ namespace Enemy
 
             if (_currentHealth <= 0)
             {
-                _state = State.DEAD;
-
-                _enemyManager.RemoveFromActive(this);
-                gameObject.SetActive(false);
+                DisableThis();
             }
+        }
+
+        private void DisableThis()
+        {
+            _state = State.DEAD;
+            _target = null;
+
+            _enemyManager.RemoveFromActive(this);
+            gameObject.SetActive(false);
         }
 
         private void SetupProperties()
