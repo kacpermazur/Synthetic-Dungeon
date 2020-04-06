@@ -4959,6 +4959,46 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 413540, guid: 06ddc49c92c02ad45977687a67899e90, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.2893028
+      objectReference: {fileID: 0}
+    - target: {fileID: 413540, guid: 06ddc49c92c02ad45977687a67899e90, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.056966946
+      objectReference: {fileID: 0}
+    - target: {fileID: 413540, guid: 06ddc49c92c02ad45977687a67899e90, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0053207106
+      objectReference: {fileID: 0}
+    - target: {fileID: 413540, guid: 06ddc49c92c02ad45977687a67899e90, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9555263
+      objectReference: {fileID: 0}
+    - target: {fileID: 413540, guid: 06ddc49c92c02ad45977687a67899e90, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.42011064
+      objectReference: {fileID: 0}
+    - target: {fileID: 413540, guid: 06ddc49c92c02ad45977687a67899e90, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.2021556
+      objectReference: {fileID: 0}
+    - target: {fileID: 413540, guid: 06ddc49c92c02ad45977687a67899e90, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -33.523003
+      objectReference: {fileID: 0}
+    - target: {fileID: 413540, guid: 06ddc49c92c02ad45977687a67899e90, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7837124
+      objectReference: {fileID: 0}
+    - target: {fileID: 413540, guid: 06ddc49c92c02ad45977687a67899e90, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 2.966
+      objectReference: {fileID: 0}
+    - target: {fileID: 413540, guid: 06ddc49c92c02ad45977687a67899e90, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -7.7170005
+      objectReference: {fileID: 0}
     - target: {fileID: 420398, guid: 06ddc49c92c02ad45977687a67899e90, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6
