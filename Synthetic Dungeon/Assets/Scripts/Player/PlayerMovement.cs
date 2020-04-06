@@ -7,6 +7,8 @@ namespace Player
 {
     public class PlayerMovement : MonoBehaviour, IInitializable, IOnExecute
     {
+        [SerializeField] private float _playerRotationOffset = 90f;
+        
         private PlayerData _playerData;
         private Vector2 _onMoveDir;
 
@@ -23,15 +25,17 @@ namespace Player
 
         private void Movement()
         {
-            Vector3 direction = new Vector3(_onMoveDir.x, 0, _onMoveDir.y);
+            Vector3 direction = new Vector3(_onMoveDir.y, 0, -_onMoveDir.x);
             
 
             if (direction != Vector3.zero)
             {
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction),
+
+                transform.rotation = Quaternion.Slerp(transform.rotation,  Quaternion.LookRotation(direction),
                     Time.deltaTime * _playerData.rotationSpeed);
                 
-                transform.position += _playerData.movementSpeed * Time.deltaTime * transform.right;
+                
+                transform.position += _playerData.movementSpeed * Time.deltaTime * transform.forward;
             }
         }
 

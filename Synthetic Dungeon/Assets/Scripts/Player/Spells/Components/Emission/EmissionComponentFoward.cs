@@ -17,7 +17,7 @@ namespace Player.Spells.Components
             Vector3 pos = origin;
             Vector3 centerPos = new Vector3(pos.x, 0.5f, pos.z);
 
-            float pointNum = (GameManager.Instance.PlayerManager.transform.rotation.eulerAngles.y+90 * 1.0f) / 360;
+            float pointNum = (GameManager.Instance.PlayerManager.transform.rotation.eulerAngles.y * 1.0f) / 360;
 
             float angle = pointNum * Mathf.PI * 2;
 
