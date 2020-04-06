@@ -756,13 +756,13 @@ PrefabInstance:
         type: 3}
       propertyPath: emissionComponent
       value: 
-      objectReference: {fileID: 2588681289720224035, guid: 1e8b56c9355bd2943a120f2191968f86,
+      objectReference: {fileID: -7556699248939958194, guid: ecfa840d4f014b440af260cb8beeaeee,
         type: 3}
     - target: {fileID: 64637445429769319, guid: fd6782c7d42c4b441b2465ffa48d19be,
         type: 3}
       propertyPath: impactComponent
       value: 
-      objectReference: {fileID: -9009297833861292804, guid: 1e8b56c9355bd2943a120f2191968f86,
+      objectReference: {fileID: 3113307303074362300, guid: ecfa840d4f014b440af260cb8beeaeee,
         type: 3}
     - target: {fileID: 1358311805882367584, guid: fd6782c7d42c4b441b2465ffa48d19be,
         type: 3}
