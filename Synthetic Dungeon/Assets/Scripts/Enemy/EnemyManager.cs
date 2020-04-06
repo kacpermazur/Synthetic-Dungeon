@@ -20,10 +20,13 @@ namespace Enemy
             _playerTransform = GameManager.Instance.PlayerManager.Transform;
             _activeEnemies = new List<Enemy>();
 
+            
+            /*
             for (int i = 0; i < 30; i++)
             {
                 SpawnTestEnemy();
             }
+            */
 
             return true;
         }
