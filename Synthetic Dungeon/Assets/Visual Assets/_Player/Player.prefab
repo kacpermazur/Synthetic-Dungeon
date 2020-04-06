@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3de4c69085b280d44ac3142a686bac05, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -144,7 +144,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3de4c69085b280d44ac3142a686bac05, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -278,3 +278,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 028b0c17829317049a6841c145ce956c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emissionComponent: {fileID: -7556699248939958194, guid: ecfa840d4f014b440af260cb8beeaeee,
+    type: 3}
+  impactComponent: {fileID: 3113307303074362300, guid: ecfa840d4f014b440af260cb8beeaeee,
+    type: 3}
+  effectComponent: {fileID: 0}
