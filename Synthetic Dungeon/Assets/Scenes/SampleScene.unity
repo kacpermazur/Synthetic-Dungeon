@@ -1429,7 +1429,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1512611127478063301}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1512611127478063302}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8442f2a0b37e69840a55b22281bc026f, type: 3}
@@ -10069,6 +10069,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1512611126613718051, guid: b68e3a56e98711f4abbd4330c701bbb7,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6b329e56717d77445a0743b89709602d, type: 2}
+    - target: {fileID: 1512611126613718051, guid: b68e3a56e98711f4abbd4330c701bbb7,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512611126617929119, guid: b68e3a56e98711f4abbd4330c701bbb7,
+        type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512611126617929119, guid: b68e3a56e98711f4abbd4330c701bbb7,
+        type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 97.63889
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512611126617929119, guid: b68e3a56e98711f4abbd4330c701bbb7,
+        type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 94.20374
+      objectReference: {fileID: 0}
     - target: {fileID: 1512611126620833017, guid: b68e3a56e98711f4abbd4330c701bbb7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10124,10 +10149,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1512611126621003231, guid: b68e3a56e98711f4abbd4330c701bbb7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1512611126621094711, guid: b68e3a56e98711f4abbd4330c701bbb7,
         type: 3}
       propertyPath: m_Name
       value: Character_Knight_01_Black
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512611126621152537, guid: b68e3a56e98711f4abbd4330c701bbb7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1512611127787737320, guid: b68e3a56e98711f4abbd4330c701bbb7,
         type: 3}
@@ -10136,3 +10171,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b68e3a56e98711f4abbd4330c701bbb7, type: 3}
+--- !u!1 &1512611127478063302 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1512611126621094711, guid: b68e3a56e98711f4abbd4330c701bbb7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1512611127478063301}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1512611127478063303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512611127478063302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e729bee4c7360c45803b3543c2b8922, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0

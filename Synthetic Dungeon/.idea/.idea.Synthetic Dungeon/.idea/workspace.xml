@@ -15,6 +15,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/IInitializable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/AnimationTester.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponentDamage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -81,6 +82,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/Data/CameraData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/AnimationTester.cs" />
       </list>
     </option>
   </component>
@@ -139,6 +141,7 @@
       <workItem from="1586194599274" duration="429000" />
       <workItem from="1586195511256" duration="3014000" />
       <workItem from="1589217829105" duration="2516000" />
+      <workItem from="1589230665349" duration="771000" />
     </task>
     <servers />
   </component>
