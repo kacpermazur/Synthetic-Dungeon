@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc25e0b07b4bc144b220992627dceaf, type: 3}
   m_Name: Camera_Data_Default
   m_EditorClassIdentifier: 
-  smoothSpeed: 0.2
-  offset: {x: 0, y: 0, z: 0}
+  smoothSpeed: 18
+  offset: {x: -7, y: 12, z: 0}

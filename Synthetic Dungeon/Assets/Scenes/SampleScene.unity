@@ -4214,7 +4214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1206833888}
-  data: {fileID: 0}
+  data: {fileID: 11400000, guid: 68b759ad9475cd342abf32de98fe4d25, type: 2}
 --- !u!1001 &984020195
 PrefabInstance:
   m_ObjectHideFlags: 0
