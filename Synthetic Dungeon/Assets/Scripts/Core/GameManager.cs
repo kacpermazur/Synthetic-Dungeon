@@ -1,4 +1,5 @@
-﻿using Player;
+﻿using Camera;
+using Player;
 using Enemy;
 using UI;
 using UnityEngine;
@@ -12,6 +13,7 @@ namespace Core
         private static GameManager _instance;
 
         [Header("Managers")]
+        [SerializeField] private CameraManager _cameraManager;
         [SerializeField] private UIManager _uiManager;
         [SerializeField] private PlayerManager _playerManager;
         [SerializeField] private EnemyManager _enemyManager;
@@ -22,6 +24,7 @@ namespace Core
         public EnemyManager EnemyManager => _enemyManager;
 
         //todo: Move this out later
+        private bool _isCameraManagerActive;
         private bool _isPlayerActive;
         private bool _isEnemyManagerActive;
 
@@ -52,11 +55,15 @@ namespace Core
             {
                 _enemyManager.OnExecute();
             }
+            
+            if (_isCameraManagerActive)
+            {
+                _cameraManager.OnExecute();
+            }
         }
 
         private void Initialize()
         {
-
             if (!_uiManager.Initialize())
             {
                 LogMessage("Error: Please Reference UIManager!", MessageType.ALERT);
@@ -72,6 +79,12 @@ namespace Core
             if (!_enemyManager)
             {
                 LogMessage("EnemyManager not initialized!", MessageType.ALERT);
+            }
+
+            _isCameraManagerActive = _cameraManager.Initialize();
+            if (!_isCameraManagerActive)
+            {
+                LogMessage("CameraManager not initialized!", MessageType.ALERT);
             }
         }
         

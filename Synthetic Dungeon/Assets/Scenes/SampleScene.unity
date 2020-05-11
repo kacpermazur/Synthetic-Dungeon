@@ -4097,6 +4097,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4185,7 +4186,6 @@ MonoBehaviour:
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
-  m_CameraOutput: 0
   m_Cameras: []
   m_RendererIndex: -1
   m_VolumeLayerMask:
@@ -4197,9 +4197,24 @@ MonoBehaviour:
   m_AntialiasingQuality: 1
   m_StopNaN: 0
   m_Dithering: 0
+  m_ClearDepth: 1
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16469c99f85f63a4190bfa722ef28502, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1206833888}
+  data: {fileID: 0}
 --- !u!1001 &984020195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5251,6 +5266,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 471116, guid: 835caca5433f2a44b95816ffef0a5187,
     type: 3}
   m_PrefabInstance: {fileID: 1190882729}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1206833888 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1512611126620833017, guid: b68e3a56e98711f4abbd4330c701bbb7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1512611127478063301}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1239814217
 PrefabInstance:
@@ -8732,6 +8753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9998224aaedfd243a157a29f788ea5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraManager: {fileID: 963194230}
   _uiManager: {fileID: 1366018864}
   _playerManager: {fileID: 330645550}
   _enemyManager: {fileID: 2031503846}
