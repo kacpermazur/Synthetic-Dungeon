@@ -29,7 +29,6 @@ namespace Enemy.AI
             foreach (var transition in transitions)
             {
                 bool conditionMet = transition.decision.Decide(stateController);
-                
                 stateController.ChangeState(conditionMet ? transition.trueState : transition.falseState);
             }
         }
