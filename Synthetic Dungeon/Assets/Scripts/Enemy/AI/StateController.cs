@@ -13,7 +13,7 @@ namespace Enemy.AI
         [SerializeField] private Vector3 _targetPoint;
 
         [SerializeField] private State currentState;
-        [SerializeField] private State emptyState;
+        [SerializeField] private State defaultState;
         [SerializeField] private EnemyData _enemyData;
         
         public Vector3 AgentSpawnPoint => _spawnPoint;
@@ -43,6 +43,11 @@ namespace Enemy.AI
         public void OnExecute()
         {
             currentState.UpdateState(this);
+        }
+
+        public void SetToDefault()
+        {
+            currentState = defaultState;
         }
 
         public void ChangeState(State state)

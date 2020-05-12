@@ -26,11 +26,13 @@
             <e p="AI" t="Include">
               <e p="Actions" t="Include">
                 <e p="Action.cs" t="Include" />
+                <e p="AggressivePursuit.cs" t="Include" />
                 <e p="MeleeAction.cs" t="Include" />
                 <e p="PatrolAction.cs" t="Include" />
               </e>
               <e p="Decisions" t="Include">
                 <e p="Decision.cs" t="Include" />
+                <e p="PlayerAttackRangeDecision.cs" t="Include" />
                 <e p="PlayerFoundDecision.cs" t="Include" />
               </e>
               <e p="StateController.cs" t="Include" />

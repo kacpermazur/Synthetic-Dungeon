@@ -12,12 +12,10 @@ namespace Enemy.AI
         {
             Patrol(stateController);
         }
-
-        private bool _newFound;
         
         private void Patrol(StateController stateController)
         {
-            if (Vector3.Distance(stateController.transform.position, stateController.AgentTargetPoint) > 1.1f && _newFound)
+            if (Vector3.Distance(stateController.transform.position, stateController.AgentTargetPoint) > 1.1f)
             {
                 Vector3 targetVector = stateController.AgentTargetPoint - stateController.transform.position;
                 
@@ -34,7 +32,6 @@ namespace Enemy.AI
             }
             else
             {
-                _newFound = false;
                 Vector3 sp = stateController.AgentSpawnPoint;
                 float offset = 10f;
 
@@ -42,7 +39,6 @@ namespace Enemy.AI
                     Random.Range(sp.z - offset, sp.z + offset));
                 
                 stateController.AgentTargetPoint = newPos;
-                _newFound = true;
                 GameManager.LogMessage("Patrol: new target position set");
             }
         }

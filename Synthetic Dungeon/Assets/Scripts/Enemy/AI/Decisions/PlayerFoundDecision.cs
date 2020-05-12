@@ -15,7 +15,7 @@ namespace Enemy.AI
 
         private bool PlayerDetected(StateController stateController)
         {
-            if (Vector3.Distance(stateController.transform.position, GameManager.Instance.PlayerManager.Transform.position) < 1.1f)
+            if (Vector3.Distance(stateController.transform.position, GameManager.Instance.PlayerManager.Transform.position) < stateController.AgentData.distanceToPlayerDetection)
             {
                 return true;
             }

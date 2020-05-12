@@ -11,11 +11,12 @@ namespace Enemy.Data
         [Header("Movement")]
         public float movementSpeed;
         public float rotationSpeed;
-        public float distanceToPlayerDetection;
 
         [Header("Combat")] 
         public int damage;
         public int attackRate;
+        public float distanceToPlayerDetection;
+        public float attackRange;
 
         [Header("Stats")] 
         public float health;

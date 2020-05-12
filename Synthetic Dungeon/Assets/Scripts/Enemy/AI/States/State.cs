@@ -16,7 +16,7 @@ namespace Enemy.AI
             CheckTransition(stateController);
         }
 
-        public void ExecuteAction(StateController stateController)
+        private void ExecuteAction(StateController stateController)
         {
             foreach (var action in actions)
             {
