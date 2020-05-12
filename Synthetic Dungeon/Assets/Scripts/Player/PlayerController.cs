@@ -12,9 +12,8 @@ namespace Player
         
         private PlayerData _playerData;
         private Animator _animator;
-        
         private Vector2 _onMoveDir;
-
+        
         public bool Initialize()
         {
             _animator = GetComponent<Animator>();

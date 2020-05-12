@@ -83,9 +83,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/AnimationTester.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Data/PlayerData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Action.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/MeeleAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/Decision.cs" />
@@ -104,6 +101,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponentDamage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Data/PlayerData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
       </list>
     </option>
   </component>
@@ -165,7 +165,7 @@
       <workItem from="1589230665349" duration="6972000" />
       <workItem from="1589246170411" duration="12508000" />
       <workItem from="1589264950247" duration="4089000" />
-      <workItem from="1589278200834" duration="5237000" />
+      <workItem from="1589278200834" duration="6053000" />
     </task>
     <servers />
   </component>

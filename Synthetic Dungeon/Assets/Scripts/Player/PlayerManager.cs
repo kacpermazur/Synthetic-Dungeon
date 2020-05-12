@@ -24,6 +24,12 @@ namespace Player
         public PlayerData PlayerData => playerData;
         public SpellSystem SpellSystem => _spellSystem;
 
+        private float _maxHealth;
+        private float _currentHealth;
+        
+        private float _maxMana;
+        private float _currentMana;
+
         public bool Initialize()
         {
             if (playerData == null)
@@ -36,6 +42,7 @@ namespace Player
             _playerMovement = GetComponent<PlayerController>();
             _spellSystem = GetComponent<SpellSystem>();
 
+            InitPlayerStats();
             _enabledControls = _playerMovement.Initialize() && _spellSystem.Initialize();
             return _enabledControls;
         }
@@ -48,6 +55,7 @@ namespace Player
                 _spellSystem.OnExecute();
             }
         }
+        
 
         public void EnableControls()
         {
@@ -57,6 +65,31 @@ namespace Player
         public void DisableControls()
         {
             _enabledControls = false;
+        }
+
+        public void TakeDamage(float damage)
+        {
+            float dmg = (damage - playerData.toughness < 1) ? 0 : damage;
+            _currentHealth -= dmg;
+
+            if (_currentHealth <= 0)
+            {
+                //todo: Game Over
+            }
+        }
+        
+        public void Heal(float amount)
+        {
+            _currentHealth += Mathf.Clamp(amount, 0f, _maxHealth- _currentHealth);
+        }
+
+        private void InitPlayerStats()
+        {
+            _maxHealth = playerData.health;
+            _currentHealth = _maxHealth;
+            
+            _maxMana = playerData.mana;
+            _currentMana = _maxMana;
         }
         
     }

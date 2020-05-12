@@ -11,5 +11,10 @@ namespace Player.Data
         public float movementSpeed;
         public float rotationSpeed;
         public float attackSpeed;
+        
+        [Header("Stats")] 
+        public float health;
+        public float mana;
+        public float toughness;
     }
 }
