@@ -34,13 +34,12 @@ namespace Enemy.AI
             else
             {
                 Vector3 sp = stateController.AgentSpawnPoint;
-                float offset = 10f;
+                float offset = 3f;
 
                 Vector3 newPos = new Vector3(Random.Range(sp.x - offset, sp.x + offset), sp.y,
                     Random.Range(sp.z - offset, sp.z + offset));
                 
                 stateController.AgentTargetPoint = newPos;
-                GameManager.LogMessage("Patrol: new target position set");
             }
         }
     }
