@@ -86,6 +86,7 @@
             <e p="Inventory" t="Include">
               <e p="InventoryUI.cs" t="Include" />
             </e>
+            <e p="UIGameOverlay.cs" t="Include" />
             <e p="UIManager.cs" t="Include" />
             <e p="UIPanel.cs" t="Include" />
           </e>
