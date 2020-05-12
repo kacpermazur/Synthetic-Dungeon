@@ -96,11 +96,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/MeeleAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/Decision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Transition.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/PatrolAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/MeleeAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/States/State.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerFoundDecision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/StateController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/States/State.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/PatrolAction.cs" />
       </list>
     </option>
   </component>
@@ -160,7 +160,7 @@
       <workItem from="1586195511256" duration="3014000" />
       <workItem from="1589217829105" duration="2516000" />
       <workItem from="1589230665349" duration="6972000" />
-      <workItem from="1589246170411" duration="5445000" />
+      <workItem from="1589246170411" duration="7182000" />
     </task>
     <servers />
   </component>

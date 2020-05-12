@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Core;
 using UnityEngine;
 
 namespace Enemy.AI
@@ -14,7 +15,12 @@ namespace Enemy.AI
 
         private bool PlayerDetected(StateController stateController)
         {
-            return true;
+            if (Vector3.Distance(stateController.transform.position, GameManager.Instance.PlayerManager.Transform.position) < 0.1f)
+            { 
+                GameManager.LogMessage("player Found");
+                return true;
+            }
+            return false;
         }
     }
 }

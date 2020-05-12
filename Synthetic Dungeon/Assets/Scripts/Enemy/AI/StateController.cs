@@ -1,14 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Enemy.Data;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Enemy.AI
 {
     public class StateController : MonoBehaviour, IInitializable, IOnExecute
     {
         private Vector3 _spawnPoint;
-        private Vector3 _targetPoint;
+        [SerializeField] private Vector3 _targetPoint;
 
         [SerializeField] private State currentState;
         [SerializeField] private State emptyState;
@@ -21,21 +23,44 @@ namespace Enemy.AI
             set => _targetPoint = value;
         }
         public EnemyData AgentData => _enemyData;
-        
+
+        private void Start()
+        {
+            Initialize();
+        }
+
+        public void Update()
+        {
+            OnExecute();
+        }
+
         public bool Initialize()
         {
-            _targetPoint = Vector3.zero;
+            SetPositions();
             return true;
         }
 
         public void OnExecute()
         {
-            
+            currentState.UpdateState(this);
         }
 
         public void ChangeState(State state)
         {
             currentState = state;
+        }
+
+        private void SetPositions()
+        {
+            _spawnPoint = transform.position;
+            
+            Vector3 sp = _spawnPoint;
+            float offset = 3f;
+                
+            Vector3 newPos = new Vector3(Random.Range(sp.x - offset, sp.x + offset), sp.y,
+                Random.Range(sp.z - offset, sp.z + offset));
+
+            _targetPoint = newPos;
         }
     }
 }
