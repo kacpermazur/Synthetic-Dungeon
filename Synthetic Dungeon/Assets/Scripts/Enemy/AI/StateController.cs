@@ -7,13 +7,14 @@ namespace Enemy.AI
 {
     public class StateController : MonoBehaviour, IInitializable, IOnExecute
     {
-        private EnemyData _enemyData;
-        
         private Vector3 _spawnPoint;
         private Vector3 _targetPoint;
+
+        [SerializeField] private State currentState;
+        [SerializeField] private State emptyState;
+        [SerializeField] private EnemyData _enemyData;
         
         public Vector3 AgentSpawnPoint => _spawnPoint;
-
         public Vector3 AgentTargetPoint
         {
             get => _targetPoint;
@@ -30,6 +31,11 @@ namespace Enemy.AI
         public void OnExecute()
         {
             
+        }
+
+        public void ChangeState(State state)
+        {
+            currentState = state;
         }
     }
 }
