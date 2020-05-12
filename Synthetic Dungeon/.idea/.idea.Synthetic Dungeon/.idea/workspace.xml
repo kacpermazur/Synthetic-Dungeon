@@ -74,10 +74,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/EmissionComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentRing.cs" />
         <option value="$PROJECT_DIR$/Assets/Test.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponentDamage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/SpellSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/EffectComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/ImpactComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentFoward.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/Data/CameraData.cs" />
@@ -88,7 +86,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Data/PlayerData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Action.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/MeeleAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/Decision.cs" />
@@ -101,9 +98,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerAttackRangeDecision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerWithinAttackDecision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerFoundDecision.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/StateController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/AggresivePursuit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/PatrolAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/StateController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponentDamage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
       </list>
     </option>
   </component>
@@ -164,7 +164,8 @@
       <workItem from="1589217829105" duration="2516000" />
       <workItem from="1589230665349" duration="6972000" />
       <workItem from="1589246170411" duration="12508000" />
-      <workItem from="1589264950247" duration="3936000" />
+      <workItem from="1589264950247" duration="4089000" />
+      <workItem from="1589278200834" duration="5237000" />
     </task>
     <servers />
   </component>
@@ -189,10 +190,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="794" y="236" key="RiderGenerateDialog" timestamp="1589264691108">
+    <state x="794" y="236" key="RiderGenerateDialog" timestamp="1589278775540">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="236" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589264691108" />
+    <state x="794" y="236" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589278775540" />
     <state x="186" y="125" key="SettingsEditor" timestamp="1589246785257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

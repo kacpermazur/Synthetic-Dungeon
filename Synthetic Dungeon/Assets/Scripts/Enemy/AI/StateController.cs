@@ -24,17 +24,7 @@ namespace Enemy.AI
             set => _targetPoint = value;
         }
         public EnemyData AgentData => _enemyData;
-
-        private void Start()
-        {
-            Initialize();
-        }
-
-        public void Update()
-        {
-            OnExecute();
-        }
-
+        
         public bool Initialize()
         {
             SetPositions();

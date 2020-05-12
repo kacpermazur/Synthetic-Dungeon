@@ -19,4 +19,4 @@ MonoBehaviour:
   distanceToPlayerDetection: 7
   attackRange: 2
   health: 10
-  toughness: 10
+  toughness: 1

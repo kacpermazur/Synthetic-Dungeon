@@ -2,106 +2,53 @@
 using System.Collections.Generic;
 using Core;
 using Core.Data;
+using Enemy.AI;
 using Enemy.Data;
 using Player.Spells.Components;
 using UnityEngine;
 
 namespace Enemy
 {
-    public abstract class Enemy : MonoBehaviour, IOnExecute
+    public abstract class Enemy : MonoBehaviour,IInitializable, IOnExecute
     {
-        private EnemyManager _enemyManager;
-        private EnemyData _enemyData;
-
-        private int _maxHealth;
-        private int _currentHealth;
-
-        private int _maxMana;
-        private int _currentMana;
-
-        private int _toughness;
-        private int _magicPower;
-
+        [SerializeField] private EnemyManager _enemyManager;
+        [SerializeField] private EnemyData _enemyData;
+        [SerializeField] private StateController _stateController;
+        
+        private float _currentHealth;
         private List<EffectComponent> _effectComponents;
-        private Transform _target;
-
-        //todo: Make A State machine later
-        private enum State
+        public bool Initialize()
         {
-            PATROL,
-            ATTACK,
-            DEAD
-        }
-        private State _state;
+            _stateController = GetComponent<StateController>();
+            _stateController.Initialize();
+            
+            _enemyManager = GameManager.Instance.EnemyManager;
+            _currentHealth = _enemyData.health;
 
-        public void Initialize(EnemyManager enemyManager, CoreData coreData, EnemyData enemyData)
-        {
-            _enemyManager = enemyManager;
-            _enemyData = enemyData;
-
-            _maxHealth = coreData.health;
-            _maxMana = coreData.mana;
-            _toughness = coreData.toughness;
-            _magicPower = coreData.magicPower;
-
-            SetupProperties();
+            if (_enemyData)
+            {
+                return true;
+            }
+            
+            return false;
         }
 
         public void OnExecute()
         {
-            MoveTowardsTarget(_target);
-        }
-
-        public void Spawn(Vector3 spawnPosition, Transform target)
-        {
-            _target = target;
-            transform.position = spawnPosition;
+            _stateController.OnExecute();
         }
         
-        public void ApplyEffect(EffectComponent effectComponent)
-        {
-            
-        }
-
-        public virtual void MoveTowardsTarget(Transform target)
-        {
-            Vector3 targetVector = target.position - transform.position;
-            float distance = Mathf.Abs(targetVector.magnitude);
-
-            transform.rotation = Quaternion.LookRotation(targetVector, Vector3.up) * Quaternion.Euler(0, -90, 0);
-
-            if (distance >= _enemyData.distanceToPlayerDetection)
-            {
-                transform.position += _enemyData.movementSpeed * Time.deltaTime * targetVector.normalized;
-            }
-        }
-
         public virtual void TakeDamage(int damage)
         {
-            int dmg = (damage - _toughness < 1) ? 0 : damage;
+
+            float dmg = (damage - _enemyData.toughness < 1) ? 0 : damage;
             _currentHealth -= dmg;
 
             if (_currentHealth <= 0)
             {
-                DisableThis();
+                _enemyManager.RemoveFromPool(this);
+                Destroy(gameObject);
             }
-        }
-
-        private void DisableThis()
-        {
-            _state = State.DEAD;
-            _target = null;
-
-            _enemyManager.RemoveFromActive(this);
-            gameObject.SetActive(false);
-        }
-
-        private void SetupProperties()
-        {
-            _currentHealth = _maxHealth;
-            _currentMana = _maxMana;
-
-            _state = State.ATTACK;
         }
     }
 }

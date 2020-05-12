@@ -9,62 +9,45 @@ namespace Enemy
 {
     public class EnemyManager : MonoBehaviour, IInitializable, IOnExecute
     {
-        [SerializeField] private EnemyVar[] enemyPool;
-        [SerializeField] private Transform spawnPoint;
+        
+        [SerializeField] private GameObject[] enemyTypes;
 
-        private Transform _playerTransform;
-        private List<Enemy> _activeEnemies;
-
+        [SerializeField] private List<Enemy> _enemies;
+        [SerializeField] private Transform[] spawnPoints;
+        
         public bool Initialize()
         {
-            _playerTransform = GameManager.Instance.PlayerManager.Transform;
-            _activeEnemies = new List<Enemy>();
-
+            _enemies = new List<Enemy>();
             
-            /*
-            for (int i = 0; i < 30; i++)
-            {
-                SpawnTestEnemy();
-            }
-            */
-
+            SpawnEnemy(enemyTypes[0], spawnPoints[0]);
+            
             return true;
         }
 
         public void OnExecute()
         {
-            if (_activeEnemies.Count != 0)
+            if (_enemies.Count != 0)
             {
-                foreach (var actor in _activeEnemies)
-                { 
-                    actor.OnExecute();
+                foreach (var enemy in _enemies)
+                {
+                    enemy.OnExecute();
                 }
             }
-        }
-
-        public void RemoveFromActive(Enemy enemy)
-        {
-            _activeEnemies.Remove(enemy);
-            GameManager.LogMessage("Enemy Removed From Active List");
-        }
-
-        private void SpawnTestEnemy()
-        {
-            var instance = Instantiate(enemyPool[0].gameObject);
-            var e = instance.GetComponent<Enemy>();
             
-            e.Initialize(this, enemyPool[0].enemyStats , enemyPool[0].enemyProperties);
-            e.Spawn(new Vector3(Random.Range(-20.0f,20.0f), 1, Random.Range(-20.0f,20.0f)), _playerTransform);
-            
-            _activeEnemies.Add(e);
         }
-    }
 
-    [System.Serializable]
-    public struct EnemyVar
-    {
-        public GameObject gameObject;
-        public CoreData enemyStats;
-        public EnemyData enemyProperties;
+        public void RemoveFromPool(Enemy enemy)
+        {
+            _enemies.Remove(enemy);
+        }
+
+        private void SpawnEnemy(GameObject type, Transform transform)
+        {
+            var instance = Instantiate(type, transform.position, transform.rotation);
+            Enemy e = instance.GetComponent<Enemy>();
+
+            e.Initialize();
+            _enemies.Add(e);
+        }
     }
 }

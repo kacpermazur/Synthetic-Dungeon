@@ -11,7 +11,6 @@ namespace Player.Spells.Components
         [SerializeField] private int damage = 5;
         protected override void OnHit(Enemy enemy)
         {
-            //Debug.Log(enemy);
             enemy.TakeDamage(damage);
             DestroyProjectile();
         }
