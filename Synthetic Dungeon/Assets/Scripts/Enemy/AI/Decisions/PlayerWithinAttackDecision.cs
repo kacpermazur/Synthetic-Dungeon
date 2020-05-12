@@ -5,7 +5,8 @@ using UnityEngine;
 
 namespace Enemy.AI
 {
-    public class PlayerAttackRangeDecision : Decision
+    [CreateAssetMenu(menuName = "EnemyAI/Decisions/PlayerWithinAttackRange")]
+    public class PlayerWithinAttackDecision : Decision
     {
         public override bool Decide(StateController stateController)
         {

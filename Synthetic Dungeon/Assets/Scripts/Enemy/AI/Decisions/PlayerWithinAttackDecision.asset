@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 403a6a5a05c4f7a44b3a87f9c50da46d, type: 3}
-  m_Name: Melee
+  m_Script: {fileID: 11500000, guid: 93777fff518331a44b02235168c6e4f3, type: 3}
+  m_Name: PlayerWithinAttackDecision
   m_EditorClassIdentifier: 

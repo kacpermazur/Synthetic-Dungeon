@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Core;
 using Enemy.Data;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -52,7 +53,11 @@ namespace Enemy.AI
 
         public void ChangeState(State state)
         {
-            currentState = state;
+            if (state != defaultState)
+            {
+                currentState = state;
+            }
+
         }
 
         private void SetPositions()

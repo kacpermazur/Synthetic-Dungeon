@@ -15,6 +15,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/AggresivePursuit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/Action.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -30,20 +31,19 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Inventory/InventoryUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/IInitializable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerAttackRangeDecision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/AnimationTester.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/States/State.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponentDamage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/PlayerInputActions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponentRecursiveRing.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerWithinAttackDecision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Data/CoreData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Transition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentFoward.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentRing.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/CameraManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/AggressivePursuit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Data/EnemyData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/Data/CameraData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerFoundDecision.cs" root0="FORCE_HIGHLIGHTING" />
@@ -53,8 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Entity Data/HealthData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Entity Data/StatsData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Entity Core/StatsData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Inventory/Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Inventory/ItemStatsProxy.cs" />
@@ -96,14 +94,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/Decision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Transition.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/MeleeAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/PatrolAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerFoundDecision.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/StateController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/States/State.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/AggressivePursuit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerLost.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Data/EnemyData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/AggressivePursuit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerAttackRangeDecision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerWithinAttackDecision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/StateController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerFoundDecision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/AggresivePursuit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/PatrolAction.cs" />
       </list>
     </option>
   </component>
@@ -164,6 +164,7 @@
       <workItem from="1589217829105" duration="2516000" />
       <workItem from="1589230665349" duration="6972000" />
       <workItem from="1589246170411" duration="12508000" />
+      <workItem from="1589264950247" duration="3139000" />
     </task>
     <servers />
   </component>

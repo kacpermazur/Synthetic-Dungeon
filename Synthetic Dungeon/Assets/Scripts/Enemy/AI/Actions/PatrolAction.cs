@@ -15,6 +15,7 @@ namespace Enemy.AI
         
         private void Patrol(StateController stateController)
         {
+
             if (Vector3.Distance(stateController.transform.position, stateController.AgentTargetPoint) > 1.1f)
             {
                 Vector3 targetVector = stateController.AgentTargetPoint - stateController.transform.position;
