@@ -14,9 +14,17 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Attack",
+                    "name": "Magic",
                     "type": "Button",
                     "id": "fa56d711-0b9e-4d65-af58-a9ccaa01d6ee",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "c127fef7-91ac-4d89-b62b-a7cdedeb6ed8",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
@@ -82,6 +90,17 @@
                     "name": "",
                     "id": "e56ba908-20bf-4664-8b4d-6a0e09a23d6d",
                     "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Magic",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5b4f5021-7d26-41a6-aa3a-1188a51a30fc",
+                    "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",

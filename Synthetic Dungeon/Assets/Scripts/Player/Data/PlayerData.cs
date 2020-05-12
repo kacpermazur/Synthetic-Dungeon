@@ -10,5 +10,6 @@ namespace Player.Data
         [Header("Properties")] 
         public float movementSpeed;
         public float rotationSpeed;
+        public float attackSpeed;
     }
 }

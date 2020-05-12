@@ -10254,6 +10254,11 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1512611127787737321, guid: b68e3a56e98711f4abbd4330c701bbb7,
+        type: 3}
+      propertyPath: _playerRotationOffset
+      value: 90
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b68e3a56e98711f4abbd4330c701bbb7, type: 3}
 --- !u!1 &1512611127478063302 stripped

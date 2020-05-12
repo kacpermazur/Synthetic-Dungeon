@@ -1,18 +1,19 @@
-﻿using Core;
+﻿using System.Collections;
+using Core;
 using Player.Data;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Player
 {
-    public class PlayerMovement : MonoBehaviour, IInitializable, IOnExecute
+    public class PlayerController : MonoBehaviour, IInitializable, IOnExecute
     {
-        [SerializeField] private float _playerRotationOffset = 90f;
-
-        private PlayerData _playerData;
-        private Vector2 _onMoveDir;
+        [SerializeField] private float _playerRotationOffset;
         
+        private PlayerData _playerData;
         private Animator _animator;
+        
+        private Vector2 _onMoveDir;
 
         public bool Initialize()
         {
@@ -42,9 +43,9 @@ namespace Player
             {
                 transform.rotation = Quaternion.Slerp(transform.rotation,  Quaternion.LookRotation(direction),
                     Time.deltaTime * _playerData.rotationSpeed);
-                
-                
+
                 transform.position += _playerData.movementSpeed * Time.deltaTime * transform.forward;
+                
                 _animator.SetFloat("vertical", 1f);
             }
         }
@@ -54,10 +55,18 @@ namespace Player
             _onMoveDir = value.Get<Vector2>();
         }
         
-        public void OnAttack(InputValue value)
+        public void OnMagic(InputValue value)
         {
+            GameManager.LogMessage("On Magic");
             _animator.CrossFade("oh_magic_1", 0.2f);
             GameManager.Instance.PlayerManager.SpellSystem.CastSpell();
         }
+
+        public void OnAttack(InputValue value)
+        {
+            GameManager.LogMessage("On Attack");
+            _animator.CrossFade("oh_attack_1", 0.2f);
+        }
+
     }
 }

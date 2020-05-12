@@ -6,10 +6,10 @@ using UnityEngine.InputSystem;
 
 namespace Player
 {
-    [RequireComponent(typeof(Rigidbody), typeof(PlayerMovement), typeof(SpellSystem))]
+    [RequireComponent(typeof(Rigidbody), typeof(PlayerController), typeof(SpellSystem))]
     public class PlayerManager : MonoBehaviour, IInitializable, IOnExecute
     {
-        private PlayerMovement _playerMovement;
+        private PlayerController _playerMovement;
         private SpellSystem _spellSystem;
 
         [SerializeField] private PlayerData playerData;
@@ -33,7 +33,7 @@ namespace Player
             
             _transform = GetComponent<Transform>();
             _rigidBody = GetComponent<Rigidbody>();
-            _playerMovement = GetComponent<PlayerMovement>();
+            _playerMovement = GetComponent<PlayerController>();
             _spellSystem = GetComponent<SpellSystem>();
 
             _enabledControls = _playerMovement.Initialize() && _spellSystem.Initialize();
