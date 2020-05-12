@@ -7,13 +7,18 @@ namespace Enemy.Data
     [CreateAssetMenuAttribute(fileName = "Enemy_Properties_", menuName = "Data/Enemy_Properties")]
     public class EnemyData : ScriptableObject
     {
+        
+        [Header("Movement")]
+        public float movementSpeed;
+        public float rotationSpeed;
+        public float distanceToPlayerDetection;
+
         [Header("Combat")] 
         public int damage;
         public int attackRate;
 
-        [Header("Movement")]
-        public float movementSpeed;
-        public float rotationSpeed;
-        public float distanceToPlayer;
+        [Header("Stats")] 
+        public float health;
+        public float toughness;
     }
 }

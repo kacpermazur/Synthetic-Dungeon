@@ -23,6 +23,13 @@
             <e p="PlayerInputActions.cs" t="Include" />
           </e>
           <e p="Enemy" t="Include">
+            <e p="AI" t="Include">
+              <e p="Action.cs" t="Include" />
+              <e p="Actions" t="Include">
+                <e p="PatrolAction.cs" t="Include" />
+              </e>
+              <e p="StateController.cs" t="Include" />
+            </e>
             <e p="Data" t="Include">
               <e p="EnemyData.cs" t="Include" />
             </e>

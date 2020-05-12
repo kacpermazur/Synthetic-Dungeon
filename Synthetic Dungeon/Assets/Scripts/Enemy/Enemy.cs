@@ -70,7 +70,7 @@ namespace Enemy
 
             transform.rotation = Quaternion.LookRotation(targetVector, Vector3.up) * Quaternion.Euler(0, -90, 0);
 
-            if (distance >= _enemyData.distanceToPlayer)
+            if (distance >= _enemyData.distanceToPlayerDetection)
             {
                 transform.position += _enemyData.movementSpeed * Time.deltaTime * targetVector.normalized;
             }
