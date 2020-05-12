@@ -100,8 +100,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/AggressivePursuit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerAttackRangeDecision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerWithinAttackDecision.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/StateController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerFoundDecision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/StateController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/AggresivePursuit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/PatrolAction.cs" />
       </list>
@@ -164,7 +164,7 @@
       <workItem from="1589217829105" duration="2516000" />
       <workItem from="1589230665349" duration="6972000" />
       <workItem from="1589246170411" duration="12508000" />
-      <workItem from="1589264950247" duration="3139000" />
+      <workItem from="1589264950247" duration="3936000" />
     </task>
     <servers />
   </component>

@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d187acc3fa3a2447a766c34cc86e922, type: 3}
   m_Name: MeeleAttackState
   m_EditorClassIdentifier: 
-  actions: []
-  transitions: []
+  actions:
+  - {fileID: 11400000, guid: 093b8b05c0737f14bb950f1f08abb917, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: c1910bf7285402b48b0977ac1f14a6ed, type: 2}
+    trueState: {fileID: 11400000, guid: 9406213a13bc3204d80cb8db45be9510, type: 2}
+    falseState: {fileID: 11400000, guid: 19953fe32b36cd845819541dee83f4bf, type: 2}

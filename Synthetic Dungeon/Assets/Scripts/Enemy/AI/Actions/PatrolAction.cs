@@ -20,7 +20,7 @@ namespace Enemy.AI
             {
                 Vector3 targetVector = stateController.AgentTargetPoint - stateController.transform.position;
                 
-                Quaternion rotation = Quaternion.LookRotation(targetVector, Vector3.up) * Quaternion.Euler(0, -90, 0);
+                Quaternion rotation = Quaternion.LookRotation(targetVector, Vector3.up);
                 rotation.x = 0;
                 rotation.z = 0;
 

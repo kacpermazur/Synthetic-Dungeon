@@ -11,7 +11,7 @@ namespace Enemy.AI
     public class StateController : MonoBehaviour, IInitializable, IOnExecute
     {
         private Vector3 _spawnPoint;
-        [SerializeField] private Vector3 _targetPoint;
+        private Vector3 _targetPoint;
 
         [SerializeField] private State currentState;
         [SerializeField] private State defaultState;
@@ -57,7 +57,6 @@ namespace Enemy.AI
             {
                 currentState = state;
             }
-
         }
 
         private void SetPositions()
