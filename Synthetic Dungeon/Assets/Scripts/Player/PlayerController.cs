@@ -64,7 +64,7 @@ namespace Player
         public void OnAttack(InputValue value)
         {
             GameManager.LogMessage("On Attack");
-            _animator.CrossFade("oh_attack_1", 0.2f);
+            _animator.CrossFade("oh_attack_3", 0.2f);
         }
 
     }

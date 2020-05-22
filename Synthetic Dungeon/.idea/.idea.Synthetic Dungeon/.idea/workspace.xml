@@ -100,11 +100,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponentDamage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Data/PlayerData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIGameOverlay.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/PatrolAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
       </list>
     </option>
   </component>
@@ -167,6 +167,11 @@
       <workItem from="1589246170411" duration="12508000" />
       <workItem from="1589264950247" duration="4089000" />
       <workItem from="1589278200834" duration="8182000" />
+      <workItem from="1589539824665" duration="1000" />
+      <workItem from="1589539910713" duration="1206000" />
+      <workItem from="1589645461510" duration="596000" />
+      <workItem from="1590079470163" duration="452000" />
+      <workItem from="1590080558425" duration="269000" />
     </task>
     <servers />
   </component>
