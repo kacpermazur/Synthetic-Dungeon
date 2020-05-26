@@ -105,8 +105,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Sound/SoundClip.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" />
       </list>
     </option>
   </component>
@@ -174,7 +174,7 @@
       <workItem from="1589645461510" duration="596000" />
       <workItem from="1590079470163" duration="452000" />
       <workItem from="1590080558425" duration="269000" />
-      <workItem from="1590462949926" duration="1252000" />
+      <workItem from="1590462949926" duration="1551000" />
     </task>
     <servers />
   </component>
