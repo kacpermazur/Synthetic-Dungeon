@@ -6,8 +6,6 @@ namespace Player.Spells.Components
     using Enemy;
     public class Projectile : MonoBehaviour
     {
-        public ImpactComponent impactComponent;
-        
         
         private float _lifeTime = 3f;
         private Vector3 PlayerPos;
@@ -49,9 +47,15 @@ namespace Player.Spells.Components
         {
             if (other.CompareTag("Enemy"))
             {
+                GameManager.LogMessage("HIT!");
+                
+                var spellSystem = GameManager.Instance.PlayerManager.SpellSystem;
+                
                 var enemy = other.GetComponent<Enemy>();
-                enemy.ApplyEffect(GameManager.Instance.PlayerManager.SpellSystem.EffectComponent);
-                impactComponent.OnHit(enemy);
+                enemy.ApplyEffect(spellSystem.EffectComponent);
+                spellSystem.ImpactComponent.OnHit(enemy, gameObject);
+
+                DestroyProjectile();
             }
         }
         

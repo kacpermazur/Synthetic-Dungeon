@@ -11926,13 +11926,25 @@ PrefabInstance:
         type: 3}
       propertyPath: effectComponent
       value: 
-      objectReference: {fileID: 8086935715652238603, guid: ecfa840d4f014b440af260cb8beeaeee,
-        type: 3}
+      objectReference: {fileID: 11400000, guid: 8ca1a00550747de40ae3d9f71b028187,
+        type: 2}
     - target: {fileID: 1512611127787737322, guid: b68e3a56e98711f4abbd4330c701bbb7,
         type: 3}
       propertyPath: Projectile
       value: 
       objectReference: {fileID: 884211895299123720, guid: e98b376f953a7274cbb7eb0976b9b299,
         type: 3}
+    - target: {fileID: 1512611127787737322, guid: b68e3a56e98711f4abbd4330c701bbb7,
+        type: 3}
+      propertyPath: impactComponent
+      value: 
+      objectReference: {fileID: 11400000, guid: c0aebd666c6980b4dbb1ddff8e3cc22b,
+        type: 2}
+    - target: {fileID: 1512611127787737322, guid: b68e3a56e98711f4abbd4330c701bbb7,
+        type: 3}
+      propertyPath: emissionComponent
+      value: 
+      objectReference: {fileID: 11400000, guid: 40eedb1823824954786a5ac48b9707cd,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b68e3a56e98711f4abbd4330c701bbb7, type: 3}

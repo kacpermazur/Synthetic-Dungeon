@@ -6,9 +6,10 @@ namespace Player.Spells.Components
     public class ImpactComponentDamage : ImpactComponent
     {
         [SerializeField] private int damage = 5;
-        public override void OnHit(Enemy.Enemy enemy)
+        public override void OnHit(Enemy.Enemy enemy, GameObject gameObject)
         {
             enemy.TakeDamage(damage);
+            Destroy(gameObject);
         }
     }
 }

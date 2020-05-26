@@ -14,6 +14,7 @@ namespace Player.Spells
         [SerializeField] private ImpactComponent impactComponent;
         [SerializeField] private EffectComponent effectComponent;
 
+        public ImpactComponent ImpactComponent => impactComponent;
         public EffectComponent EffectComponent => effectComponent;
 
         private Vector3[] _emissionPoints;
