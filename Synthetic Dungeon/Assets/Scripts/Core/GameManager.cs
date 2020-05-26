@@ -1,6 +1,7 @@
 ﻿using Camera;
 using Player;
 using Enemy;
+using Sound;
 using UI;
 using UnityEngine;
 
@@ -17,11 +18,13 @@ namespace Core
         [SerializeField] private UIManager _uiManager;
         [SerializeField] private PlayerManager _playerManager;
         [SerializeField] private EnemyManager _enemyManager;
+        [SerializeField] private SoundManager _soundManager;
         
         public static GameManager Instance => _instance;
         public UIManager UiManager => _uiManager; 
-        public PlayerManager PlayerManager => _playerManager;
+        public PlayerManager PlayerManager => _playerManager; 
         public EnemyManager EnemyManager => _enemyManager;
+        public SoundManager SoundManager => _soundManager;
 
         //todo: Move this out later
         private bool _isCameraManagerActive;
@@ -85,6 +88,11 @@ namespace Core
             if (!_isCameraManagerActive)
             {
                 LogMessage("CameraManager not initialized!", MessageType.ALERT);
+            }
+
+            if (!_playerManager.Initialize())
+            {
+                LogMessage("SoundManager not initialized!", MessageType.ALERT);
             }
         }
         
