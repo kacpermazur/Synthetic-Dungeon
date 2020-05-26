@@ -31,11 +31,18 @@ namespace Player.Spells
 
         public void CastSpell()
         {
-            _emissionPoints = emissionComponent.GetEmissionShape(_playerManager.Transform.position);
-            
-            foreach (var point in _emissionPoints)
+            if (emissionComponent && impactComponent && effectComponent)
             {
-                Projectile.SpawnProjectile(point, _playerManager.Transform.position);
+                _emissionPoints = emissionComponent.GetEmissionShape(_playerManager.Transform.position);
+
+                foreach (var point in _emissionPoints)
+                {
+                    Projectile.SpawnProjectile(point, _playerManager.Transform.position);
+                }
+            }
+            else
+            {
+                GameManager.LogMessage("Spell System: Unable to cast Spell!");
             }
         }
 
