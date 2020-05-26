@@ -3,7 +3,7 @@ using Core;
 
 namespace Player.Spells.Components
 {
-    [CreateAssetMenu(menuName = "Spells/Emission/Forward")]
+    [CreateAssetMenu(menuName = "Spells/Emission/Ring")]
     public class EmissionComponentRing : EmissionComponent
     {
         private const int NumPoints = 50;
