@@ -90,7 +90,7 @@ namespace Core
                 LogMessage("CameraManager not initialized!", MessageType.ALERT);
             }
 
-            if (!_playerManager.Initialize())
+            if (!_soundManager.Initialize())
             {
                 LogMessage("SoundManager not initialized!", MessageType.ALERT);
             }

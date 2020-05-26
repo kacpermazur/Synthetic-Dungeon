@@ -50,44 +50,41 @@ namespace Sound
             switch (type)
             {
                 case SoundType.SFX:
-                    
+                    clip = Array.Find(_soundClipsSFX, soundClip => soundClip.name == name);
+                    SetSoundClipSettings(ref _audioSourceSFX, clip);
+                    _audioSourceSFX.Play();
                     break;
                 case SoundType.UI:
+                    clip = Array.Find(_soundClipsUI, soundClip => soundClip.name == name);
+                    SetSoundClipSettings(ref _audioSourceSFX, clip);
+                    _audioSourceSFX.Play();
                     break;
                 case SoundType.MUSIC:
+                    clip = Array.Find(_soundClipsMUSIC, soundClip => soundClip.name == name);
+                    SetSoundClipSettings(ref _audioSourceMusic, clip);
+                    _audioSourceMusic.Play();
                     break;
                 default:
-                    clip = null;
                     GameManager.LogMessage("Sound Manager: Clip Not Found!");
                     return;
             }
         }
 
-        public void PlaySoundSpatial(string name, SoundType type)
+        public void PlaySoundSpatialSFX(string name, GameObject gameObject)
         {
-            
-        }
+            SoundClip clip = Array.Find(_soundClipsSFX, soundClip => soundClip.name == name);
+            AudioSource localAudioSource = gameObject.GetComponent<AudioSource>();
 
-        public void StopSound(string name, SoundType type)
-        {
-            SoundClip clip;
-            
-            switch (type)
+            if (localAudioSource == null)
             {
-                case SoundType.SFX:
-                    break;
-                case SoundType.UI:
-                    break;
-                case SoundType.MUSIC:
-                    break;
-                default:
-                    clip = null;
-                    GameManager.LogMessage("Sound Manager: Clip Not Found!");
-                    return;
+                localAudioSource = gameObject.AddComponent<AudioSource>();
             }
-        }
 
-        private void SetAudioClipSettings(ref AudioSource source, SoundClip clip)
+            SetSoundClipSettings(ref localAudioSource, clip);
+            localAudioSource.Play();
+        }
+        
+        private void SetSoundClipSettings(ref AudioSource source, SoundClip clip)
         {
             source.clip = clip.clip;
             source.loop = clip.loop;

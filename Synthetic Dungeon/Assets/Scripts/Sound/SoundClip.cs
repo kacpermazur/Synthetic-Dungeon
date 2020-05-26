@@ -11,7 +11,5 @@ namespace Sound
 
         [Range(0.0f, 1.0f)] public float volume;
         [Range(0.0f, 1.0f)] public float spacialBlend;
-
-        [HideInInspector] public AudioSource source;
     }
 }
