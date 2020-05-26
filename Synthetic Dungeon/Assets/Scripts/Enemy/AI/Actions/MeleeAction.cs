@@ -8,6 +8,8 @@ namespace Enemy.AI
     [CreateAssetMenu(menuName = "EnemyAI/Actions/Melee")]
     public class MeleeAction : Action
     {
+        private float nextAttackTime = 0;
+        
         public override void Act(StateController stateController)
         {
             Melee(stateController);
@@ -15,7 +17,13 @@ namespace Enemy.AI
 
         private void Melee(StateController stateController)
         {
-            GameManager.LogMessage("Melee Attack");
+            float eTime = Time.time;
+            
+            if (eTime > nextAttackTime)
+            {
+                GameManager.LogMessage("Melee Attack");
+                nextAttackTime = eTime + stateController.AgentData.attackRate;
+            }
         }
     }
 }
