@@ -74,7 +74,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/MeeleAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/Decision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Transition.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/MeleeAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/States/State.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerLost.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Data/EnemyData.cs" />
@@ -89,7 +88,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Sound/SoundClip.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/StateController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Effect/EmptyEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponentRecursiveRing.cs" />
@@ -107,11 +105,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponentDamage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/SpellSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Effects/EffectComponentEmpty.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Projectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/StateController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/MeleeAction.cs" />
       </list>
     </option>
   </component>
@@ -180,7 +180,7 @@
       <workItem from="1590079470163" duration="452000" />
       <workItem from="1590080558425" duration="269000" />
       <workItem from="1590462949926" duration="14443000" />
-      <workItem from="1590493171387" duration="4219000" />
+      <workItem from="1590493171387" duration="4896000" />
     </task>
     <servers />
   </component>

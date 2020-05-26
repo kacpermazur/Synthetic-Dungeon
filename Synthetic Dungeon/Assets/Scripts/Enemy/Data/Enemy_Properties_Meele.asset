@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 1.5
   rotationSpeed: 10
-  damage: 5
+  damage: 2
   attackRate: 1
   distanceToPlayerDetection: 7
   attackRange: 2

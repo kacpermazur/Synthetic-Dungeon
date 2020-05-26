@@ -73,6 +73,8 @@ namespace Player
         {
             float dmg = (damage - playerData.toughness < 1) ? 0 : damage;
             _currentHealth -= dmg;
+            
+            GameManager.LogMessage("Player has taken Damage!");
 
             if (_currentHealth <= 0)
             {

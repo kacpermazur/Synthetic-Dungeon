@@ -10,6 +10,8 @@ namespace Enemy.AI
 {
     public class StateController : MonoBehaviour, IInitializable, IOnExecute
     {
+        private float eTime;
+        
         private Vector3 _spawnPoint;
         private Vector3 _targetPoint;
 
@@ -18,6 +20,10 @@ namespace Enemy.AI
         [SerializeField] private EnemyData _enemyData;
         
         public Vector3 AgentSpawnPoint => _spawnPoint;
+        public float nextAttackTime;
+
+        public float ETime => eTime;
+
         public Vector3 AgentTargetPoint
         {
             get => _targetPoint;
@@ -28,12 +34,14 @@ namespace Enemy.AI
         public bool Initialize()
         {
             SetPositions();
+            nextAttackTime = 0f;
             return true;
         }
 
         public void OnExecute()
         {
             currentState.UpdateState(this);
+            eTime = Time.time;
         }
 
         public void ChangeEnemyData(EnemyData enemyData)
