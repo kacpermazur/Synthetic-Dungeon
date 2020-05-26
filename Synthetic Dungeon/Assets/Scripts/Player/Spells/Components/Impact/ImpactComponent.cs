@@ -4,11 +4,13 @@ using UnityEngine;
 
 namespace Player.Spells.Components
 {
-    public abstract class EmissionComponent : MonoBehaviour
+    using Enemy;
+    
+    public class ImpactComponent : ScriptableObject
     {
-        public virtual Vector3[] GetEmissionShape(Vector3 origin)
+        public virtual void OnHit(Enemy enemy)
         {
-            return null;
+            
         }
     }
 }

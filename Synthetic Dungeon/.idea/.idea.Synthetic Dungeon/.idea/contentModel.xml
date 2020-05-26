@@ -67,20 +67,11 @@
             <e p="PlayerManager.cs" t="Include" />
             <e p="Spells" t="Include">
               <e p="Components" t="Include">
-                <e p="Effect" t="Include">
-                  <e p="EmptyEffect.cs" t="Include" />
-                </e>
-                <e p="EffectComponent.cs" t="Include" />
-                <e p="Emission" t="Include">
-                  <e p="EmissionComponentFoward.cs" t="Include" />
-                  <e p="EmissionComponentRing.cs" t="Include" />
-                </e>
-                <e p="EmissionComponent.cs" t="Include" />
                 <e p="Impact" t="Include">
+                  <e p="ImpactComponent.cs" t="Include" />
                   <e p="ImpactComponentDamage.cs" t="Include" />
-                  <e p="ImpactComponentRecursiveRing.cs" t="Include" />
                 </e>
-                <e p="ImpactComponent.cs" t="Include" />
+                <e p="Projectile.cs" t="Include" />
               </e>
               <e p="SpellSystem.cs" t="Include" />
             </e>

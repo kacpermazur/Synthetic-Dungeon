@@ -1,25 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Core;
+﻿using Core;
 using UnityEngine;
-using Quaternion = UnityEngine.Quaternion;
-using Vector3 = UnityEngine.Vector3;
 
 namespace Player.Spells.Components
 {
     using Enemy;
-    
-    public abstract class ImpactComponent : MonoBehaviour
+    public class Projectile : MonoBehaviour
     {
-        private float _lifeTime = 3f;
-        protected Vector3 PlayerPos;
+        public ImpactComponent impactComponent;
         
-        //todo: remove these later
-        protected bool IsActive;
-                
+        
+        private float _lifeTime = 3f;
+        private Vector3 PlayerPos;
+        private bool IsActive;
+
         public void SpawnProjectile(Vector3 spawnPoint, Vector3 origin)
         {
             var obj = Instantiate(this, spawnPoint, Quaternion.identity);
+
+            var inject = obj.gameObject;
+
             obj.IsActive = true;
             obj.PlayerPos = origin;
         }
@@ -46,25 +45,21 @@ namespace Player.Spells.Components
             }
         }
         
-        protected virtual void OnHit(Enemy enemy)
-        {
-            
-        }
-
-        protected virtual void DestroyProjectile()
-        {
-            IsActive = false;
-            Destroy(gameObject);
-        }
-        
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Enemy"))
             {
                 var enemy = other.GetComponent<Enemy>();
                 enemy.ApplyEffect(GameManager.Instance.PlayerManager.SpellSystem.EffectComponent);
-                OnHit(enemy);
+                impactComponent.OnHit(enemy);
             }
         }
+        
+        private void DestroyProjectile()
+        {
+            IsActive = false;
+            Destroy(gameObject);
+        }
+
     }
 }

@@ -11920,7 +11920,19 @@ PrefabInstance:
     - target: {fileID: 1512611126621094711, guid: b68e3a56e98711f4abbd4330c701bbb7,
         type: 3}
       propertyPath: m_Name
-      value: Character_Knight_01_Black
+      value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1512611127787737322, guid: b68e3a56e98711f4abbd4330c701bbb7,
+        type: 3}
+      propertyPath: effectComponent
+      value: 
+      objectReference: {fileID: 8086935715652238603, guid: ecfa840d4f014b440af260cb8beeaeee,
+        type: 3}
+    - target: {fileID: 1512611127787737322, guid: b68e3a56e98711f4abbd4330c701bbb7,
+        type: 3}
+      propertyPath: Projectile
+      value: 
+      objectReference: {fileID: 884211895299123720, guid: e98b376f953a7274cbb7eb0976b9b299,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b68e3a56e98711f4abbd4330c701bbb7, type: 3}

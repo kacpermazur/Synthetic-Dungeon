@@ -7,6 +7,8 @@ namespace Player.Spells
     public class SpellSystem : MonoBehaviour, IInitializable, IOnExecute
     {
         private PlayerManager _playerManager;
+
+        [SerializeField] private Projectile Projectile;
         
         [SerializeField] private EmissionComponent emissionComponent;
         [SerializeField] private ImpactComponent impactComponent;
@@ -32,7 +34,7 @@ namespace Player.Spells
             
             foreach (var point in _emissionPoints)
             {
-                impactComponent.SpawnProjectile(point, _playerManager.Transform.position);
+                Projectile.SpawnProjectile(point, _playerManager.Transform.position);
             }
         }
 

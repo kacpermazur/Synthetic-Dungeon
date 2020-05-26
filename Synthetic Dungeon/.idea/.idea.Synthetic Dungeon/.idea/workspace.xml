@@ -15,8 +15,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/New folder/ImpactComponent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/New folder/EffectComponent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/PlayerInputActions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Data/EnemyData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/New folder/EmissionComponent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/IInitializable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Types/EnemyMeele.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Data/CoreData.cs" root0="FORCE_HIGHLIGHTING" />
@@ -24,44 +27,35 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/AnimationTester.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/Data/CameraData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/New folder/Impact/ImpactComponentDamage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Effect/EmptyEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponentDamage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/StateController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Data/PlayerData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Transition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/SpellSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/States/State.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/EmissionComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/ImpactComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/PatrolAction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/EffectComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/MeleeAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/Action.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIGameOverlay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/AggresivePursuit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponentDamage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/Decision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIPanel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponentRecursiveRing.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerFoundDecision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/SoundClip.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Inventory/InventoryUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerWithinAttackDecision.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentFoward.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentRing.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/MovementSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyTag.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovementSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawnSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/IInitializable1.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Inventory/InventoryUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/IInitializable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
@@ -71,7 +65,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Data/CoreData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Types/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Types/EnemyMeele.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/EmissionComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentRing.cs" />
         <option value="$PROJECT_DIR$/Assets/Test.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentFoward.cs" />
@@ -92,7 +85,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerWithinAttackDecision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerFoundDecision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/AggresivePursuit.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponentDamage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Data/PlayerData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIGameOverlay.cs" />
@@ -102,12 +94,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Sound/SoundClip.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/StateController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/EffectComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/SpellSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/ImpactComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Effect/EmptyEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponentRecursiveRing.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/SpellSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/EmissionComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/ImpactComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/EffectComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Projectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/ImpactComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/Action.cs" />
+        <option value="$USER_HOME$/Desktop/New folder/Impact/ImpactComponentDamage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponentDamage.cs" />
       </list>
     </option>
   </component>
@@ -175,7 +174,7 @@
       <workItem from="1589645461510" duration="596000" />
       <workItem from="1590079470163" duration="452000" />
       <workItem from="1590080558425" duration="269000" />
-      <workItem from="1590462949926" duration="10706000" />
+      <workItem from="1590462949926" duration="14443000" />
     </task>
     <servers />
   </component>
@@ -200,18 +199,18 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="794" y="236" key="RiderGenerateDialog" timestamp="1590476386382">
+    <state x="794" y="236" key="RiderGenerateDialog" timestamp="1590492973927">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="236" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590476386382" />
+    <state x="794" y="236" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590492973927" />
     <state x="186" y="125" key="SettingsEditor" timestamp="1589246785257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="186" y="125" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589246785257" />
-    <state x="399" y="384" width="1602" height="1027" key="dock-window-1" timestamp="1589264293779">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2510" y="-17" width="1893" height="1027" maximized="true" key="dock-window-1" timestamp="1590492794679">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="399" y="384" width="1602" height="1027" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589264293779" />
+    <state x="2510" y="-17" width="1893" height="1027" maximized="true" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590492794679" />
     <state x="2202" y="0" width="1602" height="1027" key="dock-window-2" timestamp="1589264293780">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
