@@ -8,6 +8,13 @@ namespace Sound
     public class SoundManager : MonoBehaviour, IInitializable
     {
         [SerializeField] private AudioMixer _audioMixer;
+        
+        public enum SoundType
+        {
+            SFX,
+            MUSIC,
+            UI
+        }
 
         public bool Initialize()
         {
