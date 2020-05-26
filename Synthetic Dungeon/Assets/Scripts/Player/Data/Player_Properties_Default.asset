@@ -14,3 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 5
   rotationSpeed: 10
+  attackSpeed: 2
+  health: 10
+  mana: 10
+  toughness: 1

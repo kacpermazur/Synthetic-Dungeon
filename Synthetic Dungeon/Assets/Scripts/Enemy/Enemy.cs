@@ -48,7 +48,6 @@ namespace Enemy
 
             if (!IsInvoking("TriggerEffect"))
             {
-                GameManager.LogMessage("Effect Has been STARTED!");
                 _effectTimer = effectComponent.Duration;
                 InvokeRepeating("TriggerEffect", effectComponent.Duration, 1f);
             }

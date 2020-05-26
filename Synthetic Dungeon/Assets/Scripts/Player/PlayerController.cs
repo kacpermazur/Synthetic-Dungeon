@@ -13,12 +13,17 @@ namespace Player
         private PlayerData _playerData;
         private Animator _animator;
         private Vector2 _onMoveDir;
+
+        private bool isAttackedPressed;
+        private float nextAttackTime;
         
         public bool Initialize()
         {
             _animator = GetComponent<Animator>();
             _playerData = GameManager.Instance.PlayerManager.PlayerData;
 
+            nextAttackTime = 0;
+            
             if (_animator)
             {
                 return true;
@@ -29,7 +34,29 @@ namespace Player
 
         public void OnExecute()
         {
+            float eTime = Time.time;
+            
             Movement();
+            Attack(eTime);
+
+        }
+
+        private void Attack(float eTime)
+        {
+            if (eTime > nextAttackTime)
+            {
+                if (isAttackedPressed)
+                {
+                    isAttackedPressed = false;
+                    
+                    if (Time.time > nextAttackTime)
+                    {
+                        GameManager.LogMessage("On Attack");
+                        _animator.CrossFade("oh_attack_3", 0.2f);
+                        nextAttackTime = eTime + _playerData.attackSpeed;
+                    }
+                }
+            }
         }
 
         private void Movement()
@@ -63,8 +90,7 @@ namespace Player
 
         public void OnAttack(InputValue value)
         {
-            GameManager.LogMessage("On Attack");
-            _animator.CrossFade("oh_attack_3", 0.2f);
+            isAttackedPressed = value.isPressed;
         }
 
     }

@@ -30,6 +30,9 @@ namespace Player
         private float _maxMana;
         private float _currentMana;
 
+        private int _currentLevel;
+        private int _exp;
+
         public bool Initialize()
         {
             if (playerData == null)
@@ -55,7 +58,6 @@ namespace Player
                 _spellSystem.OnExecute();
             }
         }
-        
 
         public void EnableControls()
         {
@@ -74,13 +76,25 @@ namespace Player
 
             if (_currentHealth <= 0)
             {
-                //todo: Game Over
+                GameManager.LogMessage("Player Died!");
             }
         }
         
         public void Heal(float amount)
         {
             _currentHealth += Mathf.Clamp(amount, 0f, _maxHealth- _currentHealth);
+        }
+
+        public void AddExp(int amount)
+        {
+            _exp += amount;
+
+            if (_exp <= 100)
+            {
+                GameManager.LogMessage("PlayerManager: Player Has Leveled UP!");
+                _currentLevel++;
+                _exp = 0;
+            }
         }
 
         private void InitPlayerStats()
@@ -90,6 +104,9 @@ namespace Player
             
             _maxMana = playerData.mana;
             _currentMana = _maxMana;
+
+            _currentLevel = 1;
+            _exp = 0;
         }
         
     }

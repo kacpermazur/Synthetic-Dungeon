@@ -8,7 +8,7 @@ namespace Player.Spells.Components
     {
         public override void Tick(Enemy.Enemy enemy)
         {
-            GameManager.LogMessage("Nothing!!!!!!!!!!!!!");
+            
         }
     }
 }

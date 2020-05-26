@@ -37,8 +37,6 @@ namespace Player.Spells.Components
                 dir.y = 0;
                 dir = dir.normalized;
 
-                //transform.rotation = Quaternion.LookRotation(dir);
-
                 transform.position += delta * 15.0f * dir;
             }
         }
@@ -47,8 +45,6 @@ namespace Player.Spells.Components
         {
             if (other.CompareTag("Enemy"))
             {
-                GameManager.LogMessage("HIT!");
-                
                 var spellSystem = GameManager.Instance.PlayerManager.SpellSystem;
                 
                 var enemy = other.GetComponent<Enemy>();
