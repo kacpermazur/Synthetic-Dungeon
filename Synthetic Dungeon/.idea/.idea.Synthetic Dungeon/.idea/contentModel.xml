@@ -67,6 +67,13 @@
             <e p="PlayerManager.cs" t="Include" />
             <e p="Spells" t="Include">
               <e p="Components" t="Include">
+                <e p="Effects" t="Include">
+                  <e p="EffectComponent.cs" t="Include" />
+                  <e p="EffectComponentEmpty.cs" t="Include" />
+                </e>
+                <e p="Emission" t="Include">
+                  <e p="EmissionComponent.cs" t="Include" />
+                </e>
                 <e p="Impact" t="Include">
                   <e p="ImpactComponent.cs" t="Include" />
                   <e p="ImpactComponentDamage.cs" t="Include" />

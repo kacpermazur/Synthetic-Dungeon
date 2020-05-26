@@ -6,7 +6,7 @@ namespace Player.Spells.Components
 {
     using Enemy;
     
-    public class ImpactComponent : ScriptableObject
+    public abstract class ImpactComponent : ScriptableObject
     {
         public virtual void OnHit(Enemy enemy)
         {
