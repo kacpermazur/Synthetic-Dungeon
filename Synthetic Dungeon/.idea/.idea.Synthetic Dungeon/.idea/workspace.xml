@@ -32,6 +32,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponentDamage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -58,8 +59,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/IOnUpdate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Data/PlayerData1.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Data/CoreData.cs" />
@@ -107,8 +106,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/Action.cs" />
         <option value="$USER_HOME$/Desktop/New folder/Impact/ImpactComponentDamage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Effects/EffectComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponentDamage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Effects/EffectComponentEmpty.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Effects/EffectComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponent.cs" />
       </list>
     </option>
   </component>
@@ -177,7 +178,7 @@
       <workItem from="1590079470163" duration="452000" />
       <workItem from="1590080558425" duration="269000" />
       <workItem from="1590462949926" duration="14443000" />
-      <workItem from="1590493171387" duration="319000" />
+      <workItem from="1590493171387" duration="654000" />
     </task>
     <servers />
   </component>
@@ -202,10 +203,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="794" y="236" key="RiderGenerateDialog" timestamp="1590492973927">
+    <state x="794" y="236" key="RiderGenerateDialog" timestamp="1590493532197">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="236" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590492973927" />
+    <state x="794" y="236" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590493532197" />
     <state x="186" y="125" key="SettingsEditor" timestamp="1589246785257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
