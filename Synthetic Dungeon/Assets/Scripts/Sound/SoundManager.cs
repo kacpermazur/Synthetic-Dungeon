@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using Core;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -9,14 +11,18 @@ namespace Sound
     {
         [SerializeField] private AudioMixer _audioMixer;
 
-        private AudioSource _audioSourceMusic;
-        private AudioSource _audioSourceSFX;
+        [SerializeField] private SoundClip[] _soundClipsSFX;
+        [SerializeField] private SoundClip[] _soundClipsUI;
+        [SerializeField] private SoundClip[] _soundClipsMUSIC;
         
+        private AudioSource _audioSourceSFX;
+        private AudioSource _audioSourceMusic;
+
         public enum SoundType
         {
             SFX,
-            MUSIC,
-            UI
+            UI,
+            MUSIC
         }
 
         public bool Initialize()
@@ -39,7 +45,22 @@ namespace Sound
 
         public void PlaySound(string name, SoundType type)
         {
-            
+            SoundClip clip;
+
+            switch (type)
+            {
+                case SoundType.SFX:
+                    
+                    break;
+                case SoundType.UI:
+                    break;
+                case SoundType.MUSIC:
+                    break;
+                default:
+                    clip = null;
+                    GameManager.LogMessage("Sound Manager: Clip Not Found!");
+                    return;
+            }
         }
 
         public void PlaySoundSpatial(string name, SoundType type)
@@ -49,7 +70,21 @@ namespace Sound
 
         public void StopSound(string name, SoundType type)
         {
+            SoundClip clip;
             
+            switch (type)
+            {
+                case SoundType.SFX:
+                    break;
+                case SoundType.UI:
+                    break;
+                case SoundType.MUSIC:
+                    break;
+                default:
+                    clip = null;
+                    GameManager.LogMessage("Sound Manager: Clip Not Found!");
+                    return;
+            }
         }
 
         private void SetAudioClipSettings(ref AudioSource source, SoundClip clip)
