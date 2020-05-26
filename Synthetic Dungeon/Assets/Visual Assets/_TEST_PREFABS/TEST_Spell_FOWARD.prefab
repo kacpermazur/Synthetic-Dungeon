@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3113307303074362296}
   - component: {fileID: -7556699248939958194}
   - component: {fileID: 3113307303074362300}
+  - component: {fileID: 8086935715652238603}
   m_Layer: 0
   m_Name: TEST_Spell_FOWARD
   m_TagString: Untagged
@@ -120,3 +121,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
+--- !u!114 &8086935715652238603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3113307303074362295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b9849640656f5f4a982034e0261d730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 2

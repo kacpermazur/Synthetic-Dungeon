@@ -62,6 +62,7 @@ namespace Player.Spells.Components
             if (other.CompareTag("Enemy"))
             {
                 var enemy = other.GetComponent<Enemy>();
+                enemy.ApplyEffect(GameManager.Instance.PlayerManager.SpellSystem.EffectComponent);
                 OnHit(enemy);
             }
         }

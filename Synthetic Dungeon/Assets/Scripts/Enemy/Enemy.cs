@@ -14,9 +14,13 @@ namespace Enemy
         [SerializeField] private EnemyManager _enemyManager;
         [SerializeField] private EnemyData _enemyData;
         [SerializeField] private StateController _stateController;
-        
+
+        public StateController StateController => _stateController;
+
         private float _currentHealth;
-        private List<EffectComponent> _effectComponents;
+        private float _effectTimer;
+        
+        private EffectComponent _effectComponent;
         public bool Initialize()
         {
             _stateController = GetComponent<StateController>();
@@ -37,6 +41,18 @@ namespace Enemy
         {
             _stateController.OnExecute();
         }
+
+        public virtual void ApplyEffect(EffectComponent effectComponent)
+        {
+            _effectComponent = effectComponent;
+
+            if (!IsInvoking("TriggerEffect"))
+            {
+                GameManager.LogMessage("Effect Has been STARTED!");
+                _effectTimer = effectComponent.Duration;
+                InvokeRepeating("TriggerEffect", effectComponent.Duration, 1f);
+            }
+        }
         
         public virtual void TakeDamage(int damage)
         {
@@ -49,6 +65,18 @@ namespace Enemy
                 _enemyManager.RemoveFromPool(this);
                 Destroy(gameObject);
             }
+        }
+
+        private void TriggerEffect()
+        {
+            _effectTimer -= 1f;
+
+            if (_effectTimer <= 0)
+            {
+                CancelInvoke("TriggerEffect");
+            }
+            
+            _effectComponent.Tick(this);
         }
     }
 }

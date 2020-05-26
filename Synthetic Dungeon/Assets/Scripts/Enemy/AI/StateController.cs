@@ -36,9 +36,9 @@ namespace Enemy.AI
             currentState.UpdateState(this);
         }
 
-        public void SetToDefault()
+        public void ChangeEnemyData(EnemyData enemyData)
         {
-            currentState = defaultState;
+            _enemyData = enemyData;
         }
 
         public void ChangeState(State state)

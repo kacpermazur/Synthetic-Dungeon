@@ -19,8 +19,8 @@ namespace Enemy
         {
             _enemies = new List<Enemy>();
             
-            //SpawnEnemy(enemyTypes[0], spawnPoints[0]);
-            //SpawnEnemy(enemyTypes[0], spawnPoints[1]);
+            SpawnEnemy(enemyTypes[0], spawnPoints[0]);
+            SpawnEnemy(enemyTypes[0], spawnPoints[1]);
             
             return true;
         }

@@ -3,23 +3,13 @@
 namespace Player.Spells.Components
 {
     using Enemy;
-    public abstract class EffectComponent : MonoBehaviour, IInitializable, IOnExecute
+    public abstract class EffectComponent : MonoBehaviour
     {
-        //private 
+        public float Duration = 2f;
         
-        public bool Initialize()
+        public virtual void Tick(Enemy enemy)
         {
-            return true;
-        }
-
-        public void OnExecute()
-        {
-
-        }
-
-        public EffectComponent ApplyEffect(Enemy enemy)
-        {
-            return null;
+            
         }
     }
 }
