@@ -42,6 +42,22 @@ namespace UI
             
             return true;
         }
+        
+        public void SetEmmisionImage(Sprite icon)
+        {
+            _emmisionImage.sprite = icon;
+        }
+        
+        public void SetImpactImage(Sprite icon)
+        {
+            _impactImage.sprite = icon;
+        }
+        
+        public void SetEffectImage(Sprite icon)
+        {
+            _effectImage.sprite = icon;
+        }
+
 
         private void ButtonEmpty()
         {

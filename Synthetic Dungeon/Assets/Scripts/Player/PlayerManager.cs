@@ -22,6 +22,8 @@ namespace Player
 
         public Transform Transform => _transform;
         public Rigidbody Rigidbody => _rigidBody;
+
+        public PlayerData PlayerData1 => playerData;
         public PlayerData PlayerData => playerData;
         public SpellSystem SpellSystem => _spellSystem;
 

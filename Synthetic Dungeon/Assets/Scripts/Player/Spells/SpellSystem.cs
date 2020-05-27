@@ -10,9 +10,15 @@ namespace Player.Spells
 
         [SerializeField] private Projectile Projectile;
         
+        [Header("Active Components List")]
         [SerializeField] private EmissionComponent emissionComponent;
         [SerializeField] private ImpactComponent impactComponent;
         [SerializeField] private EffectComponent effectComponent;
+
+        [Header("Component List")]
+        public EmissionComponent[] EmissionComponents;
+        public ImpactComponent[] ImpactComponents;
+        public EffectComponent[] EffectComponents;
 
         public ImpactComponent ImpactComponent => impactComponent;
         public EffectComponent EffectComponent => effectComponent;
@@ -46,18 +52,21 @@ namespace Player.Spells
         {
             emissionComponent = emission;
             GameManager.Instance.UiManager.GameOverlay.SetEmmisionImage(emission.icon);
+            GameManager.Instance.UiManager.PanelSkills.SetEmmisionImage(emission.icon);
         }
         
         public void EquipImpactComponent(ImpactComponent impact)
         {
             impactComponent = impact;
             GameManager.Instance.UiManager.GameOverlay.SetImpactImage(impact.icon);
+            GameManager.Instance.UiManager.PanelSkills.SetImpactImage(impact.icon);
         }
         
         public void EquipEffectComponent(EffectComponent effect)
         {
             effectComponent = effect;
             GameManager.Instance.UiManager.GameOverlay.SetEffectImage(effect.icon);
+            GameManager.Instance.UiManager.PanelSkills.SetEffectImage(effect.icon);
         }
     }
 }

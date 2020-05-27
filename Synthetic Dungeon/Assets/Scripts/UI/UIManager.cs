@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Core;
 using Player;
+using Player.Spells;
 using Sound;
 using UnityEngine;
 
@@ -20,6 +21,8 @@ namespace UI
         public UIGameOverlay GameOverlay => panelGameOverlay;
         public UIPanelSkills PanelSkills => panelSkills;
 
+        private SpellSystem _spellSystem;
+
         public bool Initialize()
         {
             AddListeners();
@@ -31,6 +34,8 @@ namespace UI
             
             OpenPanel(panelMainMenu);
             GameManager.Instance.PlayerManager.DisableControls();
+
+            _spellSystem = GameManager.Instance.PlayerManager.SpellSystem;
 
             if (!init)
             {
@@ -101,26 +106,31 @@ namespace UI
         private void onButtonEmptyClicked()
         {
             GameManager.LogMessage("Empty Effect Selected!");
+            _spellSystem.EquipEffectComponent(_spellSystem.EffectComponents[0]);
         }
         
         private void onButtonFireClicked()
         {
             GameManager.LogMessage("Fire Effect Selected!");
+            _spellSystem.EquipEffectComponent(_spellSystem.EffectComponents[1]);
         }
         
         private void onButtonFowardClicked()
         {
             GameManager.LogMessage("Foward Emission Selected!");
+            _spellSystem.EquipEmissionComponent(_spellSystem.EmissionComponents[0]);
         }
         
         private void onButtonRingClicked()
         {
             GameManager.LogMessage("Ring Emission Selected!");
+            _spellSystem.EquipEmissionComponent(_spellSystem.EmissionComponents[1]);
         }
         
         private void onButtonDamageClicked()
         {
             GameManager.LogMessage("Damage Impact Selected!");
+            _spellSystem.EquipImpactComponent(_spellSystem.ImpactComponents[0]);
         }
     }
 }
