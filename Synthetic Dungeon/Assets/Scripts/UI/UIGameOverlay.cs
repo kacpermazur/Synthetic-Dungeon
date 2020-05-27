@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Core;
 using Player.Data;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,11 +17,14 @@ namespace UI
         [SerializeField] private Image _impactImage;
         [SerializeField] private Image _elementImage;
 
+        [SerializeField] private TextMeshProUGUI _infoText;
+        [SerializeField] private Animator _animator;
+
         private PlayerData _playerData;
 
         public override bool Initialize()
         {
-            if (!healthSlider && !manaSlider && !_emmisionImage && !_impactImage && !_elementImage)
+            if (!healthSlider && !manaSlider && !_emmisionImage && !_impactImage && !_elementImage && !_infoText && !_animator)
             {
                 GameManager.LogMessage("UI Manager: Please Reference components in game overlay panel!");
                 return false;
@@ -31,6 +35,17 @@ namespace UI
             InitializeManaSlider();
             
             return true;
+        }
+
+        public void DisplayTextShow(string message)
+        {
+            _infoText.text = message;
+            _animator.SetBool("isVisable", true);
+        }
+        
+        public void DisplayTextHide()
+        {
+            _animator.SetBool("isVisable", false);
         }
 
         public void SetHealth(float health)
