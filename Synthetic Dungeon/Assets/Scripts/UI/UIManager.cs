@@ -29,6 +29,7 @@ namespace UI
             
             _uiPanels.Add(panelMainMenu);
             _uiPanels.Add(panelGameOverlay);
+            _uiPanels.Add(panelSkills);
 
             bool init = panelMainMenu.Initialize() && panelGameOverlay.Initialize() && panelSkills.Initialize();
             
