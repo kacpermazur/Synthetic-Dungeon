@@ -8,6 +8,7 @@ namespace Player.Spells.Components
     
     public abstract class ImpactComponent : ScriptableObject
     {
+        public Sprite icon;
         public virtual void OnHit(Enemy enemy, GameObject gameObject)
         {
             

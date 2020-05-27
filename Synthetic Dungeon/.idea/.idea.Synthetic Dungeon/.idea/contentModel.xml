@@ -75,6 +75,7 @@
                   <e p="EmissionComponent.cs" t="Include" />
                   <e p="EmissionComponentForward.cs" t="Include" />
                   <e p="EmissionComponentRing.cs" t="Include" />
+                  <e p="EmissionComponentTri.cs" t="Include" />
                 </e>
                 <e p="Impact" t="Include">
                   <e p="ImpactComponent.cs" t="Include" />

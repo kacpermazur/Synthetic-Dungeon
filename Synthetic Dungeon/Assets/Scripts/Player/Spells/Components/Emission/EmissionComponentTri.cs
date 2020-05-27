@@ -3,10 +3,10 @@ using Core;
 
 namespace Player.Spells.Components
 {
-    [CreateAssetMenu(menuName = "Spells/Emission/Ring")]
-    public class EmissionComponentRing : EmissionComponent
+    [CreateAssetMenu(menuName = "Spells/Emission/Tri")]
+    public class EmissionComponentTri : EmissionComponent
     {
-        private const int NumPoints = 12;
+        private const int NumPoints = 24;
         private const float RadiusX = 1f;
         private const float RadiusZ = 1f;
         public override Vector3[] GetEmissionShape(Vector3 origin)
@@ -26,8 +26,12 @@ namespace Player.Spells.Components
 
                 spellEmitters[i] = new Vector3(x, 0, z) + centerPos;
             }
+            var localEm = new Vector3[3];
+            localEm[0] = spellEmitters[5];
+            localEm[1] = spellEmitters[6];
+            localEm[2] = spellEmitters[7];
 
-            return spellEmitters;
+            return localEm;
         }
     }
 }

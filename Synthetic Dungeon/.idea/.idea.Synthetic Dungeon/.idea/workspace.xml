@@ -54,6 +54,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIGameOverlay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/AggresivePursuit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentTri.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/Decision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerFoundDecision.cs" root0="FORCE_HIGHLIGHTING" />
@@ -64,7 +65,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/AnimationTester.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Action.cs" />
@@ -92,12 +92,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/ImpactComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/Action.cs" />
         <option value="$USER_HOME$/Desktop/New folder/Impact/ImpactComponentDamage.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Effects/EffectComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentFoward.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentForward.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentRing.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponentDamage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Effects/EffectComponentEmpty.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Projectile.cs" />
@@ -115,6 +111,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIGameOverlay.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Triggers/MessageTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Effects/EffectComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentRing.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentTri.cs" />
       </list>
     </option>
   </component>
@@ -184,7 +185,8 @@
       <workItem from="1590080558425" duration="269000" />
       <workItem from="1590462949926" duration="14443000" />
       <workItem from="1590493171387" duration="5248000" />
-      <workItem from="1590551121908" duration="11883000" />
+      <workItem from="1590551121908" duration="12131000" />
+      <workItem from="1590597753330" duration="285000" />
     </task>
     <servers />
   </component>
