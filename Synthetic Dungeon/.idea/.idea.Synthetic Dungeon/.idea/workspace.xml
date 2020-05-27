@@ -42,6 +42,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Transition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/SpellSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/States/State.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIPanelMainMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Effects/EffectComponentEmpty.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentForward.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/PatrolAction.cs" root0="FORCE_HIGHLIGHTING" />
@@ -54,16 +55,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerFoundDecision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/SoundClip.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Inventory/InventoryUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerWithinAttackDecision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Data/PlayerData1.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Data/CoreData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Types/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Types/EnemyMeele.cs" />
         <option value="$PROJECT_DIR$/Assets/Test.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/Data/CameraData.cs" />
@@ -112,6 +109,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/StateController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/MeleeAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIPanelMainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
       </list>
     </option>
   </component>
@@ -180,7 +180,8 @@
       <workItem from="1590079470163" duration="452000" />
       <workItem from="1590080558425" duration="269000" />
       <workItem from="1590462949926" duration="14443000" />
-      <workItem from="1590493171387" duration="4896000" />
+      <workItem from="1590493171387" duration="5248000" />
+      <workItem from="1590551121908" duration="718000" />
     </task>
     <servers />
   </component>
@@ -205,10 +206,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="794" y="236" key="RiderGenerateDialog" timestamp="1590494095477">
+    <state x="794" y="236" key="RiderGenerateDialog" timestamp="1590551264328">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="236" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590494095477" />
+    <state x="794" y="236" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590551264328" />
     <state x="186" y="125" key="SettingsEditor" timestamp="1589246785257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

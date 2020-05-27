@@ -9,9 +9,17 @@ namespace UI
     {
         private List<UIPanel> _uiPanels = new List<UIPanel>();
 
+        [SerializeField] private UIPanelMainMenu panelMainMenu;
+
+
+        public UIPanelMainMenu MainMenu => panelMainMenu;
+
         public bool Initialize()
         {
             AddListeners();
+            
+            _uiPanels.Add(panelMainMenu);
+            
             return true;
         }
 
@@ -35,6 +43,16 @@ namespace UI
         }
         
         private void RemoveListeners()
+        {
+            
+        }
+
+        private void OnButtonStartClicked()
+        {
+            
+        }
+
+        private void OnButtonExitClicked()
         {
             
         }
