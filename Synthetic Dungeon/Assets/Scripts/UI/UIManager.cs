@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Core;
 using UnityEngine;
 
 namespace UI
@@ -10,17 +11,23 @@ namespace UI
         private List<UIPanel> _uiPanels = new List<UIPanel>();
 
         [SerializeField] private UIPanelMainMenu panelMainMenu;
-
+        [SerializeField] private UIGameOverlay panelGameOverlay;
 
         public UIPanelMainMenu MainMenu => panelMainMenu;
+        public UIGameOverlay GameOverlay => panelGameOverlay;
 
         public bool Initialize()
         {
             AddListeners();
             
             _uiPanels.Add(panelMainMenu);
+            _uiPanels.Add(panelGameOverlay);
+
+            bool init = panelMainMenu.Initialize();
             
-            return true;
+            OpenPanel(panelMainMenu);
+            
+            return init;
         }
 
         public void OpenPanel(UIPanel panel)
@@ -39,22 +46,26 @@ namespace UI
 
         private void AddListeners()
         {
-            
+            panelMainMenu.onButtonStartClicked += OnButtonStartClicked;
+            panelMainMenu.onButtonExitClicked += OnButtonExitClicked;
         }
         
         private void RemoveListeners()
         {
-            
+            panelMainMenu.onButtonStartClicked -= OnButtonStartClicked;
+            panelMainMenu.onButtonExitClicked -= OnButtonExitClicked;
         }
 
         private void OnButtonStartClicked()
         {
-            
+            GameManager.LogMessage("Start Button Pressed!");
+            OpenPanel(panelGameOverlay);
         }
 
         private void OnButtonExitClicked()
         {
-            
+            GameManager.LogMessage("Exit Button Pressed!");
+            Application.Quit();
         }
     }
 }
