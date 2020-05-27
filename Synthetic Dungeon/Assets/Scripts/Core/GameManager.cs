@@ -67,15 +67,15 @@ namespace Core
 
         private void Initialize()
         {
-            if (!_uiManager.Initialize())
-            {
-                LogMessage("Error: Please Reference UIManager!", MessageType.ALERT);
-            }
-
             _isPlayerActive = _playerManager.Initialize();
             if (!_isPlayerActive)
             {
                 LogMessage("PlayerManager not initialized!", MessageType.ALERT);
+            }
+            
+            if (!_uiManager.Initialize())
+            {
+                LogMessage("Error: Please Reference UIManager!", MessageType.ALERT);
             }
             
             _isEnemyManagerActive = _enemyManager.Initialize();
@@ -95,7 +95,6 @@ namespace Core
                 LogMessage("SoundManager not initialized!", MessageType.ALERT);
             }
             
-            _uiManager.GameOverlay.SetHealth(2);
         }
         
 

@@ -17,21 +17,21 @@ namespace Player
         private Transform _transform;
         private Rigidbody _rigidBody;
 
-        private bool _enabledControls;
+        public bool enabledControls;
 
         public Transform Transform => _transform;
         public Rigidbody Rigidbody => _rigidBody;
         public PlayerData PlayerData => playerData;
         public SpellSystem SpellSystem => _spellSystem;
 
-        private float _maxHealth;
-        private float _currentHealth;
+        public float maxHealth;
+        public float currentHealth;
         
-        private float _maxMana;
-        private float _currentMana;
+        public float maxMana;
+        public float currentMana;
 
-        private int _currentLevel;
-        private int _exp;
+        public int currentLevel;
+        public int exp;
 
         public bool Initialize()
         {
@@ -46,37 +46,40 @@ namespace Player
             _spellSystem = GetComponent<SpellSystem>();
 
             InitPlayerStats();
-            _enabledControls = _playerMovement.Initialize() && _spellSystem.Initialize();
-            return _enabledControls;
+            var init = _playerMovement.Initialize() && _spellSystem.Initialize();
+
+            return init;
         }
 
         public void OnExecute()
         {
-            if (_enabledControls)
+            if (enabledControls)
             {
+                Debug.Log("bazinga");
                 _playerMovement.OnExecute();
-                _spellSystem.OnExecute();
             }
         }
 
         public void EnableControls()
         {
-            _enabledControls = true;
+            GameManager.LogMessage("Controls Enabled");
+            enabledControls = true;
         }
         
         public void DisableControls()
         {
-            _enabledControls = false;
+            GameManager.LogMessage("Controls Disabled");
+            enabledControls = false;
         }
 
         public void TakeDamage(float damage)
         {
             float dmg = (damage - playerData.toughness < 1) ? 0 : damage;
-            _currentHealth -= dmg;
+            currentHealth -= dmg;
             
             GameManager.LogMessage("Player has taken Damage!");
 
-            if (_currentHealth <= 0)
+            if (currentHealth <= 0)
             {
                 GameManager.LogMessage("Player Died!");
             }
@@ -84,31 +87,31 @@ namespace Player
         
         public void Heal(float amount)
         {
-            _currentHealth += Mathf.Clamp(amount, 0f, _maxHealth- _currentHealth);
+            currentHealth += Mathf.Clamp(amount, 0f, maxHealth - currentHealth);
         }
 
         public void AddExp(int amount)
         {
-            _exp += amount;
+            exp += amount;
 
-            if (_exp <= 100)
+            if (exp <= 100)
             {
                 GameManager.LogMessage("PlayerManager: Player Has Leveled UP!");
-                _currentLevel++;
-                _exp = 0;
+                currentLevel++;
+                exp = 0;
             }
         }
 
         private void InitPlayerStats()
         {
-            _maxHealth = playerData.health;
-            _currentHealth = _maxHealth;
+            maxHealth = playerData.health;
+            currentHealth = maxHealth;
             
-            _maxMana = playerData.mana;
-            _currentMana = _maxMana;
+            maxMana = playerData.mana;
+            currentMana = maxMana;
 
-            _currentLevel = 1;
-            _exp = 0;
+            currentLevel = 1;
+            exp = 0;
         }
         
     }

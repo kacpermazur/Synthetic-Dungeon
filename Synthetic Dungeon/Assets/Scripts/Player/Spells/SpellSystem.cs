@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Player.Spells
 {
-    public class SpellSystem : MonoBehaviour, IInitializable, IOnExecute
+    public class SpellSystem : MonoBehaviour, IInitializable
     {
         private PlayerManager _playerManager;
 
@@ -23,10 +23,6 @@ namespace Player.Spells
         {
             _playerManager = GameManager.Instance.PlayerManager;
             return true;
-        }
-        
-        public void OnExecute()
-        {
         }
 
         public void CastSpell()

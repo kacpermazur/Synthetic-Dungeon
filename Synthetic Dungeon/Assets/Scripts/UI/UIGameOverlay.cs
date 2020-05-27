@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Core;
+using Player;
 using Player.Data;
 using TMPro;
 using UnityEngine;
@@ -12,6 +13,7 @@ namespace UI
     {
         [SerializeField] private Slider healthSlider;
         [SerializeField] private Slider manaSlider;
+        [SerializeField] private Slider expSlider;
 
         [SerializeField] private Image _emmisionImage;
         [SerializeField] private Image _impactImage;
@@ -20,19 +22,20 @@ namespace UI
         [SerializeField] private TextMeshProUGUI _infoText;
         [SerializeField] private Animator _animator;
 
-        private PlayerData _playerData;
+        private PlayerManager _playerManager;
 
         public override bool Initialize()
         {
-            if (!healthSlider && !manaSlider && !_emmisionImage && !_impactImage && !_elementImage && !_infoText && !_animator)
+            if (!healthSlider && !manaSlider && !expSlider && !_emmisionImage && !_impactImage && !_elementImage && !_infoText && !_animator)
             {
                 GameManager.LogMessage("UI Manager: Please Reference components in game overlay panel!");
                 return false;
             }
 
-            _playerData = GameManager.Instance.PlayerManager.PlayerData;
+            _playerManager = GameManager.Instance.PlayerManager;
             InitializeHealthSlider();
             InitializeManaSlider();
+            InitializeExpSlider();
             
             return true;
         }
@@ -57,6 +60,11 @@ namespace UI
         {
             manaSlider.value = mana;
         }
+        
+        public void SetExp(float exp)
+        {
+            expSlider.value = exp;
+        }
 
         public void SetEmmisionImage(Sprite icon)
         {
@@ -75,14 +83,22 @@ namespace UI
 
         private void InitializeHealthSlider()
         {
-            healthSlider.maxValue = _playerData.health;
-            healthSlider.value = _playerData.health;
+            healthSlider.maxValue = _playerManager.maxHealth;
+            healthSlider.value = _playerManager.currentHealth;
         }
         
         private void InitializeManaSlider()
         {
-            manaSlider.maxValue = _playerData.mana;
-            manaSlider.value = _playerData.mana;
+            manaSlider.maxValue = _playerManager.maxMana;
+            manaSlider.value = _playerManager.currentMana;
+        }
+        
+        private void InitializeExpSlider()
+        {
+            const int maxExp = 100;
+            
+            expSlider.maxValue = maxExp;
+            expSlider.value = _playerManager.exp;
         }
     }
 }

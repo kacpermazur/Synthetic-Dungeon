@@ -83,9 +83,12 @@ namespace Player
         
         public void OnMagic(InputValue value)
         {
-            GameManager.LogMessage("On Magic");
-            _animator.CrossFade("oh_magic_1", 0.2f);
-            GameManager.Instance.PlayerManager.SpellSystem.CastSpell();
+            if (GameManager.Instance.PlayerManager.enabledControls)
+            {
+                GameManager.LogMessage("On Magic");
+                _animator.CrossFade("oh_magic_1", 0.2f);
+                GameManager.Instance.PlayerManager.SpellSystem.CastSpell();
+            }
         }
 
         public void OnAttack(InputValue value)

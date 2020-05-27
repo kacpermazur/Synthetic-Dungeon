@@ -28,7 +28,6 @@ namespace UI
             
             return true;
         }
-
         private void ButtonStart()
         {
             onButtonStartClicked?.Invoke();

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Core;
+using Player;
 using UnityEngine;
 
 namespace UI
@@ -26,6 +27,7 @@ namespace UI
             bool init = panelMainMenu.Initialize() && panelGameOverlay.Initialize();
             
             OpenPanel(panelMainMenu);
+            GameManager.Instance.PlayerManager.DisableControls();
             
             return init;
         }
@@ -59,6 +61,7 @@ namespace UI
         private void OnButtonStartClicked()
         {
             GameManager.LogMessage("Start Button Pressed!");
+            GameManager.Instance.PlayerManager.EnableControls();
             OpenPanel(panelGameOverlay);
         }
 
