@@ -2,6 +2,7 @@
 using Core;
 using Player.Data;
 using Sound;
+using Triggers;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,7 @@ namespace Player
     public class PlayerController : MonoBehaviour, IInitializable, IOnExecute
     {
         [SerializeField] private float _playerRotationOffset;
+        [SerializeField] private OnMeleeDetect _onMeleeDetect;
         
         private PlayerData _playerData;
         private Animator _animator;
@@ -17,10 +19,17 @@ namespace Player
 
         private bool isAttackedPressed;
         private float nextAttackTime;
-        
-        
+
         private float nextWalakPlay;
-        
+
+        private Enemy.Enemy _enemy;
+
+        public Enemy.Enemy Enemy
+        {
+            get => _enemy;
+            set => _enemy = value;
+        }
+
         public bool Initialize()
         {
             _animator = GetComponent<Animator>();
@@ -28,6 +37,8 @@ namespace Player
 
             nextAttackTime = 0;
             nextWalakPlay = 0;
+
+            _onMeleeDetect.Initialize();
             
             if (_animator)
             {
@@ -57,6 +68,12 @@ namespace Player
                     GameManager.LogMessage("On Attack");
                     GameManager.Instance.SoundManager.PlaySound("attack", SoundManager.SoundType.SFX);
                     _animator.CrossFade("oh_attack_3", 0.2f);
+
+                    if (_enemy)
+                    {
+                        _enemy.TakeDamage(8);
+                    }
+                    
                     nextAttackTime = eTime + _playerData.attackSpeed;
                 }
             }

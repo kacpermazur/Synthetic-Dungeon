@@ -8,6 +8,7 @@ namespace Player.Spells.Components
     {
         public override void Tick(Enemy.Enemy enemy)
         {
+            GameManager.LogMessage("fire tick");
             enemy.TakeDamage(1);
         }
     }

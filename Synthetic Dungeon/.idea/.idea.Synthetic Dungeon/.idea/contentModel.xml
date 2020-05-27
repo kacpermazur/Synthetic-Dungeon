@@ -76,7 +76,6 @@
                   <e p="EmissionComponent.cs" t="Include" />
                   <e p="EmissionComponentForward.cs" t="Include" />
                   <e p="EmissionComponentRing.cs" t="Include" />
-                  <e p="EmissionComponentTri.cs" t="Include" />
                 </e>
                 <e p="Impact" t="Include">
                   <e p="ImpactComponent.cs" t="Include" />
@@ -94,6 +93,7 @@
           <e p="Triggers" t="Include">
             <e p="MessageComponent.cs" t="Include" />
             <e p="MessageTrigger.cs" t="Include" />
+            <e p="OnMeleeDetect.cs" t="Include" />
             <e p="PortalTrigger.cs" t="Include" />
           </e>
           <e p="UI" t="Include">

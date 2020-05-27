@@ -9503,7 +9503,7 @@ MonoBehaviour:
   expSlider: {fileID: 610623371}
   _emmisionImage: {fileID: 246136169}
   _impactImage: {fileID: 1095364998}
-  _elementImage: {fileID: 1074397442}
+  _effectImage: {fileID: 0}
   _infoText: {fileID: 1235768422}
   _animator: {fileID: 1235768421}
 --- !u!1001 &1302340994
@@ -15964,10 +15964,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1512611126613718051, guid: b68e3a56e98711f4abbd4330c701bbb7,
-        type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
+    - target: {fileID: 1549591695, guid: b68e3a56e98711f4abbd4330c701bbb7, type: 3}
+      propertyPath: m_Size.x
+      value: 1.8534181
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549591695, guid: b68e3a56e98711f4abbd4330c701bbb7, type: 3}
+      propertyPath: m_Center.x
+      value: 0.124198556
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549591695, guid: b68e3a56e98711f4abbd4330c701bbb7, type: 3}
+      propertyPath: m_Size.z
+      value: 1.4752126
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549591695, guid: b68e3a56e98711f4abbd4330c701bbb7, type: 3}
+      propertyPath: m_Center.z
+      value: 0.23760635
       objectReference: {fileID: 0}
     - target: {fileID: 1512611126620833017, guid: b68e3a56e98711f4abbd4330c701bbb7,
         type: 3}
@@ -16029,29 +16040,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1512611127787737322, guid: b68e3a56e98711f4abbd4330c701bbb7,
+    - target: {fileID: 5450087164494948410, guid: b68e3a56e98711f4abbd4330c701bbb7,
         type: 3}
-      propertyPath: effectComponent
-      value: 
-      objectReference: {fileID: 11400000, guid: 1991b2c5b8192ff46847cc6372ec1b64,
-        type: 2}
-    - target: {fileID: 1512611127787737322, guid: b68e3a56e98711f4abbd4330c701bbb7,
-        type: 3}
-      propertyPath: Projectile
-      value: 
-      objectReference: {fileID: 884211895299123720, guid: e98b376f953a7274cbb7eb0976b9b299,
-        type: 3}
-    - target: {fileID: 1512611127787737322, guid: b68e3a56e98711f4abbd4330c701bbb7,
-        type: 3}
-      propertyPath: impactComponent
-      value: 
-      objectReference: {fileID: 11400000, guid: c0aebd666c6980b4dbb1ddff8e3cc22b,
-        type: 2}
-    - target: {fileID: 1512611127787737322, guid: b68e3a56e98711f4abbd4330c701bbb7,
-        type: 3}
-      propertyPath: emissionComponent
-      value: 
-      objectReference: {fileID: 11400000, guid: 9cc0bbf474eaa774fae74cfaf61943de,
-        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b68e3a56e98711f4abbd4330c701bbb7, type: 3}

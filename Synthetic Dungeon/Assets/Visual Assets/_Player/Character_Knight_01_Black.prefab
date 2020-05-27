@@ -1,5 +1,62 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1549591693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1549591694}
+  - component: {fileID: 1549591695}
+  - component: {fileID: 6650628179954945895}
+  m_Layer: 0
+  m_Name: meleeRange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1549591694
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549591693}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.998, z: 0.736}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1512611126620833017}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1549591695
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549591693}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.140477, y: 1.5504134, z: 0.9418453}
+  m_Center: {x: -0.07023847, y: 0.123318315, z: -0.029077351}
+--- !u!114 &6650628179954945895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549591693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03c4fe232d63aa46975b6c35edf98db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1512611126621000973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,6 +1454,7 @@ Transform:
   m_Children:
   - {fileID: 1512611126620740961}
   - {fileID: 1512611126620829215}
+  - {fileID: 1549591694}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
@@ -1489,6 +1547,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: e41ad1985e8f53e459c1d17160795c1c, type: 2}
+  enabledControls: 0
+  maxHealth: 0
+  currentHealth: 0
+  maxMana: 0
+  currentMana: 0
+  currentLevel: 0
+  exp: 0
 --- !u!114 &1512611127787737321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1502,6 +1567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerRotationOffset: 90
+  _onMeleeDetect: {fileID: 6650628179954945895}
 --- !u!114 &1512611127787737322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1514,11 +1580,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 028b0c17829317049a6841c145ce956c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emissionComponent: {fileID: -7556699248939958194, guid: ecfa840d4f014b440af260cb8beeaeee,
+  Projectile: {fileID: 884211895299123720, guid: e98b376f953a7274cbb7eb0976b9b299,
     type: 3}
-  impactComponent: {fileID: 3113307303074362300, guid: ecfa840d4f014b440af260cb8beeaeee,
-    type: 3}
-  effectComponent: {fileID: 0}
+  emissionComponent: {fileID: 11400000, guid: 40eedb1823824954786a5ac48b9707cd, type: 2}
+  impactComponent: {fileID: 11400000, guid: c0aebd666c6980b4dbb1ddff8e3cc22b, type: 2}
+  effectComponent: {fileID: 11400000, guid: 1991b2c5b8192ff46847cc6372ec1b64, type: 2}
 --- !u!95 &1512611126613718051
 Animator:
   serializedVersion: 3

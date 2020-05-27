@@ -14,8 +14,7 @@ namespace Enemy
         [SerializeField] private EnemyManager _enemyManager;
         [SerializeField] private EnemyData _enemyData;
         [SerializeField] private StateController _stateController;
-
-        [SerializeField] private Animator _animator;
+        
         public StateController StateController => _stateController;
 
         private float _currentHealth;
@@ -59,7 +58,6 @@ namespace Enemy
         
         public virtual void TakeDamage(int damage)
         {
-            _animator.SetBool("IsHit", true);
             float dmg = (damage - _enemyData.toughness < 1) ? 0 : damage;
             _currentHealth -= dmg;
 
@@ -69,7 +67,6 @@ namespace Enemy
                 _enemyManager.RemoveFromPool(this);
                 Destroy(gameObject);
             }
-            _animator.SetBool("IsHit", false);
         }
 
         private void TriggerEffect()
