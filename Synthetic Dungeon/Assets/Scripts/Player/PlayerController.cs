@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using Core;
 using Player.Data;
+using Sound;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -17,12 +18,16 @@ namespace Player
         private bool isAttackedPressed;
         private float nextAttackTime;
         
+        
+        private float nextWalakPlay;
+        
         public bool Initialize()
         {
             _animator = GetComponent<Animator>();
             _playerData = GameManager.Instance.PlayerManager.PlayerData;
 
             nextAttackTime = 0;
+            nextWalakPlay = 0;
             
             if (_animator)
             {
@@ -36,37 +41,40 @@ namespace Player
         {
             float eTime = Time.time;
             
-            Movement();
+            Movement(eTime);
             Attack(eTime);
 
         }
 
         private void Attack(float eTime)
         {
-            if (eTime > nextAttackTime)
+            if (isAttackedPressed)
             {
-                if (isAttackedPressed)
+                isAttackedPressed = false;
+                
+                if (Time.time > nextAttackTime)
                 {
-                    isAttackedPressed = false;
-                    
-                    if (Time.time > nextAttackTime)
-                    {
-                        GameManager.LogMessage("On Attack");
-                        _animator.CrossFade("oh_attack_3", 0.2f);
-                        nextAttackTime = eTime + _playerData.attackSpeed;
-                    }
+                    GameManager.LogMessage("On Attack");
+                    GameManager.Instance.SoundManager.PlaySound("attack", SoundManager.SoundType.SFX);
+                    _animator.CrossFade("oh_attack_3", 0.2f);
+                    nextAttackTime = eTime + _playerData.attackSpeed;
                 }
             }
         }
 
-        private void Movement()
+        private void Movement(float eTime)
         {
             Vector3 direction = new Vector3(_onMoveDir.y, 0, -_onMoveDir.x);
-            
             _animator.SetFloat("vertical", 0f, 0.1f, Time.deltaTime);
             
             if (direction != Vector3.zero)
             {
+                if (eTime > nextWalakPlay)
+                {
+                    GameManager.Instance.SoundManager.PlaySound("walk", SoundManager.SoundType.SFX);
+                    nextWalakPlay = eTime + 0.75f;
+                }
+                
                 transform.rotation = Quaternion.Slerp(transform.rotation,  Quaternion.LookRotation(direction),
                     Time.deltaTime * _playerData.rotationSpeed);
 
@@ -86,6 +94,7 @@ namespace Player
             if (GameManager.Instance.PlayerManager.enabledControls)
             {
                 GameManager.LogMessage("On Magic");
+                GameManager.Instance.SoundManager.PlaySound("attack", SoundManager.SoundType.SFX);
                 _animator.CrossFade("oh_magic_1", 0.2f);
                 GameManager.Instance.PlayerManager.SpellSystem.CastSpell();
             }

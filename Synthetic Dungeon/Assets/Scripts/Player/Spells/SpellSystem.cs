@@ -45,16 +45,19 @@ namespace Player.Spells
         public void EquipEmissionComponent(EmissionComponent emission)
         {
             emissionComponent = emission;
+            GameManager.Instance.UiManager.GameOverlay.SetEmmisionImage(emission.icon);
         }
         
         public void EquipImpactComponent(ImpactComponent impact)
         {
             impactComponent = impact;
+            GameManager.Instance.UiManager.GameOverlay.SetImpactImage(impact.icon);
         }
         
         public void EquipEffectComponent(EffectComponent effect)
         {
             effectComponent = effect;
+            GameManager.Instance.UiManager.GameOverlay.SetEffectImage(effect.icon);
         }
     }
 }

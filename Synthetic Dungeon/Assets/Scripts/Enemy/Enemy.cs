@@ -15,12 +15,15 @@ namespace Enemy
         [SerializeField] private EnemyData _enemyData;
         [SerializeField] private StateController _stateController;
 
+        [SerializeField] private Animator _animator;
         public StateController StateController => _stateController;
 
         private float _currentHealth;
         private float _effectTimer;
         
         private EffectComponent _effectComponent;
+        
+
         public bool Initialize()
         {
             _stateController = GetComponent<StateController>();
@@ -28,7 +31,8 @@ namespace Enemy
             
             _enemyManager = GameManager.Instance.EnemyManager;
             _currentHealth = _enemyData.health;
-
+            GameManager.Instance.SoundManager.PlaySoundSpatialSFX("zombie", gameObject);
+            
             if (_enemyData)
             {
                 return true;
@@ -55,15 +59,17 @@ namespace Enemy
         
         public virtual void TakeDamage(int damage)
         {
-
+            _animator.SetBool("IsHit", true);
             float dmg = (damage - _enemyData.toughness < 1) ? 0 : damage;
             _currentHealth -= dmg;
 
+            
             if (_currentHealth <= 0)
             {
                 _enemyManager.RemoveFromPool(this);
                 Destroy(gameObject);
             }
+            _animator.SetBool("IsHit", false);
         }
 
         private void TriggerEffect()

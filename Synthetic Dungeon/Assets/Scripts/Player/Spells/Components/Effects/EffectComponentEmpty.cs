@@ -4,11 +4,11 @@ using Core;
 namespace Player.Spells.Components
 {
     [CreateAssetMenu(menuName = "Spells/Effect/Empty")]
-    public class EffectComponentFire : EffectComponent
+    public class EffectComponentEmpty : EffectComponent
     {
         public override void Tick(Enemy.Enemy enemy)
         {
-            enemy.TakeDamage(1);
+            
         }
     }
 }

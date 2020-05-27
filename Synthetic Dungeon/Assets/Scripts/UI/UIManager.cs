@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Core;
 using Player;
+using Sound;
 using UnityEngine;
 
 namespace UI
@@ -61,6 +62,8 @@ namespace UI
         private void OnButtonStartClicked()
         {
             GameManager.LogMessage("Start Button Pressed!");
+            GameManager.Instance.SoundManager.PlaySound("UIClick", SoundManager.SoundType.UI);
+            GameManager.Instance.SoundManager.PlaySound("music", SoundManager.SoundType.MUSIC);
             GameManager.Instance.PlayerManager.EnableControls();
             OpenPanel(panelGameOverlay);
         }
@@ -68,6 +71,7 @@ namespace UI
         private void OnButtonExitClicked()
         {
             GameManager.LogMessage("Exit Button Pressed!");
+            GameManager.Instance.SoundManager.PlaySound("UIClick", SoundManager.SoundType.UI);
             Application.Quit();
         }
     }

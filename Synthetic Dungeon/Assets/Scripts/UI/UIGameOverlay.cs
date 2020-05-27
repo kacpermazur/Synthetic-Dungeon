@@ -17,7 +17,7 @@ namespace UI
 
         [SerializeField] private Image _emmisionImage;
         [SerializeField] private Image _impactImage;
-        [SerializeField] private Image _elementImage;
+        [SerializeField] private Image _effectImage;
 
         [SerializeField] private TextMeshProUGUI _infoText;
         [SerializeField] private Animator _animator;
@@ -26,7 +26,7 @@ namespace UI
 
         public override bool Initialize()
         {
-            if (!healthSlider && !manaSlider && !expSlider && !_emmisionImage && !_impactImage && !_elementImage && !_infoText && !_animator)
+            if (!healthSlider && !manaSlider && !expSlider && !_emmisionImage && !_impactImage && !_effectImage && !_infoText && !_animator)
             {
                 GameManager.LogMessage("UI Manager: Please Reference components in game overlay panel!");
                 return false;
@@ -77,14 +77,14 @@ namespace UI
             _emmisionImage.sprite = icon;
         }
         
-        public void SeImpactImage(Sprite icon)
+        public void SetImpactImage(Sprite icon)
         {
             _impactImage.sprite = icon;
         }
         
-        public void SetElementImage(Sprite icon)
+        public void SetEffectImage(Sprite icon)
         {
-            _elementImage.sprite = icon;
+            _effectImage.sprite = icon;
         }
 
         private void InitializeHealthSlider()

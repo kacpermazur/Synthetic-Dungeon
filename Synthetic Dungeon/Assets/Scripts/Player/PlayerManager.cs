@@ -1,6 +1,7 @@
 ﻿using Core;
 using Player.Data;
 using Player.Spells;
+using Sound;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -77,6 +78,8 @@ namespace Player
             currentHealth -= dmg;
             
             GameManager.LogMessage("Player has taken Damage!");
+            GameManager.Instance.SoundManager.PlaySound("playerHit", SoundManager.SoundType.SFX);
+            GameManager.Instance.UiManager.GameOverlay.SetHealth(currentHealth);
 
             if (currentHealth <= 0)
             {
@@ -87,6 +90,7 @@ namespace Player
         public void Heal(float amount)
         {
             currentHealth += Mathf.Clamp(amount, 0f, maxHealth - currentHealth);
+            GameManager.Instance.UiManager.GameOverlay.SetHealth(currentHealth);
         }
 
         public void AddExp(int amount)
@@ -99,6 +103,7 @@ namespace Player
                 currentLevel++;
                 exp = 0;
             }
+            GameManager.Instance.UiManager.GameOverlay.SetExp(exp);
         }
 
         private void InitPlayerStats()
