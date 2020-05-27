@@ -80,7 +80,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Decisions/PlayerFoundDecision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/AggresivePursuit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Data/PlayerData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIGameOverlay.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/PatrolAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Sound/SoundClip.cs" />
@@ -112,6 +111,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIPanelMainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIGameOverlay.cs" />
       </list>
     </option>
   </component>
@@ -181,7 +181,7 @@
       <workItem from="1590080558425" duration="269000" />
       <workItem from="1590462949926" duration="14443000" />
       <workItem from="1590493171387" duration="5248000" />
-      <workItem from="1590551121908" duration="2041000" />
+      <workItem from="1590551121908" duration="4289000" />
     </task>
     <servers />
   </component>
@@ -206,10 +206,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="794" y="236" key="RiderGenerateDialog" timestamp="1590551264328">
+    <state x="794" y="236" key="RiderGenerateDialog" timestamp="1590573259401">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="236" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590551264328" />
+    <state x="794" y="236" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590573259401" />
     <state x="186" y="125" key="SettingsEditor" timestamp="1589246785257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
