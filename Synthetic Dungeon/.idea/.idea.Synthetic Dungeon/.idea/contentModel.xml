@@ -89,6 +89,11 @@
             <e p="SoundClip.cs" t="Include" />
             <e p="SoundManager.cs" t="Include" />
           </e>
+          <e p="Triggers" t="Include">
+            <e p="MessageComponent.cs" t="Include" />
+            <e p="MessageTrigger.cs" t="Include" />
+            <e p="PortalTrigger.cs" t="Include" />
+          </e>
           <e p="UI" t="Include">
             <e p="UIGameOverlay.cs" t="Include" />
             <e p="UIManager.cs" t="Include" />

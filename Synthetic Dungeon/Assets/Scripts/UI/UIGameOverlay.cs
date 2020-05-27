@@ -21,7 +21,7 @@ namespace UI
 
         [SerializeField] private TextMeshProUGUI _infoText;
         [SerializeField] private Animator _animator;
-
+        
         private PlayerManager _playerManager;
 
         public override bool Initialize()
@@ -38,6 +38,12 @@ namespace UI
             InitializeExpSlider();
             
             return true;
+        }
+        
+        public TextMeshProUGUI TextMesh()
+        {
+            _animator.SetBool("isVisable", true);
+            return _infoText;
         }
 
         public void DisplayTextShow(string message)

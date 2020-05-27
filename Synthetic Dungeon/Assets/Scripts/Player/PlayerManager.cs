@@ -55,7 +55,6 @@ namespace Player
         {
             if (enabledControls)
             {
-                Debug.Log("bazinga");
                 _playerMovement.OnExecute();
             }
         }
