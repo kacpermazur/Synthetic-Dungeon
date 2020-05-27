@@ -19,15 +19,15 @@ namespace UI
         [SerializeField] private Image _impactImage;
         [SerializeField] private Image _effectImage;
         
-        [Header("Spell Emission")]
+        [Header("Spell Effects")]
         [SerializeField] private Button _emptyButton;
         [SerializeField] private Button _fireButton;
 
-        [Header("Spell Impact")]
+        [Header("Spell Emissions")]
         [SerializeField] private Button _fowardButton;
         [SerializeField] private Button _ringButton;
 
-        [Header("Spell Effects")]
+        [Header("Spell Impacts")]
         [SerializeField] private Button _damgeButton;
 
         public override bool Initialize()

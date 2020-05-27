@@ -110,7 +110,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Effects/EffectComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentRing.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Effects/EffectComponentEmpty.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentTri.cs" />
@@ -118,6 +117,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Triggers/OnMeleeDetect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIPanelSkills.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
       </list>
     </option>
   </component>
@@ -234,10 +234,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583810700031" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1590591009649">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1590612392382">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590591009649" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590612392382" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
