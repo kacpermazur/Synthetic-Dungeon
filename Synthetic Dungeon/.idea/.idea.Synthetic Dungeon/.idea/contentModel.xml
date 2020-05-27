@@ -101,6 +101,7 @@
             <e p="UIManager.cs" t="Include" />
             <e p="UIPanel.cs" t="Include" />
             <e p="UIPanelMainMenu.cs" t="Include" />
+            <e p="UIPanelSkills.cs" t="Include" />
           </e>
           <e p="Utilities" t="Include">
             <e p="AnimationTester.cs" t="Include" />
