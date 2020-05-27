@@ -94,6 +94,8 @@ namespace Core
             {
                 LogMessage("SoundManager not initialized!", MessageType.ALERT);
             }
+            
+            _uiManager.GameOverlay.SetHealth(2);
         }
         
 

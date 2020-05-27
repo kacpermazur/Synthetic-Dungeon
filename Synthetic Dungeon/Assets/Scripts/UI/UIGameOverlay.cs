@@ -20,7 +20,16 @@ namespace UI
 
         public override bool Initialize()
         {
+            if (!healthSlider && !manaSlider && !_emmisionImage && !_impactImage && !_elementImage)
+            {
+                GameManager.LogMessage("UI Manager: Please Reference components in game overlay panel!");
+                return false;
+            }
+
             _playerData = GameManager.Instance.PlayerManager.PlayerData;
+            InitializeHealthSlider();
+            InitializeManaSlider();
+            
             return true;
         }
 

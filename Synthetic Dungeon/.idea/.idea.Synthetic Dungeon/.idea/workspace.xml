@@ -81,7 +81,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/AggresivePursuit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Data/PlayerData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/PatrolAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Sound/SoundClip.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Effect/EmptyEffect.cs" />
@@ -111,6 +110,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIPanelMainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIGameOverlay.cs" />
       </list>
     </option>
@@ -181,7 +181,7 @@
       <workItem from="1590080558425" duration="269000" />
       <workItem from="1590462949926" duration="14443000" />
       <workItem from="1590493171387" duration="5248000" />
-      <workItem from="1590551121908" duration="4289000" />
+      <workItem from="1590551121908" duration="4643000" />
     </task>
     <servers />
   </component>
