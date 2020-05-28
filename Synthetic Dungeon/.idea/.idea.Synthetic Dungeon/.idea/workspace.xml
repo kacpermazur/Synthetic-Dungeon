@@ -37,6 +37,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/SoundClip.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/New folder/ImpactComponent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/IOnExecute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/New folder/EffectComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/PlayerInputActions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/New folder/EmissionComponent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -92,7 +93,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/Actions/Action.cs" />
         <option value="$USER_HOME$/Desktop/New folder/Impact/ImpactComponentDamage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentFoward.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentForward.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponentDamage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Projectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/StateController.cs" />
@@ -112,12 +112,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentTri.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Effects/EffectComponentFire.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Triggers/OnMeleeDetect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIPanelSkills.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/SpellSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIGameOverlay.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponentForward.cs" />
       </list>
     </option>
   </component>
@@ -191,6 +192,7 @@
       <workItem from="1590597753330" duration="606000" />
       <workItem from="1590598560342" duration="3762000" />
       <workItem from="1590630579200" duration="2424000" />
+      <workItem from="1590655059760" duration="5731000" />
     </task>
     <servers />
   </component>
