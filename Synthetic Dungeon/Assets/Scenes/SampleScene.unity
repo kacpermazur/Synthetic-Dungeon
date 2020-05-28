@@ -550,7 +550,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 0b24b080d49a902488da234212427686, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -832,7 +832,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: bf38ecd9b11fa0f47a062dd13b0e1a9b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3337,8 +3337,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: a2e2a83536d4eef45ace93d156eab562, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4453,7 +4453,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c14bd27b66cebf544a9f29e083c78877, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8047,7 +8047,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ffe6fb1568b217f4cb0d0b5693752e3b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8317,9 +8317,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75c5260d24965c340b8991eb9784b034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _emmisionImage: {fileID: 421735156}
-  _impactImage: {fileID: 1097953501}
-  _effectImage: {fileID: 2127815580}
+  _emmisionImage: {fileID: 58633346}
+  _impactImage: {fileID: 2020900553}
+  _effectImage: {fileID: 1694623645}
   _emptyButton: {fileID: 896851723}
   _fireButton: {fileID: 1418785534}
   _fowardButton: {fileID: 1172815165}
@@ -8566,8 +8566,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281348305
-  m_fontColor: {r: 0.8207547, g: 0.18970275, b: 0.18970275, a: 1}
+    rgba: 4280558796
+  m_fontColor: {r: 0.8018868, g: 0.13995194, b: 0.13995194, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8585,8 +8585,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9208,9 +9208,9 @@ MonoBehaviour:
   healthSlider: {fileID: 272819120}
   manaSlider: {fileID: 1904335015}
   expSlider: {fileID: 610623371}
-  _emmisionImage: {fileID: 246136169}
-  _impactImage: {fileID: 1095364998}
-  _effectImage: {fileID: 0}
+  _emmisionImage: {fileID: 1104800450}
+  _impactImage: {fileID: 948279509}
+  _effectImage: {fileID: 1940310005}
   _infoText: {fileID: 1235768422}
   _animator: {fileID: 1235768421}
 --- !u!1001 &1302340994
@@ -9409,7 +9409,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 3a39883a299341845926b5f50d60f3cd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11851,8 +11851,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 6b8728d20b5d4c540b335c3789517218, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -12965,8 +12965,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -12984,8 +12984,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -15598,22 +15598,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1549591695, guid: b68e3a56e98711f4abbd4330c701bbb7, type: 3}
-      propertyPath: m_Size.x
-      value: 1.8534181
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549591695, guid: b68e3a56e98711f4abbd4330c701bbb7, type: 3}
-      propertyPath: m_Center.x
-      value: 0.124198556
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549591695, guid: b68e3a56e98711f4abbd4330c701bbb7, type: 3}
-      propertyPath: m_Size.z
-      value: 1.4752126
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549591695, guid: b68e3a56e98711f4abbd4330c701bbb7, type: 3}
-      propertyPath: m_Center.z
-      value: 0.23760635
-      objectReference: {fileID: 0}
     - target: {fileID: 1512611126620833017, guid: b68e3a56e98711f4abbd4330c701bbb7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15673,56 +15657,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1512611127787737322, guid: b68e3a56e98711f4abbd4330c701bbb7,
-        type: 3}
-      propertyPath: ImpactComponents.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1512611127787737322, guid: b68e3a56e98711f4abbd4330c701bbb7,
-        type: 3}
-      propertyPath: EmissionComponents.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1512611127787737322, guid: b68e3a56e98711f4abbd4330c701bbb7,
-        type: 3}
-      propertyPath: EffectComponents.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1512611127787737322, guid: b68e3a56e98711f4abbd4330c701bbb7,
-        type: 3}
-      propertyPath: ImpactComponents.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: c0aebd666c6980b4dbb1ddff8e3cc22b,
-        type: 2}
-    - target: {fileID: 1512611127787737322, guid: b68e3a56e98711f4abbd4330c701bbb7,
-        type: 3}
-      propertyPath: EmissionComponents.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 40eedb1823824954786a5ac48b9707cd,
-        type: 2}
-    - target: {fileID: 1512611127787737322, guid: b68e3a56e98711f4abbd4330c701bbb7,
-        type: 3}
-      propertyPath: EmissionComponents.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: f84c4b3a89072b547bf6e7cb8b88f5ad,
-        type: 2}
-    - target: {fileID: 1512611127787737322, guid: b68e3a56e98711f4abbd4330c701bbb7,
-        type: 3}
-      propertyPath: EffectComponents.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 8ca1a00550747de40ae3d9f71b028187,
-        type: 2}
-    - target: {fileID: 1512611127787737322, guid: b68e3a56e98711f4abbd4330c701bbb7,
-        type: 3}
-      propertyPath: EffectComponents.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 1991b2c5b8192ff46847cc6372ec1b64,
-        type: 2}
-    - target: {fileID: 5450087164494948410, guid: b68e3a56e98711f4abbd4330c701bbb7,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b68e3a56e98711f4abbd4330c701bbb7, type: 3}

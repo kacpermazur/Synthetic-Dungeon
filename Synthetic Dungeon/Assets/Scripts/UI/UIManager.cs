@@ -113,6 +113,7 @@ namespace UI
         private void onButtonFireClicked()
         {
             GameManager.LogMessage("Fire Effect Selected!");
+            Debug.Log(_spellSystem.EffectComponents[1]);
             _spellSystem.EquipEffectComponent(_spellSystem.EffectComponents[1]);
         }
         

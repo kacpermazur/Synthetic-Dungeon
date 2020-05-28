@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffbc83a41b0347f4983e349e5c02bc6f, type: 3}
   m_Name: Impact Component Damage
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 3a39883a299341845926b5f50d60f3cd, type: 3}
   damage: 5

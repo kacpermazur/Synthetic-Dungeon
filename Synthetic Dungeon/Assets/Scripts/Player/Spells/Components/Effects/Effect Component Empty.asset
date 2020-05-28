@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65d972d1b316d954780c5e37eeee017a, type: 3}
   m_Name: Effect Component Empty
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: c14bd27b66cebf544a9f29e083c78877, type: 3}
   Duration: 2

@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ce355aeb76459c4c9b040628725a6db, type: 3}
   m_Name: Emission Component Forward
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 0b24b080d49a902488da234212427686, type: 3}

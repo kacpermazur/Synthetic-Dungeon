@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8341ed18b445cb4da90b3b91038101f, type: 3}
   m_Name: Emission Component Ring
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: bf38ecd9b11fa0f47a062dd13b0e1a9b, type: 3}
