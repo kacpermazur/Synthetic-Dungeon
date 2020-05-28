@@ -20,6 +20,7 @@ namespace Player.Spells
         public ImpactComponent[] ImpactComponents;
         public EffectComponent[] EffectComponents;
 
+        public EmissionComponent EmissionComponent => emissionComponent;
         public ImpactComponent ImpactComponent => impactComponent;
         public EffectComponent EffectComponent => effectComponent;
 

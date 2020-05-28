@@ -102,7 +102,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Triggers/MessageComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Triggers/PortalTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIGameOverlay.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Triggers/MessageTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Impact/ImpactComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/Components/Emission/EmissionComponent.cs" />
@@ -118,6 +117,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIPanelSkills.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spells/SpellSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIGameOverlay.cs" />
       </list>
     </option>
   </component>
@@ -190,7 +190,7 @@
       <workItem from="1590551121908" duration="12131000" />
       <workItem from="1590597753330" duration="606000" />
       <workItem from="1590598560342" duration="3762000" />
-      <workItem from="1590630579200" duration="822000" />
+      <workItem from="1590630579200" duration="1199000" />
     </task>
     <servers />
   </component>
@@ -215,18 +215,18 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="794" y="236" key="RiderGenerateDialog" timestamp="1590611317307">
+    <state x="794" y="236" key="RiderGenerateDialog" timestamp="1590631507082">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="236" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590611317307" />
+    <state x="794" y="236" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590631507082" />
     <state x="186" y="125" key="SettingsEditor" timestamp="1589246785257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="186" y="125" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589246785257" />
-    <state x="1920" y="28" width="1699" height="959" key="dock-window-1" timestamp="1590631031611">
+    <state x="1920" y="0" width="1699" height="959" key="dock-window-1" timestamp="1590631779237">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="1920" y="28" width="1699" height="959" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590631031611" />
+    <state x="1920" y="0" width="1699" height="959" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590631779237" />
     <state x="2202" y="0" width="1602" height="1027" key="dock-window-2" timestamp="1589264293780">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

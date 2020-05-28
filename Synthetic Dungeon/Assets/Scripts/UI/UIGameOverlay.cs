@@ -39,7 +39,16 @@ namespace UI
             
             return true;
         }
-        
+
+        public override void Open()
+        {
+            SetEmmisionImage(_playerManager.SpellSystem.EmissionComponent.icon);
+            SetImpactImage(_playerManager.SpellSystem.ImpactComponent.icon);
+            SetEffectImage(_playerManager.SpellSystem.EffectComponent.icon);
+            
+            base.Open();
+        }
+
         public TextMeshProUGUI TextMesh()
         {
             _animator.SetBool("isVisable", true);
