@@ -28,6 +28,14 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "MagicMenu",
+                    "type": "Button",
+                    "id": "694de167-ebc4-4a61-92b7-fb94f2b58bfd",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -45,7 +53,7 @@
                 {
                     "name": "up",
                     "id": "d1b3e5f0-2424-4a8a-890c-948ca4497c86",
-                    "path": "<Keyboard>/w",
+                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -56,7 +64,7 @@
                 {
                     "name": "down",
                     "id": "37efb67a-6d9a-479e-bffe-1a9f948e97bf",
-                    "path": "<Keyboard>/s",
+                    "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -67,7 +75,7 @@
                 {
                     "name": "left",
                     "id": "0c20f4c3-6431-44e2-973e-0caadfdc2a97",
-                    "path": "<Keyboard>/a",
+                    "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -78,7 +86,7 @@
                 {
                     "name": "right",
                     "id": "3fc9dae5-3cc5-4ac0-9115-d97f8e615a6b",
-                    "path": "<Keyboard>/d",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -89,7 +97,7 @@
                 {
                     "name": "",
                     "id": "e56ba908-20bf-4664-8b4d-6a0e09a23d6d",
-                    "path": "<Keyboard>/e",
+                    "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -100,11 +108,22 @@
                 {
                     "name": "",
                     "id": "5b4f5021-7d26-41a6-aa3a-1188a51a30fc",
-                    "path": "<Keyboard>/r",
+                    "path": "<Keyboard>/z",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e702a96f-4888-4c9b-9028-03388277fd51",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "MagicMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

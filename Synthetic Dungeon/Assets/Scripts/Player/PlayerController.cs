@@ -3,6 +3,7 @@ using Core;
 using Player.Data;
 using Sound;
 using Triggers;
+using UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,7 +20,6 @@ namespace Player
 
         private bool isAttackedPressed;
         private float nextAttackTime;
-
         private float nextWalakPlay;
 
         private Enemy.Enemy _enemy;
@@ -34,7 +34,7 @@ namespace Player
         {
             _animator = GetComponent<Animator>();
             _playerData = GameManager.Instance.PlayerManager.PlayerData;
-
+            
             nextAttackTime = 0;
             nextWalakPlay = 0;
 
@@ -120,6 +120,26 @@ namespace Player
         public void OnAttack(InputValue value)
         {
             isAttackedPressed = value.isPressed;
+        }
+        
+        private bool _isMagicMenuOpened;
+        
+        public void OnMagicMenu(InputValue value)
+        {
+            GameManager.LogMessage("Magic Menu Pressed");
+
+            _isMagicMenuOpened = !_isMagicMenuOpened;
+
+            if (_isMagicMenuOpened)
+            {
+                GameManager.LogMessage("Magic Menu Opened");
+                GameManager.Instance.UiManager.OpenPanel(GameManager.Instance.UiManager.PanelSkills);
+            }
+            else if(!_isMagicMenuOpened)
+            {
+                GameManager.LogMessage("Magic Menu Closed");
+                GameManager.Instance.UiManager.OpenPanel(GameManager.Instance.UiManager.GameOverlay);
+            }
         }
 
     }
