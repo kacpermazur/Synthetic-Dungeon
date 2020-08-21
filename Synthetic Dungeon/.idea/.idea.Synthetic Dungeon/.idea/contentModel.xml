@@ -31,6 +31,9 @@
             <e p="IOnExecute.cs" t="Include" />
             <e p="PlayerInputActions.cs" t="Include" />
           </e>
+          <e p="Duengon" t="Include">
+            <e p="DuengonManager.cs" t="Include" />
+          </e>
           <e p="Enemy" t="Include">
             <e p="AI" t="Include">
               <e p="Actions" t="Include">
@@ -97,6 +100,7 @@
             <e p="PortalTrigger.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
+            <e p="SpellUnlocks.cs" t="Include" />
             <e p="UIGameOverlay.cs" t="Include" />
             <e p="UIManager.cs" t="Include" />
             <e p="UIPanel.cs" t="Include" />

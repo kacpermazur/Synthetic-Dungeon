@@ -70,7 +70,7 @@ namespace Sound
             }
         }
 
-        public void PlaySoundSpatialSFX(string name, GameObject gameObject)
+        public AudioSource PlaySoundSpatialSFX(string name, GameObject gameObject)
         {
             SoundClip clip = Array.Find(_soundClipsSFX, soundClip => soundClip.name == name);
             AudioSource localAudioSource = gameObject.GetComponent<AudioSource>();
@@ -82,6 +82,8 @@ namespace Sound
 
             SetSoundClipSettings(ref localAudioSource, clip);
             localAudioSource.Play();
+
+            return localAudioSource;
         }
         
         private void SetSoundClipSettings(ref AudioSource source, SoundClip clip)

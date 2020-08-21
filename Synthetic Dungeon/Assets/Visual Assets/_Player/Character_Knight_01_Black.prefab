@@ -1,62 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1549591693
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1549591694}
-  - component: {fileID: 1549591695}
-  - component: {fileID: 6650628179954945895}
-  m_Layer: 0
-  m_Name: meleeRange
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1549591694
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549591693}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.998, z: 0.736}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1512611126620833017}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1549591695
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549591693}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.8534181, y: 1.5504134, z: 1.4752126}
-  m_Center: {x: 0.124198556, y: 0.123318315, z: 0.23760635}
---- !u!114 &6650628179954945895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549591693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b03c4fe232d63aa46975b6c35edf98db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1512611126621000973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,7 +1397,6 @@ Transform:
   m_Children:
   - {fileID: 1512611126620740961}
   - {fileID: 1512611126620829215}
-  - {fileID: 1549591694}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
@@ -1547,6 +1489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: e41ad1985e8f53e459c1d17160795c1c, type: 2}
+  _playerSpawn: {fileID: 0}
   enabledControls: 0
   maxHealth: 0
   currentHealth: 0
@@ -1554,6 +1497,7 @@ MonoBehaviour:
   currentMana: 0
   currentLevel: 0
   exp: 0
+  skillPoints: 0
 --- !u!114 &1512611127787737321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1567,7 +1511,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerRotationOffset: 90
-  _onMeleeDetect: {fileID: 6650628179954945895}
 --- !u!114 &1512611127787737322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1584,7 +1527,7 @@ MonoBehaviour:
     type: 3}
   emissionComponent: {fileID: 11400000, guid: 40eedb1823824954786a5ac48b9707cd, type: 2}
   impactComponent: {fileID: 11400000, guid: c0aebd666c6980b4dbb1ddff8e3cc22b, type: 2}
-  effectComponent: {fileID: 11400000, guid: 1991b2c5b8192ff46847cc6372ec1b64, type: 2}
+  effectComponent: {fileID: 11400000, guid: 8ca1a00550747de40ae3d9f71b028187, type: 2}
   EmissionComponents:
   - {fileID: 11400000, guid: 40eedb1823824954786a5ac48b9707cd, type: 2}
   - {fileID: 11400000, guid: f84c4b3a89072b547bf6e7cb8b88f5ad, type: 2}
@@ -1593,6 +1536,7 @@ MonoBehaviour:
   EffectComponents:
   - {fileID: 11400000, guid: 8ca1a00550747de40ae3d9f71b028187, type: 2}
   - {fileID: 11400000, guid: 1991b2c5b8192ff46847cc6372ec1b64, type: 2}
+  _spellMaterial: {fileID: 2100000, guid: a28978aead784384597a7901f4956522, type: 2}
 --- !u!95 &1512611126613718051
 Animator:
   serializedVersion: 3

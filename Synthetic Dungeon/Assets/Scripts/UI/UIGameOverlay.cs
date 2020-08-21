@@ -19,6 +19,7 @@ namespace UI
         [SerializeField] private Image _impactImage;
         [SerializeField] private Image _effectImage;
 
+        [SerializeField] private TextMeshProUGUI _level;
         [SerializeField] private TextMeshProUGUI _infoText;
         [SerializeField] private Animator _animator;
         
@@ -79,6 +80,11 @@ namespace UI
         public void SetExp(float exp)
         {
             expSlider.value = exp;
+        }
+
+        public void SetLevel(int num)
+        {
+            _level.text = num.ToString();
         }
 
         public void SetEmmisionImage(Sprite icon)

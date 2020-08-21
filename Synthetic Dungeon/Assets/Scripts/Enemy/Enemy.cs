@@ -21,7 +21,8 @@ namespace Enemy
         private float _effectTimer;
         
         private EffectComponent _effectComponent;
-        
+
+        public AudioSource audioSFX;
 
         public bool Initialize()
         {
@@ -30,7 +31,7 @@ namespace Enemy
             
             _enemyManager = GameManager.Instance.EnemyManager;
             _currentHealth = _enemyData.health;
-            GameManager.Instance.SoundManager.PlaySoundSpatialSFX("zombie", gameObject);
+            audioSFX = GameManager.Instance.SoundManager.PlaySoundSpatialSFX("zombie", gameObject);
             
             if (_enemyData)
             {
@@ -65,8 +66,15 @@ namespace Enemy
             if (_currentHealth <= 0)
             {
                 _enemyManager.RemoveFromPool(this);
+                GameManager.Instance.PlayerManager.AddExp(10);
                 Destroy(gameObject);
             }
+        }
+        
+        public virtual void Kill()
+        {
+            _enemyManager.RemoveFromPool(this);
+            Destroy(gameObject);
         }
 
         private void TriggerEffect()

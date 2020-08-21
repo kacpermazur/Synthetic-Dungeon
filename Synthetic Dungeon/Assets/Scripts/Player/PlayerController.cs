@@ -12,8 +12,7 @@ namespace Player
     public class PlayerController : MonoBehaviour, IInitializable, IOnExecute
     {
         [SerializeField] private float _playerRotationOffset;
-        [SerializeField] private OnMeleeDetect _onMeleeDetect;
-        
+
         private PlayerData _playerData;
         private Animator _animator;
         private Vector2 _onMoveDir;
@@ -37,8 +36,7 @@ namespace Player
             
             nextAttackTime = 0;
             nextWalakPlay = 0;
-
-            _onMeleeDetect.Initialize();
+            
             
             if (_animator)
             {
@@ -53,30 +51,7 @@ namespace Player
             float eTime = Time.time;
             
             Movement(eTime);
-            Attack(eTime);
 
-        }
-
-        private void Attack(float eTime)
-        {
-            if (isAttackedPressed)
-            {
-                isAttackedPressed = false;
-                
-                if (Time.time > nextAttackTime)
-                {
-                    GameManager.LogMessage("On Attack");
-                    GameManager.Instance.SoundManager.PlaySound("attack", SoundManager.SoundType.SFX);
-                    _animator.CrossFade("oh_attack_3", 0.2f);
-
-                    if (_enemy)
-                    {
-                        _enemy.TakeDamage(8);
-                    }
-                    
-                    nextAttackTime = eTime + _playerData.attackSpeed;
-                }
-            }
         }
 
         private void Movement(float eTime)
@@ -110,18 +85,17 @@ namespace Player
         {
             if (GameManager.Instance.PlayerManager.enabledControls)
             {
-                GameManager.LogMessage("On Magic");
-                GameManager.Instance.SoundManager.PlaySound("attack", SoundManager.SoundType.SFX);
-                _animator.CrossFade("oh_magic_1", 0.2f);
-                GameManager.Instance.PlayerManager.SpellSystem.CastSpell();
+                if (GameManager.Instance.PlayerManager.currentMana >= 2f)
+                {
+                    GameManager.LogMessage("On Magic");
+                    GameManager.Instance.SoundManager.PlaySound("attack", SoundManager.SoundType.SFX);
+                    _animator.CrossFade("oh_magic_1", 0.2f);
+                    GameManager.Instance.PlayerManager.SpellSystem.CastSpell();
+                    GameManager.Instance.PlayerManager.RemoveMana(2);
+                }
             }
         }
 
-        public void OnAttack(InputValue value)
-        {
-            isAttackedPressed = value.isPressed;
-        }
-        
         private bool _isMagicMenuOpened;
         
         public void OnMagicMenu(InputValue value)

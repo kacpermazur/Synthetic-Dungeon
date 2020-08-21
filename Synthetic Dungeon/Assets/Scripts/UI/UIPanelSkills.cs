@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
@@ -29,6 +30,8 @@ namespace UI
 
         [Header("Spell Impacts")]
         [SerializeField] private Button _damgeButton;
+        
+        [SerializeField] private TextMeshProUGUI _skillPoints;
 
         public override bool Initialize()
         {
@@ -41,6 +44,11 @@ namespace UI
             _damgeButton.onClick.AddListener(ButtonDamage);
             
             return true;
+        }
+        
+        public void SetSkillPoint(int num)
+        {
+            _skillPoints.text = num.ToString();
         }
         
         public void SetEmmisionImage(Sprite icon)

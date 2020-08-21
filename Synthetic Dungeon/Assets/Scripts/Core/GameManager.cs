@@ -18,12 +18,15 @@ namespace Core
         [SerializeField] private UIManager _uiManager;
         [SerializeField] private PlayerManager _playerManager;
         [SerializeField] private EnemyManager _enemyManager;
+        [SerializeField] private DuengonManager _duengonManager;
         [SerializeField] private SoundManager _soundManager;
         
         public static GameManager Instance => _instance;
         public UIManager UiManager => _uiManager; 
         public PlayerManager PlayerManager => _playerManager; 
         public EnemyManager EnemyManager => _enemyManager;
+        
+        public DuengonManager DuengonManager => _duengonManager;
         public SoundManager SoundManager => _soundManager;
 
         //todo: Move this out later
@@ -79,9 +82,14 @@ namespace Core
             }
             
             _isEnemyManagerActive = _enemyManager.Initialize();
-            if (!_enemyManager)
+            if (!_isEnemyManagerActive)
             {
                 LogMessage("EnemyManager not initialized!", MessageType.ALERT);
+            }
+            
+            if (!_duengonManager.Initialize())
+            {
+                LogMessage("DuengonManager not initialized!", MessageType.ALERT);
             }
 
             _isCameraManagerActive = _cameraManager.Initialize();

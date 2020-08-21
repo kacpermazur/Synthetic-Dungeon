@@ -10,6 +10,7 @@ namespace Player.Spells
 
         [SerializeField] private Projectile Projectile;
         
+        
         [Header("Active Components List")]
         [SerializeField] private EmissionComponent emissionComponent;
         [SerializeField] private ImpactComponent impactComponent;
@@ -19,6 +20,8 @@ namespace Player.Spells
         public EmissionComponent[] EmissionComponents;
         public ImpactComponent[] ImpactComponents;
         public EffectComponent[] EffectComponents;
+        
+        [SerializeField] private Material _spellMaterial;
 
         public EmissionComponent EmissionComponent => emissionComponent;
         public ImpactComponent ImpactComponent => impactComponent;
@@ -68,6 +71,8 @@ namespace Player.Spells
             effectComponent = effect;
             GameManager.Instance.UiManager.GameOverlay.SetEffectImage(effect.icon);
             GameManager.Instance.UiManager.PanelSkills.SetEffectImage(effect.icon);
+            
+            _spellMaterial.SetColor("Color_CD32963E", effect.Color);
         }
     }
 }

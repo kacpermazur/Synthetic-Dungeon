@@ -8,7 +8,8 @@ namespace Triggers
     [RequireComponent(typeof(BoxCollider))]
     public class PortalTrigger : MonoBehaviour
     {
-        [SerializeField] private Transform targetTransform;
+        [SerializeField] private Transform _targetTransform;
+        [SerializeField] private bool _homePortal;
         
         private void OnTriggerEnter(Collider other)
         {
@@ -22,7 +23,17 @@ namespace Triggers
         private void TeleportPlayer(Transform playerPos)
         {
             GameManager.LogMessage("Hub: Player has been transported!");
-            playerPos.position = transform.position;
+            playerPos.position = _targetTransform.position;
+
+            if (_homePortal)
+            {
+                GameManager.Instance.DuengonManager.StopDuengon();
+            }
+            else
+            {
+                GameManager.Instance.DuengonManager.StartDuengon();
+            }
+            
         }
     }
 }

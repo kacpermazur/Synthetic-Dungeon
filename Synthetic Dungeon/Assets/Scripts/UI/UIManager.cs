@@ -17,11 +17,14 @@ namespace UI
         [SerializeField] private UIGameOverlay panelGameOverlay;
         [SerializeField] private UIPanelSkills panelSkills;
 
+        [SerializeField] private SpellUnlocks[] _spellUnlocks;
+
         public UIPanelMainMenu MainMenu => panelMainMenu;
         public UIGameOverlay GameOverlay => panelGameOverlay;
         public UIPanelSkills PanelSkills => panelSkills;
 
         private SpellSystem _spellSystem;
+        private PlayerManager _playerManager;
 
         public bool Initialize()
         {
@@ -37,6 +40,7 @@ namespace UI
             GameManager.Instance.PlayerManager.DisableControls();
 
             _spellSystem = GameManager.Instance.PlayerManager.SpellSystem;
+            _playerManager = GameManager.Instance.PlayerManager;
 
             if (!init)
             {
@@ -94,6 +98,7 @@ namespace UI
             GameManager.Instance.SoundManager.PlaySound("UIClick", SoundManager.SoundType.UI);
             GameManager.Instance.SoundManager.PlaySound("music", SoundManager.SoundType.MUSIC);
             GameManager.Instance.PlayerManager.EnableControls();
+            GameManager.Instance.EnemyManager.StartAllSound();
             OpenPanel(panelGameOverlay);
         }
 
@@ -114,7 +119,19 @@ namespace UI
         {
             GameManager.LogMessage("Fire Effect Selected!");
             Debug.Log(_spellSystem.EffectComponents[1]);
-            _spellSystem.EquipEffectComponent(_spellSystem.EffectComponents[1]);
+            
+            if (_spellUnlocks[1].GetStatus())
+            {
+                _spellSystem.EquipEffectComponent(_spellSystem.EffectComponents[1]);
+            }
+            else if (_playerManager.skillPoints >= 1)
+            {
+                _playerManager.skillPoints--;
+                _spellUnlocks[1].UnlockSpell();
+                _spellSystem.EquipEffectComponent(_spellSystem.EffectComponents[1]);
+            }
+
+            panelSkills.SetSkillPoint(_playerManager.skillPoints);
         }
         
         private void onButtonFowardClicked()
@@ -126,7 +143,19 @@ namespace UI
         private void onButtonRingClicked()
         {
             GameManager.LogMessage("Ring Emission Selected!");
-            _spellSystem.EquipEmissionComponent(_spellSystem.EmissionComponents[1]);
+            
+            if (_spellUnlocks[0].GetStatus())
+            {
+                _spellSystem.EquipEmissionComponent(_spellSystem.EmissionComponents[1]);
+            }
+            else if (_playerManager.skillPoints >= 1)
+            {
+                _playerManager.skillPoints--;
+                _spellUnlocks[0].UnlockSpell();
+                _spellSystem.EquipEmissionComponent(_spellSystem.EmissionComponents[1]);
+            }
+            
+            panelSkills.SetSkillPoint(_playerManager.skillPoints);
         }
         
         private void onButtonDamageClicked()
